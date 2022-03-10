@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "elog.h": "c",
+        "usb_host.h": "c",
+        "fatfs.h": "c"
+    }
+}
