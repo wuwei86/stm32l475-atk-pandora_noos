@@ -1,10 +1,10 @@
 Dependencies for Project 'usb', Target 'usb': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
-F (startup_stm32l475xx.s)(0x6229E7D0)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32L475xx SETA 1"--list startup_stm32l475xx.lst --xref -o usb\startup_stm32l475xx.o --depend usb\startup_stm32l475xx.d)
-F (../Core/Src/main.c)(0x622A1194)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\main.o --omf_browse usb\main.crf --depend usb\main.d)
+F (startup_stm32l475xx.s)(0x628CC78F)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32L475xx SETA 1"--list startup_stm32l475xx.lst --xref -o usb\startup_stm32l475xx.o --depend usb\startup_stm32l475xx.d)
+F (../Core/Src/main.c)(0x628CD04F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\main.o --omf_browse usb\main.crf --depend usb\main.d)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -33,6 +33,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../FATFS/App/fatfs.h)(0x6229E7CE)
@@ -59,10 +61,12 @@ I (..\easylogger\inc\elog.h)(0x61A0A61A)
 I (..\easylogger\inc\elog_cfg.h)(0x6229F8A6)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AD218)
 I (../Core/Inc/bsp.h)(0x622A1326)
-F (../Core/Src/stm32l4xx_it.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_it.o --omf_browse usb\stm32l4xx_it.crf --depend usb\stm32l4xx_it.d)
+I (..\Core\Inc\LCD\lcd.h)(0x628C9C77)
+I (..\Core\Inc\sys\sys.h)(0x628C9B54)
+F (../Core/Src/stm32l4xx_it.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_it.o --omf_browse usb\stm32l4xx_it.crf --depend usb\stm32l4xx_it.d)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -91,13 +95,15 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Core/Inc/stm32l4xx_it.h)(0x6229E7CE)
-F (../Core/Src/stm32l4xx_hal_msp.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_msp.o --omf_browse usb\stm32l4xx_hal_msp.crf --depend usb\stm32l4xx_hal_msp.d)
+F (../Core/Src/stm32l4xx_hal_msp.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_msp.o --omf_browse usb\stm32l4xx_hal_msp.crf --depend usb\stm32l4xx_hal_msp.d)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -126,11 +132,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (..\Core\Src\bsp.c)(0x622A0788)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\bsp.o --omf_browse usb\bsp.crf --depend usb\bsp.d)
+F (..\Core\Src\bsp.c)(0x622DED56)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\bsp.o --omf_browse usb\bsp.crf --depend usb\bsp.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -159,14 +167,168 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Core/Inc/bsp.h)(0x622A1326)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_hcd.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_hcd.o --omf_browse usb\stm32l4xx_hal_hcd.crf --depend usb\stm32l4xx_hal_hcd.d)
+F (..\Core\Src\LCD\lcd.c)(0x628C9E13)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\lcd.o --omf_browse usb\lcd.crf --depend usb\lcd.d)
+I (..\Core\Inc\sys\sys.h)(0x628C9B54)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x621C83EC)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
+I (..\Core\Inc\delay\delay.h)(0x5BD4398A)
+I (..\Core\Inc\LCD\lcd.h)(0x628C9C77)
+I (..\Core\Inc\LCD\font.h)(0x5BE29ECA)
+I (..\Core\Inc\SPI3\spi3.h)(0x628C9AB9)
+I (..\Core\Inc\LCD\grs.h)(0x62134E7C)
+F (..\Core\Src\SPI3\spi3.c)(0x628C9B8A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\spi3.o --omf_browse usb\spi3.crf --depend usb\spi3.d)
+I (..\Core\Inc\SPI3\spi3.h)(0x628C9AB9)
+I (..\Core\Inc\sys\sys.h)(0x628C9B54)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x621C83EC)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
+I (..\Core\Inc\delay\delay.h)(0x5BD4398A)
+F (..\Core\Src\delay\delay.c)(0x628C9C6E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\delay.o --omf_browse usb\delay.crf --depend usb\delay.d)
+I (..\Core\Inc\delay\delay.h)(0x5BD4398A)
+I (..\Core\Inc\sys\sys.h)(0x628C9B54)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x621C83EC)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
+F (..\Core\Src\sys\sys.c)(0x628C9B49)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\sys.o --omf_browse usb\sys.crf --depend usb\sys.d)
+I (..\Core\Inc\sys\sys.h)(0x628C9B54)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x621C83EC)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_hcd.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_hcd.o --omf_browse usb\stm32l4xx_hal_hcd.crf --depend usb\stm32l4xx_hal_hcd.d)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -195,11 +357,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_ll_usb.o --omf_browse usb\stm32l4xx_ll_usb.crf --depend usb\stm32l4xx_ll_usb.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_ll_usb.o --omf_browse usb\stm32l4xx_ll_usb.crf --depend usb\stm32l4xx_ll_usb.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -228,11 +392,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal.o --omf_browse usb\stm32l4xx_hal.crf --depend usb\stm32l4xx_hal.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal.o --omf_browse usb\stm32l4xx_hal.crf --depend usb\stm32l4xx_hal.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -261,11 +427,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_i2c.o --omf_browse usb\stm32l4xx_hal_i2c.crf --depend usb\stm32l4xx_hal_i2c.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_i2c.o --omf_browse usb\stm32l4xx_hal_i2c.crf --depend usb\stm32l4xx_hal_i2c.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -294,11 +462,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_i2c_ex.o --omf_browse usb\stm32l4xx_hal_i2c_ex.crf --depend usb\stm32l4xx_hal_i2c_ex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_i2c_ex.o --omf_browse usb\stm32l4xx_hal_i2c_ex.crf --depend usb\stm32l4xx_hal_i2c_ex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -327,11 +497,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_rcc.o --omf_browse usb\stm32l4xx_hal_rcc.crf --depend usb\stm32l4xx_hal_rcc.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_rcc.o --omf_browse usb\stm32l4xx_hal_rcc.crf --depend usb\stm32l4xx_hal_rcc.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -360,11 +532,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_rcc_ex.o --omf_browse usb\stm32l4xx_hal_rcc_ex.crf --depend usb\stm32l4xx_hal_rcc_ex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_rcc_ex.o --omf_browse usb\stm32l4xx_hal_rcc_ex.crf --depend usb\stm32l4xx_hal_rcc_ex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -393,11 +567,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_flash.o --omf_browse usb\stm32l4xx_hal_flash.crf --depend usb\stm32l4xx_hal_flash.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_flash.o --omf_browse usb\stm32l4xx_hal_flash.crf --depend usb\stm32l4xx_hal_flash.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -426,11 +602,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_flash_ex.o --omf_browse usb\stm32l4xx_hal_flash_ex.crf --depend usb\stm32l4xx_hal_flash_ex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_flash_ex.o --omf_browse usb\stm32l4xx_hal_flash_ex.crf --depend usb\stm32l4xx_hal_flash_ex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -459,11 +637,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_flash_ramfunc.o --omf_browse usb\stm32l4xx_hal_flash_ramfunc.crf --depend usb\stm32l4xx_hal_flash_ramfunc.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_flash_ramfunc.o --omf_browse usb\stm32l4xx_hal_flash_ramfunc.crf --depend usb\stm32l4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -492,11 +672,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_gpio.o --omf_browse usb\stm32l4xx_hal_gpio.crf --depend usb\stm32l4xx_hal_gpio.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_gpio.o --omf_browse usb\stm32l4xx_hal_gpio.crf --depend usb\stm32l4xx_hal_gpio.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -525,11 +707,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_dma.o --omf_browse usb\stm32l4xx_hal_dma.crf --depend usb\stm32l4xx_hal_dma.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_dma.o --omf_browse usb\stm32l4xx_hal_dma.crf --depend usb\stm32l4xx_hal_dma.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -558,11 +742,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_dma_ex.o --omf_browse usb\stm32l4xx_hal_dma_ex.crf --depend usb\stm32l4xx_hal_dma_ex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_dma_ex.o --omf_browse usb\stm32l4xx_hal_dma_ex.crf --depend usb\stm32l4xx_hal_dma_ex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -591,11 +777,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_pwr.o --omf_browse usb\stm32l4xx_hal_pwr.crf --depend usb\stm32l4xx_hal_pwr.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_pwr.o --omf_browse usb\stm32l4xx_hal_pwr.crf --depend usb\stm32l4xx_hal_pwr.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -624,11 +812,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_pwr_ex.o --omf_browse usb\stm32l4xx_hal_pwr_ex.crf --depend usb\stm32l4xx_hal_pwr_ex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_pwr_ex.o --omf_browse usb\stm32l4xx_hal_pwr_ex.crf --depend usb\stm32l4xx_hal_pwr_ex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -657,11 +847,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_cortex.o --omf_browse usb\stm32l4xx_hal_cortex.crf --depend usb\stm32l4xx_hal_cortex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_cortex.o --omf_browse usb\stm32l4xx_hal_cortex.crf --depend usb\stm32l4xx_hal_cortex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -690,11 +882,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_exti.o --omf_browse usb\stm32l4xx_hal_exti.crf --depend usb\stm32l4xx_hal_exti.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_exti.o --omf_browse usb\stm32l4xx_hal_exti.crf --depend usb\stm32l4xx_hal_exti.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -723,11 +917,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_tim.o --omf_browse usb\stm32l4xx_hal_tim.crf --depend usb\stm32l4xx_hal_tim.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_tim.o --omf_browse usb\stm32l4xx_hal_tim.crf --depend usb\stm32l4xx_hal_tim.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -756,11 +952,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_tim_ex.o --omf_browse usb\stm32l4xx_hal_tim_ex.crf --depend usb\stm32l4xx_hal_tim_ex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_tim_ex.o --omf_browse usb\stm32l4xx_hal_tim_ex.crf --depend usb\stm32l4xx_hal_tim_ex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -789,11 +987,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_uart.o --omf_browse usb\stm32l4xx_hal_uart.crf --depend usb\stm32l4xx_hal_uart.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_uart.o --omf_browse usb\stm32l4xx_hal_uart.crf --depend usb\stm32l4xx_hal_uart.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -822,11 +1022,13 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_uart_ex.o --omf_browse usb\stm32l4xx_hal_uart_ex.crf --depend usb\stm32l4xx_hal_uart_ex.d)
+F (../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_uart_ex.o --omf_browse usb\stm32l4xx_hal_uart_ex.crf --depend usb\stm32l4xx_hal_uart_ex.d)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -855,9 +1057,46 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Core/Src/system_stm32l4xx.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\system_stm32l4xx.o --omf_browse usb\system_stm32l4xx.crf --depend usb\system_stm32l4xx.d)
+F (..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\stm32l4xx_hal_spi.o --omf_browse usb\stm32l4xx_hal_spi.crf --depend usb\stm32l4xx_hal_spi.d)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h)(0x621C8406)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x621C83EC)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
+I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
+F (../Core/Src/system_stm32l4xx.c)(0x621C8406)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\system_stm32l4xx.o --omf_browse usb\system_stm32l4xx.crf --depend usb\system_stm32l4xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h)(0x621C8406)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x621C83EC)
@@ -868,7 +1107,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
@@ -888,9 +1127,11 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../FATFS/Target/usbh_diskio.c)(0x6229E7CD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_diskio.o --omf_browse usb\usbh_diskio.crf --depend usb\usbh_diskio.d)
+F (../FATFS/Target/usbh_diskio.c)(0x6229E7CD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_diskio.o --omf_browse usb\usbh_diskio.crf --depend usb\usbh_diskio.d)
 I (../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/diskio.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/integer.h)(0x621C83ED)
@@ -898,7 +1139,7 @@ I (../Middlewares/Third_Party/FatFs/src/ff.h)(0x621C83ED)
 I (../FATFS/Target/ffconf.h)(0x6229E7CD)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -927,6 +1168,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
@@ -942,14 +1185,14 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
 I (../FATFS/Target/usbh_diskio.h)(0x6229E7CD)
-F (../FATFS/App/fatfs.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\fatfs.o --omf_browse usb\fatfs.crf --depend usb\fatfs.d)
+F (../FATFS/App/fatfs.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\fatfs.o --omf_browse usb\fatfs.crf --depend usb\fatfs.d)
 I (../FATFS/App/fatfs.h)(0x6229E7CE)
 I (../Middlewares/Third_Party/FatFs/src/ff.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/integer.h)(0x621C83ED)
 I (../FATFS/Target/ffconf.h)(0x6229E7CD)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -978,6 +1221,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
@@ -995,7 +1240,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621
 I (../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/diskio.h)(0x621C83ED)
 I (../FATFS/Target/usbh_diskio.h)(0x6229E7CD)
-F (../USB_HOST/App/usb_host.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usb_host.o --omf_browse usb\usb_host.crf --depend usb\usb_host.d)
+F (../USB_HOST/App/usb_host.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usb_host.o --omf_browse usb\usb_host.crf --depend usb\usb_host.d)
 I (../USB_HOST/App/usb_host.h)(0x6229E7CE)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h)(0x621C8406)
@@ -1007,7 +1252,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
@@ -1027,6 +1272,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
@@ -1042,7 +1289,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
-F (../USB_HOST/Target/usbh_conf.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_conf.o --omf_browse usb\usbh_conf.crf --depend usb\usbh_conf.d)
+F (../USB_HOST/Target/usbh_conf.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_conf.o --omf_browse usb\usbh_conf.crf --depend usb\usbh_conf.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -1050,7 +1297,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1079,6 +1326,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
@@ -1087,7 +1336,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_platform.h)(0x6229E7CE)
 I (../USB_HOST/App/usb_host.h)(0x6229E7CE)
-F (../USB_HOST/Target/usbh_platform.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_platform.o --omf_browse usb\usbh_platform.crf --depend usb\usbh_platform.d)
+F (../USB_HOST/Target/usbh_platform.c)(0x6229E7CE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_platform.o --omf_browse usb\usbh_platform.crf --depend usb\usbh_platform.d)
 I (../USB_HOST/Target/usbh_platform.h)(0x6229E7CE)
 I (../USB_HOST/App/usb_host.h)(0x6229E7CE)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1100,7 +1349,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x621C83EC)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x621C83EC)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x621C8406)
@@ -1120,9 +1369,11 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
-F (../Middlewares/Third_Party/FatFs/src/diskio.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\diskio.o --omf_browse usb\diskio.crf --depend usb\diskio.d)
+F (../Middlewares/Third_Party/FatFs/src/diskio.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\diskio.o --omf_browse usb\diskio.crf --depend usb\diskio.d)
 I (../Middlewares/Third_Party/FatFs/src/diskio.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/integer.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h)(0x621C83ED)
@@ -1130,7 +1381,7 @@ I (../Middlewares/Third_Party/FatFs/src/ff.h)(0x621C83ED)
 I (../FATFS/Target/ffconf.h)(0x6229E7CD)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1159,6 +1410,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
@@ -1173,13 +1426,13 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
-F (../Middlewares/Third_Party/FatFs/src/ff.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\ff.o --omf_browse usb\ff.crf --depend usb\ff.d)
+F (../Middlewares/Third_Party/FatFs/src/ff.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\ff.o --omf_browse usb\ff.crf --depend usb\ff.d)
 I (../Middlewares/Third_Party/FatFs/src/ff.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/integer.h)(0x621C83ED)
 I (../FATFS/Target/ffconf.h)(0x6229E7CD)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1208,6 +1461,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
@@ -1224,7 +1479,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/diskio.h)(0x621C83ED)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
-F (../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\ff_gen_drv.o --omf_browse usb\ff_gen_drv.crf --depend usb\ff_gen_drv.d)
+F (../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\ff_gen_drv.o --omf_browse usb\ff_gen_drv.crf --depend usb\ff_gen_drv.d)
 I (../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/diskio.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/integer.h)(0x621C83ED)
@@ -1232,7 +1487,7 @@ I (../Middlewares/Third_Party/FatFs/src/ff.h)(0x621C83ED)
 I (../FATFS/Target/ffconf.h)(0x6229E7CD)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1261,6 +1516,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
@@ -1275,13 +1532,13 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
-F (../Middlewares/Third_Party/FatFs/src/option/syscall.c)(0x621C83EE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\syscall.o --omf_browse usb\syscall.crf --depend usb\syscall.d)
+F (../Middlewares/Third_Party/FatFs/src/option/syscall.c)(0x621C83EE)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\syscall.o --omf_browse usb\syscall.crf --depend usb\syscall.d)
 I (../Middlewares/Third_Party/FatFs/src/option/../ff.h)(0x621C83ED)
 I (../Middlewares/Third_Party/FatFs/src/option/../integer.h)(0x621C83ED)
 I (../FATFS/Target/ffconf.h)(0x6229E7CD)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1310,6 +1567,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
@@ -1324,7 +1583,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
-F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_core.o --omf_browse usb\usbh_core.crf --depend usb\usbh_core.d)
+F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_core.o --omf_browse usb\usbh_core.crf --depend usb\usbh_core.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -1332,7 +1591,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1361,13 +1620,15 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
-F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_ctlreq.o --omf_browse usb\usbh_ctlreq.crf --depend usb\usbh_ctlreq.d)
+F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_ctlreq.o --omf_browse usb\usbh_ctlreq.crf --depend usb\usbh_ctlreq.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
@@ -1376,7 +1637,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1405,12 +1666,14 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
-F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_ioreq.o --omf_browse usb\usbh_ioreq.crf --depend usb\usbh_ioreq.d)
+F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_ioreq.o --omf_browse usb\usbh_ioreq.crf --depend usb\usbh_ioreq.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -1418,7 +1681,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1447,13 +1710,15 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
-F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_pipes.o --omf_browse usb\usbh_pipes.crf --depend usb\usbh_pipes.d)
+F (../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_pipes.o --omf_browse usb\usbh_pipes.crf --depend usb\usbh_pipes.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
@@ -1462,7 +1727,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1491,12 +1756,14 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
-F (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_msc.o --omf_browse usb\usbh_msc.crf --depend usb\usbh_msc.d)
+F (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_msc.o --omf_browse usb\usbh_msc.crf --depend usb\usbh_msc.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
@@ -1505,7 +1772,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1534,6 +1801,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
@@ -1542,7 +1811,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
-F (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_msc_bot.o --omf_browse usb\usbh_msc_bot.crf --depend usb\usbh_msc_bot.d)
+F (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_msc_bot.o --omf_browse usb\usbh_msc_bot.crf --depend usb\usbh_msc_bot.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
@@ -1551,7 +1820,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1580,6 +1849,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
@@ -1588,7 +1859,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
-F (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_msc_scsi.o --omf_browse usb\usbh_msc_scsi.crf --depend usb\usbh_msc_scsi.d)
+F (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_scsi.c)(0x621C83ED)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 -Otime --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\usbh_msc_scsi.o --omf_browse usb\usbh_msc_scsi.crf --depend usb\usbh_msc_scsi.d)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h)(0x621C83ED)
 I (../USB_HOST/Target/usbh_conf.h)(0x6229E7CE)
@@ -1597,7 +1868,7 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (../Core/Inc/main.h)(0x6229E7CE)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1626,6 +1897,8 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_def.h)(0x621C83ED)
@@ -1634,7 +1907,7 @@ I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_pipes.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_bot.h)(0x621C83ED)
 I (../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h)(0x621C83ED)
-F (..\easylogger\src\elog.c)(0x61A0A61A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\elog.o --omf_browse usb\elog.crf --depend usb\elog.d)
+F (..\easylogger\src\elog.c)(0x61A0A61A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\elog.o --omf_browse usb\elog.crf --depend usb\elog.d)
 I (..\easylogger\inc\elog.h)(0x61A0A61A)
 I (..\easylogger\inc\elog_cfg.h)(0x6229F8A6)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -1643,21 +1916,21 @@ I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AD218)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5D9AD21A)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
-F (..\easylogger\src\elog_utils.c)(0x61A0A61A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\elog_utils.o --omf_browse usb\elog_utils.crf --depend usb\elog_utils.d)
+F (..\easylogger\src\elog_utils.c)(0x61A0A61A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\elog_utils.o --omf_browse usb\elog_utils.crf --depend usb\elog_utils.d)
 I (..\easylogger\inc\elog.h)(0x61A0A61A)
 I (..\easylogger\inc\elog_cfg.h)(0x6229F8A6)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AD218)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
-F (..\easylogger\port\elog_port.c)(0x622A01A6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\elog_port.o --omf_browse usb\elog_port.crf --depend usb\elog_port.d)
+F (..\easylogger\port\elog_port.c)(0x622A01A6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\elog_port.o --omf_browse usb\elog_port.crf --depend usb\elog_port.d)
 I (..\easylogger\inc\elog.h)(0x61A0A61A)
 I (..\easylogger\inc\elog_cfg.h)(0x6229F8A6)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9AD218)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h)(0x621C8406)
-I (../Core/Inc/stm32l4xx_hal_conf.h)(0x6229E7CE)
+I (../Core/Inc/stm32l4xx_hal_conf.h)(0x628C9BD2)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h)(0x621C8406)
 I (../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h)(0x621C8406)
@@ -1684,6 +1957,18 @@ I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h)(0x621C8406)
+I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h)(0x621C8406)
 I (../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h)(0x621C8406)
 I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+F (..\UIcode\UIcode.cpp)(0x628CD96D)(--cpp -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\uicode.o --omf_browse usb\uicode.crf --depend usb\uicode.d)
+I (..\UIcode\GuiLite.h)(0x626A4DD4)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)
+F (..\UIcode\resource\Lucida_Console_27.cpp)(0x626A4DD4)(--cpp -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc -I ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I ../Drivers/CMSIS/Include -I ../FATFS/Target -I ../FATFS/App -I ../USB_HOST/App -I ../USB_HOST/Target -I ../Middlewares/Third_Party/FatFs/src -I ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I ..\easylogger\inc -I ..\Core\Inc\LCD -I ..\Core\Inc\SPI3 -I ..\Core\Inc\delay -I ..\Core\Inc\sys -I ..\UIcode-I.\RTE\_usb-IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include-D__UVISION_VERSION="529" -D_RTE_ -DSTM32L475xx -DUSE_HAL_DRIVER -DSTM32L475xx-o usb\lucida_console_27.o --omf_browse usb\lucida_console_27.crf --depend usb\lucida_console_27.d)
+I (..\UIcode\resource\../GuiLite.h)(0x626A4DD4)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (D:\Program Files\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9AD21A)

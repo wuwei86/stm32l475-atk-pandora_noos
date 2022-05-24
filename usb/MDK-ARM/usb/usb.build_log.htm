@@ -21,18 +21,170 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TCM.DLL V1.36.5.0
  
 <h2>Project:</h2>
-F:\work\github\stm32l475_usb\usb\MDK-ARM\usb.uvprojx
-Project File Date:  03/10/2022
+F:\work\github\stm32l475-atk-pandora_noos\usb\MDK-ARM\usb.uvprojx
+Project File Date:  05/24/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files\Keil_v5\ARM\ARMCC\Bin'
+*** Warning: You are compiling one or more files of source type C++ and have selected 'use MicroLIB'. MicroLIB does not support C++!
+  
 Build target 'usb'
-compiling bsp.c...
-compiling main.c...
+compiling UIcode.cpp...
+..\UIcode\GuiLite.h(216): warning:  #815-D: type qualifier on return type is meaningless
+  	static const unsigned int get_color(COLOR_LIST index)
+..\UIcode\GuiLite.h(335): warning:  #61-D: integer operation result is out of range
+  			return (m_color_bytes == 4) ? ((unsigned int*)(m_layers[z_order].fb))[y * m_width + x] : GL_RGB_16_to_32(((unsigned short*)(m_layers[z_order].fb))[y * m_width + x]);
+..\UIcode\GuiLite.h(335): warning:  #68-D: integer conversion resulted in a change of sign
+  			return (m_color_bytes == 4) ? ((unsigned int*)(m_layers[z_order].fb))[y * m_width + x] : GL_RGB_16_to_32(((unsigned short*)(m_layers[z_order].fb))[y * m_width + x]);
+..\UIcode\GuiLite.h(339): warning:  #61-D: integer operation result is out of range
+  			return (m_color_bytes == 4) ? ((unsigned int*)m_fb)[y * m_width + x] : GL_RGB_16_to_32(((unsigned short*)m_fb)[y * m_width + x]);
+..\UIcode\GuiLite.h(339): warning:  #68-D: integer conversion resulted in a change of sign
+  			return (m_color_bytes == 4) ? ((unsigned int*)m_fb)[y * m_width + x] : GL_RGB_16_to_32(((unsigned short*)m_fb)[y * m_width + x]);
+..\UIcode\GuiLite.h(343): warning:  #61-D: integer operation result is out of range
+  			return (m_color_bytes == 4) ? ((unsigned int*)m_phy_fb)[y * m_width + x] : GL_RGB_16_to_32(((unsigned short*)m_phy_fb)[y * m_width + x]);
+..\UIcode\GuiLite.h(343): warning:  #68-D: integer conversion resulted in a change of sign
+  			return (m_color_bytes == 4) ? ((unsigned int*)m_phy_fb)[y * m_width + x] : GL_RGB_16_to_32(((unsigned short*)m_phy_fb)[y * m_width + x]);
+..\UIcode\GuiLite.h(530): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		ASSERT(z_order >= Z_ORDER_LEVEL_0 && z_order < Z_ORDER_LEVEL_MAX);
+..\UIcode\GuiLite.h(540): warning:  #61-D: integer operation result is out of range
+  				unsigned int rgb = (m_color_bytes == 4) ? ((unsigned int*)fb)[(x - layer_rect.m_left) + (y - layer_rect.m_top) * width] : GL_RGB_16_to_32(((unsigned short*)fb)[(x - layer_rect.m_left) + (y - layer_rect.m_top) * width]);
+..\UIcode\GuiLite.h(540): warning:  #68-D: integer conversion resulted in a change of sign
+  				unsigned int rgb = (m_color_bytes == 4) ? ((unsigned int*)fb)[(x - layer_rect.m_left) + (y - layer_rect.m_top) * width] : GL_RGB_16_to_32(((unsigned short*)fb)[(x - layer_rect.m_left) + (y - layer_rect.m_top) * width]);
+..\UIcode\GuiLite.h(635): warning:  #1293-D: assignment in condition
+  			ASSERT(m_layers[i].fb = calloc(layer_rect.width() * layer_rect.height(), m_color_bytes));
+..\UIcode\GuiLite.h(804): warning:  #61-D: integer operation result is out of range
+  				draw_pixel(x, y, GL_RGB_16_to_32(((unsigned short*)s0->m_fb)[y * m_width + x + offset]));
+..\UIcode\GuiLite.h(804): warning:  #68-D: integer conversion resulted in a change of sign
+  				draw_pixel(x, y, GL_RGB_16_to_32(((unsigned short*)s0->m_fb)[y * m_width + x + offset]));
+..\UIcode\GuiLite.h(809): warning:  #61-D: integer operation result is out of range
+  				draw_pixel(x, y, GL_RGB_16_to_32(((unsigned short*)s1->m_fb)[y * m_width + x + offset - x1 + x0]));
+..\UIcode\GuiLite.h(809): warning:  #68-D: integer conversion resulted in a change of sign
+  				draw_pixel(x, y, GL_RGB_16_to_32(((unsigned short*)s1->m_fb)[y * m_width + x + offset - x1 + x0]));
+..\UIcode\GuiLite.h(886): warning:  #1300-D: draw_string inherits implicit virtual
+  	void draw_string(c_surface* surface, int z_order, const void* string, int x, int y, const void* font, unsigned int font_color, unsigned int bg_color)
+..\UIcode\GuiLite.h(901): warning:  #1300-D: draw_string_in_rect inherits implicit virtual
+  	void draw_string_in_rect(c_surface* surface, int z_order, const void* string, c_rect rect, const void* font, unsigned int font_color, unsigned int bg_color, unsigned int align_type = ALIGN_LEFT)
+..\UIcode\GuiLite.h(912): warning:  #1300-D: draw_value inherits implicit virtual
+  	void draw_value(c_surface* surface, int z_order, int value, int dot_position, int x, int y, const void* font, unsigned int font_color, unsigned int bg_color)
+..\UIcode\GuiLite.h(918): warning:  #1300-D: draw_value_in_rect inherits implicit virtual
+  	void draw_value_in_rect(c_surface* surface, int z_order, int value, int dot_position, c_rect rect, const void* font, unsigned int font_color, unsigned int bg_color, unsigned int align_type = ALIGN_LEFT)
+..\UIcode\GuiLite.h(924): warning:  #1300-D: get_str_size inherits implicit virtual
+  	int get_str_size(const void *string, const void* font, int& width, int& height)
+..\UIcode\GuiLite.h(983): warning:  #61-D: integer operation result is out of range
+  			error_color = GL_RGB(255, 0, 0);
+..\UIcode\GuiLite.h(983): warning:  #68-D: integer conversion resulted in a change of sign
+  			error_color = GL_RGB(255, 0, 0);
+..\UIcode\GuiLite.h(1007): warning:  #61-D: integer operation result is out of range
+  		rgb = GL_RGB(r, g, b);
+..\UIcode\GuiLite.h(1007): warning:  #68-D: integer conversion resulted in a change of sign
+  		rgb = GL_RGB(r, g, b);
+..\UIcode\GuiLite.h(1031): warning:  #61-D: integer operation result is out of range
+  					rgb = GL_RGB(r, g, b);
+..\UIcode\GuiLite.h(1031): warning:  #68-D: integer conversion resulted in a change of sign
+  					rgb = GL_RGB(r, g, b);
+..\UIcode\GuiLite.h(1169): warning:  #61-D: integer operation result is out of range
+  						surface->draw_pixel(x_, y_, (color_bytes == 4) ? lower_fb_32[(y_ - lower_fb_rect.m_top) * lower_fb_width + (x_ - lower_fb_rect.m_left)] : GL_RGB_16_to_32(lower_fb_16[(y_ - lower_fb_rect.m_top) * lower_fb_width + (x_ - lower_fb_rect.m_left)]), z_order);
+..\UIcode\GuiLite.h(1169): warning:  #68-D: integer conversion resulted in a change of sign
+  						surface->draw_pixel(x_, y_, (color_bytes == 4) ? lower_fb_32[(y_ - lower_fb_rect.m_top) * lower_fb_width + (x_ - lower_fb_rect.m_left)] : GL_RGB_16_to_32(lower_fb_16[(y_ - lower_fb_rect.m_top) * lower_fb_width + (x_ - lower_fb_rect.m_left)]), z_order);
+..\UIcode\GuiLite.h(1174): warning:  #61-D: integer operation result is out of range
+  					surface->draw_pixel(x_, y_, GL_RGB_16_to_32(rgb), z_order);
+..\UIcode\GuiLite.h(1174): warning:  #68-D: integer conversion resulted in a change of sign
+  					surface->draw_pixel(x_, y_, GL_RGB_16_to_32(rgb), z_order);
+..\UIcode\GuiLite.h(1211): warning:  #61-D: integer operation result is out of range
+  						surface->draw_pixel(x + x_, y + y_, (color_bytes == 4) ? lower_fb_32[(y + y_ - lower_fb_rect.m_top) * lower_fb_width + x + x_ - lower_fb_rect.m_left] : GL_RGB_16_to_32(lower_fb_16[(y + y_ - lower_fb_rect.m_top) * lower_fb_width + x + x_ - lower_fb_rect.m_left]), z_order);
+..\UIcode\GuiLite.h(1211): warning:  #68-D: integer conversion resulted in a change of sign
+  						surface->draw_pixel(x + x_, y + y_, (color_bytes == 4) ? lower_fb_32[(y + y_ - lower_fb_rect.m_top) * lower_fb_width + x + x_ - lower_fb_rect.m_left] : GL_RGB_16_to_32(lower_fb_16[(y + y_ - lower_fb_rect.m_top) * lower_fb_width + x + x_ - lower_fb_rect.m_left]), z_order);
+..\UIcode\GuiLite.h(1216): warning:  #61-D: integer operation result is out of range
+  					surface->draw_pixel(x + x_, y + y_, GL_RGB_16_to_32(rgb), z_order);
+..\UIcode\GuiLite.h(1216): warning:  #68-D: integer conversion resulted in a change of sign
+  					surface->draw_pixel(x + x_, y + y_, GL_RGB_16_to_32(rgb), z_order);
+..\UIcode\GuiLite.h(1278): warning:  #1299-D: members and base-classes will be initialized in declaration order, not in member initialisation list order
+  		m_str(0), m_font_color(0), m_bg_color(0), m_id(0), m_z_order(Z_ORDER_LEVEL_0), m_focus_child(0), m_surface(0) {};
+..\UIcode\GuiLite.h(1278): warning:  #1299-D: members and base-classes will be initialized in declaration order, not in member initialisation list order
+  		m_str(0), m_font_color(0), m_bg_color(0), m_id(0), m_z_order(Z_ORDER_LEVEL_0), m_focus_child(0), m_surface(0) {};
+..\UIcode\GuiLite.h(1838): warning:  #61-D: integer operation result is out of range
+  		m_bg_color = GL_RGB(33, 42, 53);
+..\UIcode\GuiLite.h(1838): warning:  #68-D: integer conversion resulted in a change of sign
+  		m_bg_color = GL_RGB(33, 42, 53);
+..\UIcode\GuiLite.h(1847): warning:  #61-D: integer operation result is out of range
+  			c_word::draw_string(m_surface, m_z_order, m_str, rect.m_left + 35, rect.m_top, c_theme::get_font(FONT_DEFAULT), GL_RGB(255, 255, 255), GL_ARGB(0, 0, 0, 0));
+..\UIcode\GuiLite.h(1847): warning:  #68-D: integer conversion resulted in a change of sign
+  			c_word::draw_string(m_surface, m_z_order, m_str, rect.m_left + 35, rect.m_top, c_theme::get_font(FONT_DEFAULT), GL_RGB(255, 255, 255), GL_ARGB(0, 0, 0, 0));
+..\UIcode\GuiLite.h(1917): warning:  #997-D: function "c_wnd::connect(c_wnd *, unsigned short, const char *, short, short, short, short, WND_TREE *)"  is hidden by "c_keyboard::connect"  -- virtual function override intended?
+  	virtual int connect(c_wnd *user, unsigned short resource_id, KEYBOARD_STYLE style)
+..\UIcode\GuiLite.h(1964): warning:  #61-D: integer operation result is out of range
+  		m_surface->fill_rect(rect, GL_RGB(0, 0, 0), m_z_order);
+..\UIcode\GuiLite.h(1964): warning:  #68-D: integer conversion resulted in a change of sign
+  		m_surface->fill_rect(rect, GL_RGB(0, 0, 0), m_z_order);
+..\UIcode\GuiLite.h(2383): warning:  #61-D: integer operation result is out of range
+  			c_word::draw_string_in_rect(m_surface, m_z_order, m_item_array[m_selected_item], rect, m_font, GL_RGB(2, 124, 165), GL_ARGB(0, 0, 0, 0), ALIGN_HCENTER | ALIGN_VCENTER);
+..\UIcode\GuiLite.h(2383): warning:  #68-D: integer conversion resulted in a change of sign
+  			c_word::draw_string_in_rect(m_surface, m_z_order, m_item_array[m_selected_item], rect, m_font, GL_RGB(2, 124, 165), GL_ARGB(0, 0, 0, 0), ALIGN_HCENTER | ALIGN_VCENTER);
+..\UIcode\GuiLite.h(2465): warning:  #61-D: integer operation result is out of range
+  				m_surface->fill_rect(tmp_rect, GL_RGB(17, 17, 17), m_z_order);
+..\UIcode\GuiLite.h(2465): warning:  #68-D: integer conversion resulted in a change of sign
+  				m_surface->fill_rect(tmp_rect, GL_RGB(17, 17, 17), m_z_order);
+..\UIcode\GuiLite.h(2466): warning:  #61-D: integer operation result is out of range
+  				c_word::draw_string_in_rect(m_surface, m_z_order, m_item_array[i], tmp_rect, m_font, m_font_color, GL_RGB(17, 17, 17), ALIGN_HCENTER | ALIGN_VCENTER);
+..\UIcode\GuiLite.h(2466): warning:  #68-D: integer conversion resulted in a change of sign
+  				c_word::draw_string_in_rect(m_surface, m_z_order, m_item_array[i], tmp_rect, m_font, m_font_color, GL_RGB(17, 17, 17), ALIGN_HCENTER | ALIGN_VCENTER);
+..\UIcode\GuiLite.h(3195): warning:  #61-D: integer operation result is out of range
+  		m_wave_name_color = m_wave_unit_color = m_wave_color = GL_RGB(255, 0, 0);
+..\UIcode\GuiLite.h(3195): warning:  #68-D: integer conversion resulted in a change of sign
+  		m_wave_name_color = m_wave_unit_color = m_wave_color = GL_RGB(255, 0, 0);
+..\UIcode\GuiLite.h(3196): warning:  #61-D: integer operation result is out of range
+  		m_back_color = GL_RGB(0, 0, 0);
+..\UIcode\GuiLite.h(3196): warning:  #68-D: integer conversion resulted in a change of sign
+  		m_back_color = GL_RGB(0, 0, 0);
+..\UIcode\GuiLite.h(3334): warning:  #61-D: integer operation result is out of range
+  				cur_rgb = GL_RGB(cur_r, cur_g, cur_b);
+..\UIcode\GuiLite.h(3334): warning:  #68-D: integer conversion resulted in a change of sign
+  				cur_rgb = GL_RGB(cur_r, cur_g, cur_b);
+..\UIcode\GuiLite.h(3343): warning:  #61-D: integer operation result is out of range
+  				cur_rgb = GL_RGB(cur_r, cur_g, cur_b);
+..\UIcode\GuiLite.h(3343): warning:  #68-D: integer conversion resulted in a change of sign
+  				cur_rgb = GL_RGB(cur_r, cur_g, cur_b);
+..\UIcode\UIcode.cpp(53): warning:  #61-D: integer operation result is out of range
+  		p_wave->set_wave_color(GL_RGB(0, 255, 0));
+..\UIcode\UIcode.cpp(53): warning:  #68-D: integer conversion resulted in a change of sign
+  		p_wave->set_wave_color(GL_RGB(0, 255, 0));
+..\UIcode\UIcode.cpp(60): warning:  #61-D: integer operation result is out of range
+  		p_wave->set_wave_color(GL_RGB(41, 189, 189));
+..\UIcode\UIcode.cpp(60): warning:  #68-D: integer conversion resulted in a change of sign
+  		p_wave->set_wave_color(GL_RGB(41, 189, 189));
+..\UIcode\UIcode.cpp(67): warning:  #61-D: integer operation result is out of range
+  		p_wave->set_wave_color(GL_RGB(255, 255, 0));
+..\UIcode\UIcode.cpp(67): warning:  #68-D: integer conversion resulted in a change of sign
+  		p_wave->set_wave_color(GL_RGB(255, 255, 0));
+..\UIcode\UIcode.cpp(76): warning:  #61-D: integer operation result is out of range
+  		m_surface->fill_rect(rect, GL_RGB(33, 33, 33), m_z_order);
+..\UIcode\UIcode.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
+  		m_surface->fill_rect(rect, GL_RGB(33, 33, 33), m_z_order);
+..\UIcode\UIcode.cpp(125): warning:  #61-D: integer operation result is out of range
+  	c_theme::add_color(COLOR_WND_FONT, GL_RGB(255, 0, 0));
+..\UIcode\UIcode.cpp(125): warning:  #68-D: integer conversion resulted in a change of sign
+  	c_theme::add_color(COLOR_WND_FONT, GL_RGB(255, 0, 0));
+..\UIcode\UIcode.cpp(126): warning:  #61-D: integer operation result is out of range
+  	c_theme::add_color(COLOR_WND_NORMAL, GL_RGB(59, 75, 94));
+..\UIcode\UIcode.cpp(126): warning:  #68-D: integer conversion resulted in a change of sign
+  	c_theme::add_color(COLOR_WND_NORMAL, GL_RGB(59, 75, 94));
+..\UIcode\UIcode.cpp(127): warning:  #61-D: integer operation result is out of range
+  	c_theme::add_color(COLOR_WND_PUSHED, GL_RGB(33, 42, 53));
+..\UIcode\UIcode.cpp(127): warning:  #68-D: integer conversion resulted in a change of sign
+  	c_theme::add_color(COLOR_WND_PUSHED, GL_RGB(33, 42, 53));
+..\UIcode\UIcode.cpp(128): warning:  #61-D: integer operation result is out of range
+  	c_theme::add_color(COLOR_WND_FOCUS, GL_RGB(33, 42, 53));
+..\UIcode\UIcode.cpp(128): warning:  #68-D: integer conversion resulted in a change of sign
+  	c_theme::add_color(COLOR_WND_FOCUS, GL_RGB(33, 42, 53));
+..\UIcode\UIcode.cpp(129): warning:  #61-D: integer operation result is out of range
+  	c_theme::add_color(COLOR_WND_BORDER, GL_RGB(46, 59, 73));
+..\UIcode\UIcode.cpp(129): warning:  #68-D: integer conversion resulted in a change of sign
+  	c_theme::add_color(COLOR_WND_BORDER, GL_RGB(46, 59, 73));
+..\UIcode\UIcode.cpp: 75 warnings, 0 errors
 linking...
-Program Size: Code=30312 RO-data=1000 RW-data=128 ZI-data=5864  
+Program Size: Code=41328 RO-data=4356 RW-data=1840 ZI-data=21824  
 FromELF: creating hex file...
-"usb\usb.axf" - 0 Error(s), 0 Warning(s).
+"usb\usb.axf" - 0 Error(s), 75 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +207,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

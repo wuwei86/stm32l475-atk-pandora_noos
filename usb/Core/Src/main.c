@@ -25,6 +25,7 @@
 #include "usb_host.h"
 #include "elog.h"
 #include "bsp.h"
+#include "lcd.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -63,6 +64,20 @@ void MX_USB_HOST_Process(void);
 FATFS USBDISKFatFs;
 FIL MyFile;
 extern ApplicationTypeDef Appli_state;
+
+#define GL_RGB_32_to_16(rgb) (((((unsigned int)(rgb)) & 0xFF) >> 3) | ((((unsigned int)(rgb)) & 0xFC00) >> 5) | ((((unsigned int)(rgb)) & 0xF80000) >> 8))
+
+void gfx_draw_pixel(int x, int y, unsigned int rgb)
+{
+	LCD_Draw_ColorPoint(x, y, GL_RGB_32_to_16(rgb));
+}
+
+struct EXTERNAL_GFX_OP
+{
+	void (*draw_pixel)(int x, int y, unsigned int rgb);
+	void (*fill_rect)(int x0, int y0, int x1, int y1, unsigned int rgb);
+} my_gfx_op;
+extern void startHelloWave(void* phy_fb, int width, int height, int color_bytes, struct EXTERNAL_GFX_OP* gfx_op);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -207,6 +222,8 @@ int main(void)
   MX_USB_HOST_Init();
   MX_USART1_UART_Init();
 
+  LCD_Init();				//
+
   elog_init();
   elog_set_text_color_enabled(true);
 
@@ -227,6 +244,12 @@ int main(void)
   test_elog();
   printDebugMsg("hello");
   printDebugMsg("hello1111");
+	
+	my_gfx_op.draw_pixel = gfx_draw_pixel;
+	my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
+	startHelloWave(NULL, 240, 240, 2, &my_gfx_op);
+
+  //Display_ALIENTEK_LOGO(0, 0);
 
 	//printf("hello");
   /* USER CODE BEGIN 2 */

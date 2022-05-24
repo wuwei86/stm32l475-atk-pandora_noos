@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L475xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -411,6 +411,26 @@
               <FileName>bsp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\LCD\lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\SPI3\spi3.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\delay\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\sys\sys.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -725,6 +745,11 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2095,6 +2120,21 @@
               <FileName>elog_port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\easylogger\port\elog_port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UIcode</GroupName>
+          <Files>
+            <File>
+              <FileName>UIcode.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\UIcode\UIcode.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Lucida_Console_27.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\UIcode\resource\Lucida_Console_27.cpp</FilePath>
             </File>
           </Files>
         </Group>

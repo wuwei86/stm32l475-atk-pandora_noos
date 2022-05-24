@@ -4,6 +4,10 @@
 "usb\stm32l4xx_it.o"
 "usb\stm32l4xx_hal_msp.o"
 "usb\bsp.o"
+"usb\lcd.o"
+"usb\spi3.o"
+"usb\delay.o"
+"usb\sys.o"
 "usb\stm32l4xx_hal_hcd.o"
 "usb\stm32l4xx_ll_usb.o"
 "usb\stm32l4xx_hal.o"
@@ -25,6 +29,7 @@
 "usb\stm32l4xx_hal_tim_ex.o"
 "usb\stm32l4xx_hal_uart.o"
 "usb\stm32l4xx_hal_uart_ex.o"
+"usb\stm32l4xx_hal_spi.o"
 "usb\system_stm32l4xx.o"
 "usb\usbh_diskio.o"
 "usb\fatfs.o"
@@ -45,6 +50,8 @@
 "usb\elog.o"
 "usb\elog_utils.o"
 "usb\elog_port.o"
+"usb\uicode.o"
+"usb\lucida_console_27.o"
 --library_type=microlib --strict --scatter "usb\usb.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

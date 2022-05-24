@@ -31,6 +31,8 @@ usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h
 usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h
 usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h
 usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h
+usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h
+usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h
 usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h
 usb\main.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
 usb\main.o: ../FATFS/App/fatfs.h
@@ -58,3 +60,5 @@ usb\main.o: ..\easylogger\inc\elog.h
 usb\main.o: ..\easylogger\inc\elog_cfg.h
 usb\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 usb\main.o: ../Core/Inc/bsp.h
+usb\main.o: ..\Core\Inc\LCD\lcd.h
+usb\main.o: ..\Core\Inc\sys\sys.h
