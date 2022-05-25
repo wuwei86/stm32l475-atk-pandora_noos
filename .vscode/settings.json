@@ -9,5 +9,6 @@
         "stm32l4xx_hal_spi.h": "c",
         "alientek_log.h": "c",
         "cc.h": "c"
-    }
+    },
+    "cmake.configureOnOpen": false
 }

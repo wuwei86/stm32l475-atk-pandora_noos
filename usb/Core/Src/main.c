@@ -28,6 +28,9 @@
 #include "lcd.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "w25qxx.h"
+#include "delay.h"
+#include "sfud.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -179,7 +182,8 @@ static void MSC_Application(void)
 
 
 
-void test_elog(void) {
+void test_elog(void)
+ {
     /* test log output for all level */
     log_a("Hello EasyLogger!");
     log_e("Hello EasyLogger!");
@@ -188,6 +192,82 @@ void test_elog(void) {
     log_d("Hello EasyLogger!");
     log_v("Hello EasyLogger!");
 //    elog_raw("Hello EasyLogger!");
+}
+
+void elog_user_init(void)
+ {
+    elog_init();
+    elog_set_text_color_enabled(true);
+
+    /* 设置每个级别的日志输出格式 */
+    //输出所有内容
+    elog_set_fmt(ELOG_LVL_ASSERT, ELOG_FMT_ALL);
+    //输出日志级别信息和日志TAG
+    elog_set_fmt(ELOG_LVL_ERROR, ELOG_FMT_LVL | ELOG_FMT_TAG);
+    elog_set_fmt(ELOG_LVL_WARN, ELOG_FMT_LVL | ELOG_FMT_TAG);
+    elog_set_fmt(ELOG_LVL_INFO, ELOG_FMT_LVL | ELOG_FMT_TAG);
+    //除了时间、进程信息、线程信息之外，其余全部输出
+    elog_set_fmt(ELOG_LVL_DEBUG, ELOG_FMT_ALL & ~(ELOG_FMT_TIME | ELOG_FMT_P_INFO | ELOG_FMT_T_INFO));
+    //输出所有内容
+    elog_set_fmt(ELOG_LVL_VERBOSE, ELOG_FMT_ALL);
+
+    /* 启动elog */
+    elog_start();
+    test_elog();
+
+    printDebugMsg("hello");
+    printDebugMsg("hello1111");
+}
+
+//写入缓存数据
+const u8 TEXT_Buffer[] = {"wwww STM32L4 QSPI TEST"};
+#define SIZE sizeof(TEXT_Buffer)
+	
+#define FLASH_Buf_Address		0x00803000			//地址 预留给用户使用（1012K）
+u8 datatemp[SIZE];
+
+void sfud_user_init(void)
+{
+  sfud_err result = SFUD_SUCCESS;
+  const sfud_flash *flash = sfud_get_device(SFUD_NM25_DEVICE_INDEX);
+
+  if (sfud_init() == SFUD_SUCCESS)
+  {
+      /* enable qspi fast read mode, set four data lines width */
+      //sfud_qspi_fast_read_enable(sfud_get_device(SFUD_W25_DEVICE_INDEX), 4);
+      //sfud_demo(0, sizeof(sfud_demo_test_buf), sfud_demo_test_buf);
+      log_d("sfud_init() is SUCCESS");
+      result = sfud_read(flash, FLASH_Buf_Address, SIZE, datatemp);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("read flash data is %s",datatemp);   
+      }
+
+      //擦除
+      result = sfud_erase(flash, FLASH_Buf_Address,SIZE);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("erase flash data is %d",result);   
+      }
+
+      result = sfud_read(flash, FLASH_Buf_Address, SIZE, datatemp);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("read flash data is %s",datatemp);   
+      }
+
+      result = sfud_write(flash, FLASH_Buf_Address, SIZE, TEXT_Buffer);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("write flash data is %s",TEXT_Buffer);   
+      }
+
+      result = sfud_read(flash, FLASH_Buf_Address, SIZE, datatemp);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("read flash data is %s",datatemp);   
+      }
+  }   
 }
 
 /**
@@ -211,6 +291,9 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
+  delay_init(80); 			//时钟80M
+  uint32_t clk = 0;
+  clk = HAL_RCC_GetSysClockFreq();
 
   /* USER CODE BEGIN SysInit */
 
@@ -221,30 +304,18 @@ int main(void)
   MX_FATFS_Init();
   MX_USB_HOST_Init();
   MX_USART1_UART_Init();
-
+  elog_user_init();
   LCD_Init();				//
+  log_d("system clk is %d",clk);
 
-  elog_init();
-  elog_set_text_color_enabled(true);
+  W25QXX_Init();
+  //W25QXX_Write((u8*)TEXT_Buffer, FLASH_Buf_Address, SIZE);		//´ÓÖ¸¶¨µØÖ·´¦¿ªÊ¼,Ð´ÈëSIZE³¤¶ÈµÄÊý¾Ý
 
-  /* 设置每个级别的日志输出格式 */
-  //输出所有内容
-  elog_set_fmt(ELOG_LVL_ASSERT, ELOG_FMT_ALL);
-  //输出日志级别信息和日志TAG
-  elog_set_fmt(ELOG_LVL_ERROR, ELOG_FMT_LVL | ELOG_FMT_TAG);
-  elog_set_fmt(ELOG_LVL_WARN, ELOG_FMT_LVL | ELOG_FMT_TAG);
-  elog_set_fmt(ELOG_LVL_INFO, ELOG_FMT_LVL | ELOG_FMT_TAG);
-  //除了时间、进程信息、线程信息之外，其余全部输出
-  elog_set_fmt(ELOG_LVL_DEBUG, ELOG_FMT_ALL & ~(ELOG_FMT_TIME | ELOG_FMT_P_INFO | ELOG_FMT_T_INFO));
-  //输出所有内容
-  elog_set_fmt(ELOG_LVL_VERBOSE, ELOG_FMT_ALL);
+	//W25QXX_Read(datatemp, FLASH_Buf_Address, SIZE);					//´ÓÖ¸¶¨µØÖ·´¦¿ªÊ¼,¶Á³öSIZE¸ö×Ö½Ú
+  log_d("datatemp is %s",datatemp);
+  sfud_user_init();
+  
 
-  /* 启动elog */
-  elog_start();
-  test_elog();
-  printDebugMsg("hello");
-  printDebugMsg("hello1111");
-	
 	my_gfx_op.draw_pixel = gfx_draw_pixel;
 	my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
 	startHelloWave(NULL, 240, 240, 2, &my_gfx_op);

@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L475xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -431,6 +431,16 @@
               <FileName>sys.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\sys\sys.c</FilePath>
+            </File>
+            <File>
+              <FileName>w25qxx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\W25QXX\w25qxx.c</FilePath>
+            </File>
+            <File>
+              <FileName>qspi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\QSPI\qspi.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -750,6 +760,21 @@
               <FileName>stm32l4xx_hal_spi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_qspi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_qspi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_ll_utils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_ll_utils.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2135,6 +2160,26 @@
               <FileName>Lucida_Console_27.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\UIcode\resource\Lucida_Console_27.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>sfud</GroupName>
+          <Files>
+            <File>
+              <FileName>sfud.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SFUD\src\sfud.c</FilePath>
+            </File>
+            <File>
+              <FileName>sfud_sfdp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SFUD\src\sfud_sfdp.c</FilePath>
+            </File>
+            <File>
+              <FileName>sfud_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SFUD\port\sfud_port.c</FilePath>
             </File>
           </Files>
         </Group>
