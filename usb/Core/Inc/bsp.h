@@ -33,6 +33,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 
+extern UART_HandleTypeDef huart1;
 
  #define printDebugMsg(format, ...) printf("File:[%s], Line:%d ,Function:[%s]: " format "\r\n",__FILE__, __LINE__,__FUNCTION__,##__VA_ARGS__);
 

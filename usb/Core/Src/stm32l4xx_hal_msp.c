@@ -115,6 +115,10 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
     GPIO_InitStruct.Alternate = GPIO_AF7_USART1;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+     //串口接收中断优先级配置和使能
+		HAL_NVIC_SetPriority(USART1_IRQn,3,3);//设置中断优先级
+		HAL_NVIC_EnableIRQ(USART1_IRQn);//使能中断通道
+
   /* USER CODE BEGIN USART1_MspInit 1 */
 
   /* USER CODE END USART1_MspInit 1 */

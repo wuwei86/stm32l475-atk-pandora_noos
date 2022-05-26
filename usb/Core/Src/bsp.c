@@ -81,10 +81,19 @@ void MX_USART1_UART_Init(void)
   {
     Error_Handler();
   }
+  
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
 
+}
+
+//编写中断服务函数
+void USART1_IRQHandler(void)
+{
+	HAL_UART_IRQHandler(&huart1);
+	//由于调用一次中断，进入中断回调函数后，中断就结束了，所以还要开启中断
+	//HAL_UART_Receive_IT(&huart1,rdata,sizeof(rdata));//使能接收中断
 }
 
 /**

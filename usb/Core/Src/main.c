@@ -31,6 +31,8 @@
 #include "w25qxx.h"
 #include "delay.h"
 #include "sfud.h"
+#include "easyflash.h"
+#include "shell_port.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -267,9 +269,78 @@ void sfud_user_init(void)
       {
         log_d("read flash data is %s",datatemp);   
       }
+
+      result = sfud_write(flash, FLASH_Buf_Address+0xff, SIZE, TEXT_Buffer);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("write flash data is %s",TEXT_Buffer);   
+      }
+
+      result = sfud_read(flash, FLASH_Buf_Address, SIZE, datatemp);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("read flash data is %s",datatemp);   
+      }
+
+      result = sfud_read(flash, FLASH_Buf_Address+0xff, SIZE, datatemp);
+      if (result == SFUD_SUCCESS)
+      {
+        log_d("read flash data is %s",datatemp);   
+      }
   }   
 }
 
+static void test_env(void) 
+{
+  uint32_t i_boot_times = NULL;
+  uint32_t i_read_time = NULL;
+  char *c_old_boot_times, c_new_boot_times[11] = {0};
+  char *c_read_times;
+
+  /* get the boot count number from Env */
+  //通过环境变量的名字来获取其对应的值。（注意：此处的环境变量指代的已加载到内存中的环境变量）
+  c_old_boot_times = ef_get_env("boot_times");
+  assert_param(c_old_boot_times);
+  i_boot_times = atol(c_old_boot_times);
+  log_d("read i_boot_times %d times\n\r", i_boot_times);
+
+  ef_set_and_save_env("read_t","333");//设置环境变量成功后立刻保存。设置功能参考ef_set_env方法。（注意：此处的环境变量指代的任意创建，不需要加载到内存中）
+  c_read_times = ef_get_env("read_t");
+  assert_param(c_read_times);
+  i_read_time = atol(c_read_times);
+  log_d("read times %s", c_read_times);
+
+
+  /* boot count +1 */
+  i_boot_times ++;
+  log_d("The system now boot %d times\n\r", i_boot_times);
+  /* interger to string */
+  sprintf(c_new_boot_times,"%ld", i_boot_times);
+  log_d("c_new_boot_times is: %s", c_new_boot_times);
+  /* set and store the boot count number to Env */
+  //使用此方法可以实现对环境变量的增加、修改及删除功能。（注意：此处的环境变量指代的已加载到内存中的环境变量）
+  //default_env_set表中的环境变量
+  ef_set_env("boot_times", c_new_boot_times);
+  ef_save_env();//保存内存中的环境变量表到Flash中
+  //ef_read_env_value();
+  //ef_print_env();
+  ef_env_set_default();//将内存中的环境变量表重置为默认值。
+  //size_t size = ef_get_env_write_bytes();//获取当前环境变量写入到Flash的字节大小
+  //log_d("ef_get_env_write_bytes is: %d",size);
+  ef_set_and_save_env("device_id","123");//设置环境变量成功后立刻保存。设置功能参考ef_set_env方法。（注意：此处的环境变量指代的已加载到内存中的环境变量）
+  ef_print_env();
+}
+
+void easyflash_user_init(void)
+{
+  //easyflash_init会调用sfud_init
+  if (easyflash_init() == EF_NO_ERR)
+  {
+        /* test Env demo */
+        log_d("easyflash_init success");
+        test_env(); 
+  } 
+}
 /**
   * @brief  The application entry point.
   * @retval int
@@ -308,12 +379,17 @@ int main(void)
   LCD_Init();				//
   log_d("system clk is %d",clk);
 
+  userShellInit();
   W25QXX_Init();
   //W25QXX_Write((u8*)TEXT_Buffer, FLASH_Buf_Address, SIZE);		//´ÓÖ¸¶¨µØÖ·´¦¿ªÊ¼,Ð´ÈëSIZE³¤¶ÈµÄÊý¾Ý
 
-	//W25QXX_Read(datatemp, FLASH_Buf_Address, SIZE);					//´ÓÖ¸¶¨µØÖ·´¦¿ªÊ¼,¶Á³öSIZE¸ö×Ö½Ú
-  log_d("datatemp is %s",datatemp);
-  sfud_user_init();
+	W25QXX_Read(datatemp, FLASH_Buf_Address, SIZE);					//´ÓÖ¸¶¨µØÖ·´¦¿ªÊ¼,¶Á³öSIZE¸ö×Ö½Ú
+  log_d("datatemp is:   %s",datatemp);
+  elog_hexdump("datatemp",16,datatemp,SIZE);
+  //sfud_user_init();
+
+  easyflash_user_init();
+  
   
 
 	my_gfx_op.draw_pixel = gfx_draw_pixel;
