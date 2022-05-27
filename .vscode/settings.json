@@ -12,7 +12,9 @@
         "sfud.h": "c",
         "stdarg.h": "c",
         "easyflash.h": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "cjson.h": "c",
+        "shell_port.h": "c"
     },
     "cmake.configureOnOpen": false
 }

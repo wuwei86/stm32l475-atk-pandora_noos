@@ -33,6 +33,8 @@
 #include "sfud.h"
 #include "easyflash.h"
 #include "shell_port.h"
+#include "cJSON.h"
+#include "cJSON_Utils.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -390,7 +392,8 @@ int main(void)
 
   easyflash_user_init();
   
-  
+  extern int CJSON_CDECL cjson_main();
+  cjson_main();
 
 	my_gfx_op.draw_pixel = gfx_draw_pixel;
 	my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
