@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "elog.h": "c",
+        "usb_host.h": "c",
+        "fatfs.h": "c",
+        "stm32l4xx_hal.h": "c",
+        "sys.h": "c",
+        "stm32l4xx_hal_spi.h": "c",
+        "alientek_log.h": "c",
+        "cc.h": "c",
+        "sfud.h": "c",
+        "stdarg.h": "c",
+        "easyflash.h": "c",
+        "cmath": "c",
+        "cjson.h": "c",
+        "shell_port.h": "c"
+    },
+    "cmake.configureOnOpen": false
+}
