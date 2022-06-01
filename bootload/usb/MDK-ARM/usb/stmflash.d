@@ -1,0 +1,43 @@
+usb\stmflash.o: ..\Core\Src\STMFLASH\stmflash.c
+usb\stmflash.o: ..\Core\Inc\STMFLASH\stmflash.h
+usb\stmflash.o: ..\Core\Inc\sys\sys.h
+usb\stmflash.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h
+usb\stmflash.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l475xx.h
+usb\stmflash.o: ../Drivers/CMSIS/Include/core_cm4.h
+usb\stmflash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+usb\stmflash.o: ../Drivers/CMSIS/Include/cmsis_version.h
+usb\stmflash.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+usb\stmflash.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+usb\stmflash.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+usb\stmflash.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h
+usb\stmflash.o: ../Core/Inc/stm32l4xx_hal_conf.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h
+usb\stmflash.o: ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+usb\stmflash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio_ex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_crc.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_crc_ex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_exti.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash_ramfunc.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_hcd.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_i2c_ex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_qspi.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi_ex.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h
+usb\stmflash.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
+usb\stmflash.o: ..\Core\Inc\delay\delay.h
+usb\stmflash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
