@@ -14,7 +14,9 @@
         "easyflash.h": "c",
         "cmath": "c",
         "cjson.h": "c",
-        "shell_port.h": "c"
+        "shell_port.h": "c",
+        "elog_flash.h": "c",
+        "shell.h": "c"
     },
     "cmake.configureOnOpen": false
 }
