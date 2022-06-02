@@ -58,3 +58,5 @@ usb\fatfs.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scs
 usb\fatfs.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
 usb\fatfs.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 usb\fatfs.o: ../FATFS/Target/usbh_diskio.h
+usb\fatfs.o: ../FATFS/Target/sd_diskio.h
+usb\fatfs.o: ..\Core\Inc\SD_CARD\sd_card.h

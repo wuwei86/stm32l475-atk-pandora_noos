@@ -30,6 +30,7 @@ extern "C" {
 #include "stm32l4xx_hal.h"
 #include "common.h"
 
+
 #define LOG_VERSION_NUM                "1.0.0"
 #define COMPILE_TIME                    __DATE__","__TIME__
 #define PROJECT_NAME                   "stm32l475-atk-pandora_noos_app"

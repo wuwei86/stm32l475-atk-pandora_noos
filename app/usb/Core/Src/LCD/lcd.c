@@ -2,7 +2,7 @@
 #include "delay.h"
 #include "lcd.h"
 #include "font.h"
-#include "spi3.h"
+#include "spi.h"
 #include "grs.h"
 
 

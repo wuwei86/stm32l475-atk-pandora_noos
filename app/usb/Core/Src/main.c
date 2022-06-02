@@ -23,6 +23,7 @@
 #include "main.h"
 #include "fatfs.h"
 #include "usb_host.h"
+#include "sd_diskio.h"
 #include "elog.h"
 #include "elog_flash.h"
 #include "bsp.h"
@@ -31,6 +32,8 @@
 #include <stdlib.h>
 #include "w25qxx.h"
 #include "delay.h"
+#include "spi1.h"
+#include "sd_card.h"
 #include "sfud.h"
 #include "easyflash.h"
 #include "shell_port.h"
@@ -72,10 +75,15 @@
 // static void MX_USART1_UART_Init(void);
 void MX_USB_HOST_Process(void);
 
-FATFS USBDISKFatFs;
-FIL MyFile;
+// FATFS USBDISKFatFs;
+// FIL USBHFile;
+
+// FATFS SDDISKFatFs;
+// FIL SDFile;
+
 extern ApplicationTypeDef Appli_state;
 
+/* GUILITE使用 -----------------------------------------------*/
 #define GL_RGB_32_to_16(rgb) (((((unsigned int)(rgb)) & 0xFF) >> 3) | ((((unsigned int)(rgb)) & 0xFC00) >> 5) | ((((unsigned int)(rgb)) & 0xF80000) >> 8))
 
 void gfx_draw_pixel(int x, int y, unsigned int rgb)
@@ -89,6 +97,8 @@ struct EXTERNAL_GFX_OP
 	void (*fill_rect)(int x0, int y0, int x1, int y1, unsigned int rgb);
 } my_gfx_op;
 extern void startHelloWave(void* phy_fb, int width, int height, int color_bytes, struct EXTERNAL_GFX_OP* gfx_op);
+/* GUILITE使用 -----------------------------------------------*/
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -145,18 +155,74 @@ extern void startHelloWave(void* phy_fb, int width, int height, int color_bytes,
 //   /* USER CODE END 3 */
 // }
 
+void SD_Mount(void)
+{
+  FRESULT res;                                          /* FatFs function common result code */
+  uint32_t byteswriten;                   /* File write/read counts */
+  uint32_t bytesread;
+  uint8_t wtext[] = "The site is STM32cube.com working with FatFs\0"; /* File write buffer */
+  uint8_t rtext[100] = {0}; 
 
+  log_d("SDPath is: %s",SDPath);
+  res = f_mount(&SDFatFs, (TCHAR const*)SDPath, 1);
+  if(res != FR_OK)
+  {
+      log_d("SDPath f_mount is fail error code is :%d",res);
+      /* FatFs Initialization Error */
+      Error_Handler();
+  }
+  else
+  {
+      log_d("SDPath f_mount is success");
+      /* Create and Open a new text file object with write access */
+      res = f_open(&SDFile, "1:aa.TXT", FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+      log_d("SDPath f_open res is :%d",res);
+      if(res != FR_OK)
+      {
+          log_d("SDPath f_open is fail###res is :%d",res);
+          /* 'STM32.TXT' file Open for write Error */
+          Error_Handler();
+      }
+      else
+      {
+          log_d("SDPath f_open is success");
+          /* Write data to the text file */
+          res = f_write(&SDFile, wtext, sizeof(wtext), (void *)&byteswriten);
+
+          if((byteswriten == 0) || (res != FR_OK))
+          {
+              log_d("SDPath f_write is fail###res is :%d",res);
+              /* 'STM32.TXT' file Write or EOF Error */
+              Error_Handler();
+          }
+          else
+          {
+              log_d("SDPath f_write is success###res is :%d###byteswriten is: %d",res,byteswriten);
+              /* Close the open text file */
+              f_lseek(&SDFile, 0);//读取文件的时候必须要加上这一句，否则报错
+              res = f_read(&SDFile,rtext,100,&bytesread);
+              log_d("f_read is rtext is: %s",rtext);
+              log_d("f_read is fail error code is: %d",res);
+              /* Close the open text file */
+              res = f_close(&SDFile);
+              log_d("f_close is fail error code is: %d",res);
+          }
+      }
+  }
+}
 
 /* USER CODE BEGIN 4 */
 static void MSC_Application(void)
 {
     FRESULT res;                                          /* FatFs function common result code */
     uint32_t byteswriten;                   /* File write/read counts */
-    uint8_t wtext[] = "The site is STM32cube.com working with FatFs"; /* File write buffer */
-//  uint8_t rtext[100];                                   /* File read buffer */
-
+    uint32_t bytesread;
+    uint8_t wtext[] = "The site is STM32cube.com working with FatFs\0"; /* File write buffer */
+    uint8_t rtext[100] = {0};                                   /* File read buffer */
+    log_d("USBHPath is: %s",USBHPath);
+    
     /* Register the file system object to the FatFs module */
-    if(f_mount(&USBDISKFatFs, (TCHAR const*)USBHPath, 0) != FR_OK)
+    if(f_mount(&USBHFatFS, (TCHAR const*)USBHPath, 1) != FR_OK)
     {
         /* FatFs Initialization Error */
         Error_Handler();
@@ -164,31 +230,57 @@ static void MSC_Application(void)
     else
     {
         /* Create and Open a new text file object with write access */
-        if(f_open(&MyFile, "aa.TXT", FA_CREATE_ALWAYS | FA_WRITE) != FR_OK)
+        if(f_open(&USBHFile, "0:aa.TXT", FA_CREATE_ALWAYS | FA_WRITE | FA_READ) != FR_OK)
         {
+            log_d("USB f_open is fail");
             /* 'STM32.TXT' file Open for write Error */
             Error_Handler();
         }
         else
         {
+            log_d("USB f_open is success");
             /* Write data to the text file */
-            res = f_write(&MyFile, wtext, sizeof(wtext), (void *)&byteswriten);
+            res = f_write(&USBHFile, wtext, sizeof(wtext)+1, (void *)&byteswriten);
 
             if((byteswriten == 0) || (res != FR_OK))
             {
+                log_d("USB f_write is fail");
                 /* 'STM32.TXT' file Write or EOF Error */
                 Error_Handler();
             }
             else
             {
+                log_d("USB f_write is success");
+                f_lseek(&USBHFile, 0);//读取文件的时候必须要加上这一句，否则报错
+                res = f_read(&USBHFile,rtext,100,&bytesread);
+                log_d("f_read is rtext is: %s",rtext);
+                log_d("f_read is fail error code is: %d",res);
                 /* Close the open text file */
-                f_close(&MyFile);
+                res = f_close(&USBHFile);
+                log_d("f_close is fail error code is: %d",res);
             }
         }
     }
+    //SD_Mount();
 }
 
+static void user_usb_process(void)
+{
+  switch(Appli_state)
+  {
+    case APPLICATION_READY:
+      MSC_Application();
+      Appli_state = APPLICATION_DISCONNECT;
+      break;
 
+    case APPLICATION_DISCONNECT:
+      f_mount(NULL, (TCHAR const*)"", 0);
+
+      break;
+    default:
+      break;
+  }
+}
 
 void test_elog(void)
  {
@@ -358,10 +450,6 @@ void elogger_eflash_user_init(void)
   {
     elog_user_init(); 
     easyflash_user_init();
-
-    //把日志存储写入flash中
-    //log_d("COMPILE_TIME: %s--%s###LOG_VERSION_NUM: %s###PROJECT_NAME: %s.\n", __DATE__, __TIME__, LOG_VERSION_NUM,PROJECT_NAME);
-    
   }
 }
 
@@ -371,7 +459,7 @@ void elogger_eflash_user_init(void)
   */
 int main(void)
 {
-  SCB->VTOR = FLASH_BASE | 0x19000; //内部FLASH的向量表重定位
+  //SCB->VTOR = FLASH_BASE | 0x19000; //内部FLASH的向量表重定位
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -403,6 +491,7 @@ int main(void)
   printf(LOG_PROJECT_VERSION_MSG);//打印工程信息
   W25QXX_Init();
   LCD_Init();	
+  SD_Init();
   
   //elog_user_init();
   //easyflash_user_init();
@@ -412,35 +501,28 @@ int main(void)
 
   userShellInit();
   
-  //W25QXX_Write((u8*)TEXT_Buffer, FLASH_Buf_Address, SIZE);		//´ÓÖ¸¶¨µØÖ·´¦¿ªÊ¼,Ð´ÈëSIZE³¤¶ÈµÄÊý¾Ý
+  //W25QXX_Write((u8*)TEXT_Buffer, FLASH_Buf_Address, SIZE);		
 
-	W25QXX_Read(datatemp, FLASH_Buf_Address, SIZE);					//´ÓÖ¸¶¨µØÖ·´¦¿ªÊ¼,¶Á³öSIZE¸ö×Ö½Ú
+  W25QXX_Read(datatemp, FLASH_Buf_Address, SIZE);					
   log_d("datatemp is:   %s",datatemp);
   elog_hexdump("datatemp",16,datatemp,SIZE);
   //sfud_user_init();
 
-  //elog_a("savelog", "COMPILE_TIME: %s--%s###LOG_VERSION_NUM: %s###PROJECT_NAME: %s.\n", __DATE__, __TIME__, LOG_VERSION_NUM,PROJECT_NAME);
-  /* write all buffered log to flash */
-  //elog_flash_flush();
-  //读出所有日志
-  //elog_flash_output_recent(1024);
-  //elog_flash_output_all();
-  
+
   extern int CJSON_CDECL cjson_main();
   cjson_main();
 
-	my_gfx_op.draw_pixel = gfx_draw_pixel;
-	my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
-	startHelloWave(NULL, 240, 240, 2, &my_gfx_op);
+  //挂载sd卡并测试文件的打开及其写入关闭
+  SD_Mount();
+
+  //my_gfx_op.draw_pixel = gfx_draw_pixel;
+  //my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
+  //startHelloWave(NULL, 240, 240, 2, &my_gfx_op);
 
   //Display_ALIENTEK_LOGO(0, 0);
 
-	//printf("hello");
-  /* USER CODE BEGIN 2 */
 
-  /* USER CODE END 2 */
 
-  /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
@@ -448,20 +530,7 @@ int main(void)
     MX_USB_HOST_Process();
     
 
-     switch(Appli_state)
-      {
-        case APPLICATION_READY:
-          MSC_Application();
-          Appli_state = APPLICATION_DISCONNECT;
-          break;
-
-        case APPLICATION_DISCONNECT:
-          f_mount(NULL, (TCHAR const*)"", 0);
-
-          break;
-        default:
-          break;
-      }
+    user_usb_process();
 
     /* USER CODE BEGIN 3 */
   }

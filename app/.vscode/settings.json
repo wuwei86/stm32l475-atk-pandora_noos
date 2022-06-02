@@ -16,7 +16,13 @@
         "cjson.h": "c",
         "shell_port.h": "c",
         "elog_flash.h": "c",
-        "shell.h": "c"
+        "shell.h": "c",
+        "usbh_msc.h": "c",
+        "sd_card.h": "c",
+        "sd_diskio.h": "c",
+        "bsp.h": "c",
+        "spi3.h": "c",
+        "grs.h": "c"
     },
     "cmake.configureOnOpen": false
 }

@@ -274,7 +274,7 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x8019000</StartAddress>
+                <StartAddress>0x8000000</StartAddress>
                 <Size>0x67000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L475xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash;..\Core\Inc\SD_CARD;..\Core\Inc\SPI1;..\Core\Inc\SPI</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -418,11 +418,6 @@
               <FilePath>..\Core\Src\LCD\lcd.c</FilePath>
             </File>
             <File>
-              <FileName>spi3.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\SPI3\spi3.c</FilePath>
-            </File>
-            <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\delay\delay.c</FilePath>
@@ -451,6 +446,16 @@
               <FileName>user_cmd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\user_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>sd_card.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\SD_CARD\sd_card.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\SPI\spi.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -925,6 +930,11 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
+            </File>
+            <File>
+              <FileName>sd_diskio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FATFS\Target\sd_diskio.c</FilePath>
             </File>
           </Files>
         </Group>

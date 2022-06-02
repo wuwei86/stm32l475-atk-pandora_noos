@@ -58,6 +58,8 @@ usb\main.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi
 usb\main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
 usb\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 usb\main.o: ../FATFS/Target/usbh_diskio.h
+usb\main.o: ../FATFS/Target/sd_diskio.h
+usb\main.o: ..\Core\Inc\SD_CARD\sd_card.h
 usb\main.o: ../USB_HOST/App/usb_host.h
 usb\main.o: ..\easylogger\inc\elog.h
 usb\main.o: ..\easylogger\inc\elog_cfg.h
@@ -68,6 +70,7 @@ usb\main.o: ../Core/Inc/bsp.h
 usb\main.o: ..\Core\Inc\LCD\lcd.h
 usb\main.o: ..\Core\Inc\W25QXX\w25qxx.h
 usb\main.o: ..\Core\Inc\delay\delay.h
+usb\main.o: ..\Core\Inc\SPI1\spi1.h
 usb\main.o: ..\SFUD\inc\sfud.h
 usb\main.o: ..\SFUD\inc\sfud_def.h
 usb\main.o: ..\SFUD\inc\sfud_cfg.h

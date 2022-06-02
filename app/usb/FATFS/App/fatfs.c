@@ -19,9 +19,14 @@
 #include "fatfs.h"
 
 uint8_t retUSBH;    /* Return value for USBH */
+uint8_t retSD;    /* Return value for SDCARD */
 char USBHPath[4];   /* USBH logical drive path */
+char SDPath[4];   /* USBH logical drive path */
 FATFS USBHFatFS;    /* File system object for USBH logical drive */
 FIL USBHFile;       /* File object for USBH */
+
+FATFS SDFatFs;
+FIL SDFile;
 
 /* USER CODE BEGIN Variables */
 
@@ -30,8 +35,8 @@ FIL USBHFile;       /* File object for USBH */
 void MX_FATFS_Init(void)
 {
   /*## FatFS: Link the USBH driver ###########################*/
-  retUSBH = FATFS_LinkDriver(&USBH_Driver, USBHPath);
-
+  retUSBH = FATFS_LinkDriver(&USBH_Driver, USBHPath);//磁盘路径为0:
+  retSD = FATFS_LinkDriver(&SDCARD_Driver, SDPath);//磁盘路径为1:
   /* USER CODE BEGIN Init */
   /* additional user code for init */
   /* USER CODE END Init */

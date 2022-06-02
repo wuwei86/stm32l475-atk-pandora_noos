@@ -39,5 +39,5 @@ usb\lcd.o: ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
 usb\lcd.o: ..\Core\Inc\delay\delay.h
 usb\lcd.o: ..\Core\Inc\LCD\lcd.h
 usb\lcd.o: ..\Core\Inc\LCD\font.h
-usb\lcd.o: ..\Core\Inc\SPI3\spi3.h
+usb\lcd.o: ..\Core\Inc\SPI\spi.h
 usb\lcd.o: ..\Core\Inc\LCD\grs.h

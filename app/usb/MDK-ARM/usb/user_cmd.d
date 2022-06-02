@@ -58,6 +58,8 @@ usb\user_cmd.o: ../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_
 usb\user_cmd.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
 usb\user_cmd.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 usb\user_cmd.o: ../FATFS/Target/usbh_diskio.h
+usb\user_cmd.o: ../FATFS/Target/sd_diskio.h
+usb\user_cmd.o: ..\Core\Inc\SD_CARD\sd_card.h
 usb\user_cmd.o: ../USB_HOST/App/usb_host.h
 usb\user_cmd.o: ..\easylogger\inc\elog.h
 usb\user_cmd.o: ..\easylogger\inc\elog_cfg.h

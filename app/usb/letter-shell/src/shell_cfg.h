@@ -169,7 +169,7 @@
 /**
  * @brief shell默认用户
  */
-#define     SHELL_DEFAULT_USER          "letter"
+#define     SHELL_DEFAULT_USER          "stm32l475-atk-pandora"
 
 /**
  * @brief shell默认用户密码
