@@ -301,7 +301,7 @@ static void user_usb_process(void)
 
       break;
     default:          
-      break;        
+      break;         
   }
 }
 

@@ -26,7 +26,7 @@ FATFS USBHFatFS;    /* File system object for USBH logical drive */
 FIL USBHFile;       /* File object for USBH */
 
 FATFS SDFatFs;
-FIL SDFile;
+FIL SDFile;    
 
 /* USER CODE BEGIN Variables */
 
