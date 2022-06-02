@@ -2,4 +2,4 @@
 *.dep
 *.d
 *.crf
-/app/usb/MDK-ARM/usb/:
+app/usb/MDK-ARM/usb/
