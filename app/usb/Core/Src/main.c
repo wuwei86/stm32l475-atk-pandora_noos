@@ -188,7 +188,6 @@ void SD_Mount(void)
           log_d("SDPath f_open is success");
           /* Write data to the text file */
           res = f_write(&SDFile, wtext, sizeof(wtext), (void *)&byteswriten);
-
           if((byteswriten == 0) || (res != FR_OK))
           {
               log_d("SDPath f_write is fail###res is :%d",res);
@@ -260,7 +259,31 @@ static void MSC_Application(void)
                 log_d("f_close is fail error code is: %d",res);
             }
         }
+
+        res = f_open(&USBHFile, "0:bb.TXT", FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+        if(res != FR_OK)
+        {
+            log_e("f_open is fail error code is: %d",res);
+            res = f_close(&USBHFile);
+            log_d("f_close is fail error code is: %d",res);
+        }
+        else
+        {
+            res = f_write(&USBHFile, wtext, sizeof(wtext)+1, (void *)&byteswriten);
+            if(res == FR_OK)
+            {
+                log_d("f_write is success");
+            }
+            else
+            {
+                log_e("f_write is fail error code is: %d",res);
+            }
+            res = f_close(&USBHFile);
+            log_d("f_close is fail error code is: %d",res);
+        }
     }
+
+    
     //SD_Mount();
 }
 
@@ -270,11 +293,11 @@ static void user_usb_process(void)
   {
     case APPLICATION_READY:
       MSC_Application();
-      Appli_state = APPLICATION_DISCONNECT;
+      Appli_state = APPLICATION_DISCONNECT;//联上去后立即断开并卸载文件系统
       break;
 
     case APPLICATION_DISCONNECT:
-      f_mount(NULL, (TCHAR const*)"", 0);
+      //f_mount(NULL, (TCHAR const*)"", 0);
 
       break;
     default:

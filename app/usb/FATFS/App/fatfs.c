@@ -37,6 +37,8 @@ void MX_FATFS_Init(void)
   /*## FatFS: Link the USBH driver ###########################*/
   retUSBH = FATFS_LinkDriver(&USBH_Driver, USBHPath);//磁盘路径为0:
   retSD = FATFS_LinkDriver(&SDCARD_Driver, SDPath);//磁盘路径为1:
+  
+  
   /* USER CODE BEGIN Init */
   /* additional user code for init */
   /* USER CODE END Init */

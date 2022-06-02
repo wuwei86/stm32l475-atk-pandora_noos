@@ -3,7 +3,7 @@
 <title>Static Call Graph - [usb\usb.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image usb\usb.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Jun 02 17:40:02 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Jun 02 18:30:42 2022
 <BR><P>
 <H3>Maximum Stack Usage =        936 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -532,6 +532,7 @@ Global Symbols
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_Application
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
 <LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_env
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_HCD_MspInit
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_flash_output
@@ -565,6 +566,7 @@ Global Symbols
 <LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ef_set_env
 <LI><a href="#[216]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ef_set_and_save_env
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ef_env_set_default
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_write_file
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_write_file
 <LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_env
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_env_cb
@@ -1474,20 +1476,22 @@ Global Symbols
 <P><STRONG><a name="[8e]"></a>SDCARD_ioctl</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, sd_diskio.o(i.SDCARD_ioctl))
 <BR>[Address Reference Count : 1]<UL><LI> sd_diskio.o(.constdata)
 </UL>
-<P><STRONG><a name="[8c]"></a>SDCARD_read</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, sd_diskio.o(i.SDCARD_read))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = SDCARD_read &rArr; SD_ReadDisk &rArr; SD_SendCmd &rArr; SD_Select &rArr; SD_WaitReady &rArr; SD_SPI_ReadWriteByte &rArr; SPI1_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
+<P><STRONG><a name="[8c]"></a>SDCARD_read</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, sd_diskio.o(i.SDCARD_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = SDCARD_read &rArr; SD_Init &rArr; SD_SendCmd &rArr; SD_Select &rArr; SD_WaitReady &rArr; SD_SPI_ReadWriteByte &rArr; SPI1_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_ReadDisk
+<BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Init
+<LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_ReadDisk
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> sd_diskio.o(.constdata)
 </UL>
 <P><STRONG><a name="[8b]"></a>SDCARD_status</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, sd_diskio.o(i.SDCARD_status))
 <BR>[Address Reference Count : 1]<UL><LI> sd_diskio.o(.constdata)
 </UL>
-<P><STRONG><a name="[8d]"></a>SDCARD_write</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, sd_diskio.o(i.SDCARD_write))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = SDCARD_write &rArr; SD_WriteDisk &rArr; SD_SendCmd &rArr; SD_Select &rArr; SD_WaitReady &rArr; SD_SPI_ReadWriteByte &rArr; SPI1_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
+<P><STRONG><a name="[8d]"></a>SDCARD_write</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, sd_diskio.o(i.SDCARD_write))
+<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = SDCARD_write &rArr; SD_Init &rArr; SD_SendCmd &rArr; SD_Select &rArr; SD_WaitReady &rArr; SD_SPI_ReadWriteByte &rArr; SPI1_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_WriteDisk
+<BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Init
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_WriteDisk
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> sd_diskio.o(.constdata)
 </UL>
@@ -1523,6 +1527,8 @@ Global Symbols
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_DisSelect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDCARD_write
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDCARD_read
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDCARD_initialize
 </UL>
 
@@ -1694,7 +1700,8 @@ Global Symbols
 <P><STRONG><a name="[26a]"></a>Str2Int</STRONG> (Thumb, 184 bytes, Stack size 20 bytes, common.o(i.Str2Int))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Str2Int
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_read_file
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_read_file
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_recent_log
 </UL>
 
@@ -3061,9 +3068,7 @@ Global Symbols
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_buf_unlock
 <LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_buf_lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_write_file
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clean_log
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clean_log
 </UL>
 
 <P><STRONG><a name="[21c]"></a>elog_flash_flush</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, elog_flash.o(i.elog_flash_flush))
@@ -3235,6 +3240,8 @@ Global Symbols
 <LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_flash_flush
 <LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_flash_clean
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_log
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_write_file
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_write_file
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_read_file
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_flash_output
@@ -3380,6 +3387,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_Application
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_write_file
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_write_file
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_read_file
 </UL>
@@ -3397,6 +3406,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_Application
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_read_file
 </UL>
 
@@ -3407,8 +3417,7 @@ Global Symbols
 <LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_volume
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clear_lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
+<BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_Application
 </UL>
 
@@ -3435,6 +3444,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_Application
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_write_file
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_write_file
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_read_file
 </UL>
@@ -3452,6 +3463,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_Application
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_read_file
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_read_file
 </UL>
 
@@ -3483,6 +3495,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Mount
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_Application
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usb_write_file
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_write_file
 </UL>
 
@@ -3494,11 +3507,10 @@ Global Symbols
 <LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
 </UL>
 
-<P><STRONG><a name="[68]"></a>main</STRONG> (Thumb, 182 bytes, Stack size 16 bytes, main.o(i.main))
+<P><STRONG><a name="[68]"></a>main</STRONG> (Thumb, 166 bytes, Stack size 16 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 896<LI>Call Chain = main &rArr; elogger_eflash_user_init &rArr; easyflash_init &rArr; ef_env_init &rArr; ef_load_env &rArr; ef_env_set_default &rArr; create_env_blob &rArr; new_env &rArr; gc_collect &rArr; sector_iterator &rArr; read_sector_meta_data &rArr; read_env &rArr; write_status &rArr; ef_port_write &rArr; sfud_write &rArr; aai_write &rArr; page256_or_1_byte_write &rArr; set_write_enabled &rArr; sfud_read_status &rArr; sfud_log_debug &rArr; vsnprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;userShellInit
-<LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mount
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_hexdump
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
@@ -3997,9 +4009,9 @@ Global Symbols
 <P><STRONG><a name="[292]"></a>shellSetVarValue</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, shell.o(i.shellSetVarValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = shellSetVarValue &rArr; shellShowVar &rArr; shellToDec
 </UL>
-<BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
+<BR>[Calls]<UL><LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellShowVar
 <LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellSetVar
 </UL>
@@ -4007,15 +4019,15 @@ Global Symbols
 <P><STRONG><a name="[9d]"></a>shellTab</STRONG> (Thumb, 248 bytes, Stack size 40 bytes, shell.o(i.shellTab))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = shellTab &rArr; shellListCommand &rArr; shellListItem &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[294]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCompare
-<LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
+<BR>[Calls]<UL><LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellGetCommandName
 <LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 <LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListItem
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellListCommand
 <LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
 <LI><a href="#[284]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellCheckPermission
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWritePrompt
+<LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
+<LI><a href="#[294]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCompare
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> shell.o(shellCommand)
 </UL>
@@ -4086,17 +4098,27 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_user_init
 </UL>
 
-<P><STRONG><a name="[97]"></a>usb_read_file</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, user_cmd.o(i.usb_read_file))
-<BR><BR>[Stack]<UL><LI>Max Depth = 512<LI>Call Chain = usb_read_file &rArr; elog_flash_clean &rArr; elog_output &rArr;  elog_output (Cycle)
+<P><STRONG><a name="[97]"></a>usb_read_file</STRONG> (Thumb, 248 bytes, Stack size 168 bytes, user_cmd.o(i.usb_read_file))
+<BR><BR>[Stack]<UL><LI>Max Depth = 640<LI>Call Chain = usb_read_file &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_flash_clean
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_read
+<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_lseek
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_close
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Str2Int
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_cmd.o(shellCommand)
 </UL>
-<P><STRONG><a name="[96]"></a>usb_write_file</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, user_cmd.o(i.usb_write_file))
-<BR><BR>[Stack]<UL><LI>Max Depth = 512<LI>Call Chain = usb_write_file &rArr; elog_flash_clean &rArr; elog_output &rArr;  elog_output (Cycle)
+<P><STRONG><a name="[96]"></a>usb_write_file</STRONG> (Thumb, 202 bytes, Stack size 32 bytes, user_cmd.o(i.usb_write_file))
+<BR><BR>[Stack]<UL><LI>Max Depth = 504<LI>Call Chain = usb_write_file &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_flash_clean
+<BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
+<LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_close
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;elog_output
+<LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> user_cmd.o(shellCommand)
 </UL>
@@ -4127,7 +4149,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[137]"></a>MSC_Application</STRONG> (Thumb, 264 bytes, Stack size 176 bytes, main.o(i.MSC_Application))
+<P><STRONG><a name="[137]"></a>MSC_Application</STRONG> (Thumb, 410 bytes, Stack size 176 bytes, main.o(i.MSC_Application))
 <BR><BR>[Stack]<UL><LI>Max Depth = 648<LI>Call Chain = MSC_Application &rArr; elog_output &rArr;  elog_output (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
@@ -5417,9 +5439,9 @@ Local Symbols
 <P><STRONG><a name="[275]"></a>shellHistory</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, shell.o(i.shellHistory))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = shellHistory &rArr; shellClearCommandLine &rArr; shellDeleteCommandLine &rArr; shellWriteString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
-<LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
+<BR>[Calls]<UL><LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellWriteString
 <LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellClearCommandLine
+<LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellStringCopy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellUp
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shellDown

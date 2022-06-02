@@ -111,7 +111,7 @@ int sd_write_file(int argc, char *agrv[])
 
     //log_d("argc is %d",argc);//加上函数和参数，总计的个数
     
-    res = f_open(&SDFile, (const TCHAR*)agrv[1], FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+    res = f_open(&SDFile, (const TCHAR*)agrv[1], FA_CREATE_ALWAYS | FA_WRITE);
     if(res != FR_OK)
     {
         log_e("f_open is fail error code is: %d",res);
@@ -150,7 +150,7 @@ int sd_read_file(int argc, char *agrv[])
     log_d("agrv2 is %s",agrv[2]);//参数2,读取文件的长度
     //log_d("agrv2 len is %d",strlen(agrv[2]));//参数2长度
 
-    res = f_open(&SDFile, (const TCHAR*)agrv[1], FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+    res = f_open(&SDFile, (const TCHAR*)agrv[1], FA_CREATE_ALWAYS | FA_READ);
     if(res != FR_OK)
     {
         log_e("f_open is fail error code is: %d",res);
@@ -178,10 +178,41 @@ int sd_read_file(int argc, char *agrv[])
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), sd_read_file, sd_read_file, sd_read_file);
 
-//usb
+//usb//由于lettershell的问题，写入的数据长度最多只能8
 int usb_write_file(int argc, char *agrv[])
 {
-    elog_flash_clean();
+    FRESULT res;                                        
+    uint32_t byteswriten;
+
+    log_d("agrv1 is %s",agrv[1]);//参数1,文件名(例子：1:aa.txt)sd卡前面是1:，usb前面0:
+    //log_d("agrv1 len is %d",strlen(agrv[1]));//参数1长度
+
+    log_d("agrv2 is %s",agrv[2]);//参数2,写入的数据（字符串）
+    //log_d("agrv2 len is %d",strlen(agrv[2]));//参数2长度
+
+    //log_d("argc is %d",argc);//加上函数和参数，总计的个数
+    
+    res = f_open(&USBHFile, (const TCHAR*)agrv[1], FA_CREATE_ALWAYS | FA_WRITE);
+    if(res != FR_OK)
+    {
+        log_e("f_open is fail error code is: %d",res);
+        res = f_close(&USBHFile);
+        log_d("f_close is fail error code is: %d",res);
+    }
+    else
+    {
+         res = f_write(&USBHFile, agrv[2], strlen(agrv[1]), (void *)&byteswriten);
+        if(res == FR_OK)
+        {
+            log_d("f_write is success### write data is: %s###byteswriten is: %d",agrv[2],byteswriten);
+        }
+        else
+        {
+            log_e("f_write is fail error code is: %d",res);
+        }
+        res = f_close(&USBHFile);
+        log_d("f_close is fail error code is: %d",res);
+    }
     return 0;
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), usb_write_file, usb_write_file, usb_write_file);
@@ -189,7 +220,41 @@ SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), us
 //读取文件
 int usb_read_file(int argc, char *agrv[])
 {
-    elog_flash_clean();
+    uint32_t size = 0;
+    uint8_t readbuf[128] = {0};
+    FRESULT res;                                        
+    uint32_t bytesread;//读指针的位置
+
+    log_d("agrv1 is %s",agrv[1]);//参数1,文件名
+    //log_d("agrv1 len is %d",strlen(agrv[1]));//参数1长度
+
+    log_d("agrv2 is %s",agrv[2]);//参数2,读取文件的长度
+    //log_d("agrv2 len is %d",strlen(agrv[2]));//参数2长度
+
+    res = f_open(&USBHFile, (const TCHAR*)agrv[1], FA_READ);
+    if(res != FR_OK)
+    {
+        log_e("f_open is fail error code is: %d",res);
+        res = f_close(&USBHFile);
+        log_d("f_close is fail error code is: %d",res);
+    }
+    else
+    {
+        Str2Int((uint8_t*)agrv[2],&size);//字符串转数字
+        log_d("read size is: %d Pointer to number of bytes read is: %d",size,bytesread);
+        f_lseek(&USBHFile, 0);//读取文件的时候必须要加上这一句，否则报错
+        res = f_read(&USBHFile,readbuf,size,&bytesread);
+        if(res == FR_OK)
+        {
+            log_d("readbuf is: %s",readbuf);
+        }
+        else
+        {
+            log_e("f_read is fail error code is: %d",res);
+        }
+        res = f_close(&USBHFile);
+        log_d("f_close is fail error code is: %d",res);
+    }
     return 0;
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), usb_read_file, usb_read_file, usb_read_file);
