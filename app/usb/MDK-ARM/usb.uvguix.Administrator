@@ -3687,9 +3687,9 @@
       </Doc>
       <Doc>
         <Name>..\Core\Src\user_cmd.c</Name>
-        <ColumnNumber>5</ColumnNumber>
+        <ColumnNumber>54</ColumnNumber>
         <TopLine>217</TopLine>
-        <CurrentLine>242</CurrentLine>
+        <CurrentLine>232</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>

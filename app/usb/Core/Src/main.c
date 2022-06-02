@@ -301,11 +301,11 @@ static void user_usb_process(void)
 
       break;
     default:          
-      break;  
+      break;        
   }
 }
 
-void test_elog(void)
+void test_elog(void) 
  {
     /* test log output for all level */
     log_a("Hello EasyLogger!");
