@@ -300,7 +300,7 @@ static void user_usb_process(void)
       //f_mount(NULL, (TCHAR const*)"", 0);
 
       break;
-    default:
+    default:   
       break;
   }
 }

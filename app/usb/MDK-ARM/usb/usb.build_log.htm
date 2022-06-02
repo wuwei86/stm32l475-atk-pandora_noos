@@ -30,11 +30,15 @@ Project File Date:  06/02/2022
   
 Build target 'usb'
 compiling user_cmd.c...
+compiling main.c...
+../Core/Src/main.c(419): warning:  #550-D: variable "i_read_time"  was set but never used
+    uint32_t i_read_time = NULL;
+../Core/Src/main.c: 1 warning, 0 errors
 linking...
-Program Size: Code=67156 RO-data=7148 RW-data=1692 ZI-data=25852  
+Program Size: Code=67152 RO-data=7148 RW-data=1692 ZI-data=25852  
 FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin -o "usb.bin"  "usb\usb.axf"
-"usb\usb.axf" - 0 Error(s), 0 Warning(s).
+"usb\usb.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 

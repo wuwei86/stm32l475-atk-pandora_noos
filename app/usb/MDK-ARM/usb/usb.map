@@ -5816,203 +5816,203 @@ Image Symbol Table
     i.update_sector_cache                    0x08010098   Section        0  ef_env.o(i.update_sector_cache)
     update_sector_cache                      0x08010099   Thumb Code    90  ef_env.o(i.update_sector_cache)
     i.usb_read_file                          0x080100f8   Section        0  user_cmd.o(i.usb_read_file)
-    i.usb_write_file                         0x080102ec   Section        0  user_cmd.o(i.usb_write_file)
-    i.userShellInit                          0x080104ac   Section        0  shell_port.o(i.userShellInit)
-    i.userShellWrite                         0x080104e0   Section        0  shell_port.o(i.userShellWrite)
-    i.validate                               0x080104fc   Section        0  ff.o(i.validate)
-    validate                                 0x080104fd   Thumb Code    56  ff.o(i.validate)
-    i.wait_busy                              0x08010534   Section        0  sfud.o(i.wait_busy)
-    wait_busy                                0x08010535   Thumb Code    92  sfud.o(i.wait_busy)
-    i.write_log                              0x080105f8   Section        0  user_cmd.o(i.write_log)
-    i.write_sector_status                    0x080106d8   Section        0  ef_log.o(i.write_sector_status)
-    write_sector_status                      0x080106d9   Thumb Code    62  ef_log.o(i.write_sector_status)
-    i.write_status                           0x0801071c   Section        0  ef_env.o(i.write_status)
-    write_status                             0x0801071d   Thumb Code    84  ef_env.o(i.write_status)
-    .constdata                               0x080107dc   Section      122  main.o(.constdata)
-    __FUNCTION__                             0x080107dc   Data           5  main.o(.constdata)
-    __FUNCTION__                             0x080107f8   Data           9  main.o(.constdata)
-    __FUNCTION__                             0x08010801   Data          16  main.o(.constdata)
-    __FUNCTION__                             0x08010811   Data          10  main.o(.constdata)
-    __FUNCTION__                             0x0801081b   Data          15  main.o(.constdata)
-    __FUNCTION__                             0x0801082a   Data          15  main.o(.constdata)
-    __FUNCTION__                             0x08010839   Data           9  main.o(.constdata)
-    __FUNCTION__                             0x08010842   Data          20  main.o(.constdata)
-    .constdata                               0x08010856   Section       12  w25qxx.o(.constdata)
-    __FUNCTION__                             0x08010856   Data          12  w25qxx.o(.constdata)
-    .constdata                               0x08010862   Section        7  user_cmd.o(.constdata)
-    .constdata                               0x08010869   Section        7  user_cmd.o(.constdata)
-    .constdata                               0x08010870   Section       10  user_cmd.o(.constdata)
-    .constdata                               0x0801087a   Section       10  user_cmd.o(.constdata)
-    .constdata                               0x08010884   Section       16  user_cmd.o(.constdata)
-    .constdata                               0x08010894   Section       16  user_cmd.o(.constdata)
-    .constdata                               0x080108a4   Section       13  user_cmd.o(.constdata)
-    .constdata                               0x080108b1   Section       13  user_cmd.o(.constdata)
-    .constdata                               0x080108be   Section       10  user_cmd.o(.constdata)
-    .constdata                               0x080108c8   Section       10  user_cmd.o(.constdata)
-    .constdata                               0x080108d2   Section       14  user_cmd.o(.constdata)
-    .constdata                               0x080108e0   Section       14  user_cmd.o(.constdata)
-    .constdata                               0x080108ee   Section       13  user_cmd.o(.constdata)
-    .constdata                               0x080108fb   Section       13  user_cmd.o(.constdata)
-    .constdata                               0x08010908   Section       15  user_cmd.o(.constdata)
-    .constdata                               0x08010917   Section       15  user_cmd.o(.constdata)
-    .constdata                               0x08010926   Section       14  user_cmd.o(.constdata)
-    .constdata                               0x08010934   Section       14  user_cmd.o(.constdata)
-    .constdata                               0x08010942   Section       66  user_cmd.o(.constdata)
-    __FUNCTION__                             0x08010942   Data          10  user_cmd.o(.constdata)
-    __FUNCTION__                             0x0801094c   Data          14  user_cmd.o(.constdata)
-    __FUNCTION__                             0x0801095a   Data          13  user_cmd.o(.constdata)
-    __FUNCTION__                             0x08010967   Data          15  user_cmd.o(.constdata)
-    __FUNCTION__                             0x08010976   Data          14  user_cmd.o(.constdata)
-    .constdata                               0x08010984   Section       64  system_stm32l4xx.o(.constdata)
-    .constdata                               0x080109c4   Section        8  system_stm32l4xx.o(.constdata)
-    .constdata                               0x080109cc   Section       20  usbh_diskio.o(.constdata)
-    .constdata                               0x080109e0   Section       20  sd_diskio.o(.constdata)
-    .constdata                               0x080109f4   Section      156  ff.o(.constdata)
-    ExCvt                                    0x080109f4   Data         128  ff.o(.constdata)
-    cst                                      0x08010a74   Data          14  ff.o(.constdata)
-    cst32                                    0x08010a82   Data          14  ff.o(.constdata)
-    .constdata                               0x08010a90   Section      198  elog.o(.constdata)
-    __FUNCTION__                             0x08010a90   Data          11  elog.o(.constdata)
-    __FUNCTION__                             0x08010a9b   Data          10  elog.o(.constdata)
-    __FUNCTION__                             0x08010aa5   Data          24  elog.o(.constdata)
-    __FUNCTION__                             0x08010abd   Data          13  elog.o(.constdata)
-    __FUNCTION__                             0x08010aca   Data          16  elog.o(.constdata)
-    __FUNCTION__                             0x08010ada   Data          20  elog.o(.constdata)
-    __FUNCTION__                             0x08010aee   Data          24  elog.o(.constdata)
-    __FUNCTION__                             0x08010b06   Data          24  elog.o(.constdata)
-    __FUNCTION__                             0x08010b1e   Data          12  elog.o(.constdata)
-    __FUNCTION__                             0x08010b2a   Data          16  elog.o(.constdata)
-    __FUNCTION__                             0x08010b3a   Data          14  elog.o(.constdata)
-    __FUNCTION__                             0x08010b48   Data          14  elog.o(.constdata)
-    .constdata                               0x08010b56   Section       35  elog_utils.o(.constdata)
-    __FUNCTION__                             0x08010b56   Data          12  elog_utils.o(.constdata)
-    __FUNCTION__                             0x08010b62   Data          11  elog_utils.o(.constdata)
-    __FUNCTION__                             0x08010b6d   Data          12  elog_utils.o(.constdata)
-    .constdata                               0x08010b79   Section       94  elog_flash.o(.constdata)
-    __FUNCTION__                             0x08010b79   Data          18  elog_flash.o(.constdata)
-    __FUNCTION__                             0x08010b8b   Data          25  elog_flash.o(.constdata)
-    __FUNCTION__                             0x08010ba4   Data          17  elog_flash.o(.constdata)
-    __FUNCTION__                             0x08010bb5   Data          17  elog_flash.o(.constdata)
-    __FUNCTION__                             0x08010bc6   Data          17  elog_flash.o(.constdata)
-    .constdata                               0x08010bd8   Section     1046  sfud.o(.constdata)
-    __FUNCTION__                             0x08010bd8   Data           6  sfud.o(.constdata)
-    mf_table                                 0x08010be0   Data         136  sfud.o(.constdata)
-    flash_chip_table                         0x08010c68   Data         600  sfud.o(.constdata)
-    qspi_flash_ext_info_table                0x08010ec0   Data          52  sfud.o(.constdata)
-    __FUNCTION__                             0x08010ef4   Data          27  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f0f   Data          14  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f1d   Data          14  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f2b   Data          10  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f35   Data          16  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f45   Data          11  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f50   Data          24  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f68   Data          10  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f72   Data          14  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f80   Data          18  sfud.o(.constdata)
-    __FUNCTION__                             0x08010f92   Data          24  sfud.o(.constdata)
-    __FUNCTION__                             0x08010faa   Data          17  sfud.o(.constdata)
-    __FUNCTION__                             0x08010fbb   Data          10  sfud.o(.constdata)
-    __FUNCTION__                             0x08010fc5   Data          23  sfud.o(.constdata)
-    __FUNCTION__                             0x08010fdc   Data          18  sfud.o(.constdata)
-    .constdata                               0x08010fee   Section       15  sfud_port.o(.constdata)
-    __FUNCTION__                             0x08010fee   Data          15  sfud_port.o(.constdata)
-    .constdata                               0x08011000   Section       86  ef_port.o(.constdata)
-    default_env_set                          0x08011000   Data          72  ef_port.o(.constdata)
-    __FUNCTION__                             0x08011048   Data          14  ef_port.o(.constdata)
-    .constdata                               0x08011056   Section      119  ef_env.o(.constdata)
-    __FUNCTION__                             0x08011056   Data          13  ef_env.o(.constdata)
-    __FUNCTION__                             0x08011063   Data          12  ef_env.o(.constdata)
-    __FUNCTION__                             0x0801106f   Data           9  ef_env.o(.constdata)
-    __FUNCTION__                             0x08011078   Data          22  ef_env.o(.constdata)
-    __FUNCTION__                             0x0801108e   Data          18  ef_env.o(.constdata)
-    __FUNCTION__                             0x080110a0   Data          14  ef_env.o(.constdata)
-    __FUNCTION__                             0x080110ae   Data          19  ef_env.o(.constdata)
-    __FUNCTION__                             0x080110c1   Data          12  ef_env.o(.constdata)
-    .constdata                               0x080110cd   Section       25  ef_log.o(.constdata)
-    __FUNCTION__                             0x080110cd   Data          12  ef_log.o(.constdata)
-    __FUNCTION__                             0x080110d9   Data          13  ef_log.o(.constdata)
-    .constdata                               0x080110e8   Section     1024  ef_utils.o(.constdata)
-    crc32_table                              0x080110e8   Data        1024  ef_utils.o(.constdata)
-    .constdata                               0x080114e8   Section       22  shell.o(.constdata)
-    .constdata                               0x080114fe   Section        1  shell.o(.constdata)
-    .constdata                               0x080114ff   Section       13  shell.o(.constdata)
-    .constdata                               0x0801150c   Section        7  shell.o(.constdata)
-    .constdata                               0x08011513   Section        8  shell.o(.constdata)
-    .constdata                               0x0801151b   Section        3  shell.o(.constdata)
-    .constdata                               0x0801151e   Section        5  shell.o(.constdata)
-    .constdata                               0x08011523   Section        6  shell.o(.constdata)
-    .constdata                               0x08011529   Section        5  shell.o(.constdata)
-    .constdata                               0x0801152e   Section        4  shell.o(.constdata)
-    .constdata                               0x08011532   Section       10  shell.o(.constdata)
-    .constdata                               0x0801153c   Section       10  shell.o(.constdata)
-    .constdata                               0x08011546   Section        7  shell.o(.constdata)
-    .constdata                               0x0801154d   Section        6  shell.o(.constdata)
-    .constdata                               0x08011553   Section        6  shell.o(.constdata)
-    .constdata                               0x08011559   Section        5  shell.o(.constdata)
-    .constdata                               0x0801155e   Section       30  shell.o(.constdata)
-    .constdata                               0x0801157c   Section        6  shell.o(.constdata)
-    .constdata                               0x08011582   Section       14  shell.o(.constdata)
-    .constdata                               0x08011590   Section        5  shell.o(.constdata)
-    .constdata                               0x08011595   Section       13  shell.o(.constdata)
-    .constdata                               0x080115a2   Section        5  shell.o(.constdata)
-    .constdata                               0x080115a7   Section       13  shell.o(.constdata)
-    .constdata                               0x080115b4   Section        5  shell.o(.constdata)
-    .constdata                               0x080115b9   Section       13  shell.o(.constdata)
-    .constdata                               0x080115c6   Section        6  shell.o(.constdata)
-    .constdata                               0x080115cc   Section       14  shell.o(.constdata)
-    .constdata                               0x080115da   Section      129  ctype_o.o(.constdata)
-    .constdata                               0x0801165c   Section        4  ctype_o.o(.constdata)
-    table                                    0x0801165c   Data           4  ctype_o.o(.constdata)
-    .constdata__ZTV10c_keyboard              0x08011660   Section       56  uicode.o(.constdata__ZTV10c_keyboard)
-    .constdata__ZTV11c_wave_ctrl             0x08011698   Section       52  uicode.o(.constdata__ZTV11c_wave_ctrl)
-    .constdata__ZTV17c_bitmap_operator       0x080116cc   Section       16  uicode.o(.constdata__ZTV17c_bitmap_operator)
-    .constdata__ZTV17c_keyboard_button       0x080116dc   Section       52  uicode.o(.constdata__ZTV17c_keyboard_button)
-    .constdata__ZTV17c_lattice_font_op       0x08011710   Section       28  uicode.o(.constdata__ZTV17c_lattice_font_op)
-    .constdata__ZTV5c_wnd                    0x0801172c   Section       52  uicode.o(.constdata__ZTV5c_wnd)
-    .constdata__ZTV6c_myUI                   0x08011760   Section       52  uicode.o(.constdata__ZTV6c_myUI)
-    .constdata__ZTV8c_button                 0x08011794   Section       52  uicode.o(.constdata__ZTV8c_button)
-    .conststring                             0x080117c8   Section      216  main.o(.conststring)
-    .conststring                             0x080118a0   Section        4  usbh_msc.o(.conststring)
-    .conststring                             0x080118a4   Section       71  elog.o(.conststring)
-    .conststring                             0x080118ec   Section       66  elog_flash.o(.conststring)
-    .conststring                             0x08011930   Section        8  uicode.o(.conststring)
-    .conststring                             0x08011938   Section      597  sfud.o(.conststring)
-    .conststring                             0x08011b90   Section      103  ef_port.o(.conststring)
-    .conststring                             0x08011bf8   Section       73  easyflash.o(.conststring)
-    .conststring                             0x08011c44   Section      303  ef_env.o(.conststring)
-    .conststring                             0x08011d74   Section       84  ef_log.o(.conststring)
-    .conststring                             0x08011dc8   Section      673  shell.o(.conststring)
-    shellCommand                             0x0801208c   Section      144  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x0801208c   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x0801209c   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x080120ac   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x080120bc   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x080120cc   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x080120dc   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x080120ec   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x080120fc   Number         0  user_cmd.o(shellCommand)
-    __tagsym$$used                           0x0801210c   Number         0  user_cmd.o(shellCommand)
-    shellCommand                             0x0801211c   Section      288  shell.o(shellCommand)
-    __tagsym$$used                           0x0801211c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801212c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801213c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801214c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801215c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801216c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801217c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801218c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801219c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x080121ac   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x080121bc   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x080121cc   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x080121dc   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x080121ec   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x080121fc   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801220c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801221c   Number         0  shell.o(shellCommand)
-    __tagsym$$used                           0x0801222c   Number         0  shell.o(shellCommand)
-    .init_array                              0x0801223c   Section        4  uicode.o(.init_array)
-    .init_array                              0x08012240   Section        0  cpp_init.o(.init_array)
+    i.usb_write_file                         0x080102e8   Section        0  user_cmd.o(i.usb_write_file)
+    i.userShellInit                          0x080104a8   Section        0  shell_port.o(i.userShellInit)
+    i.userShellWrite                         0x080104dc   Section        0  shell_port.o(i.userShellWrite)
+    i.validate                               0x080104f8   Section        0  ff.o(i.validate)
+    validate                                 0x080104f9   Thumb Code    56  ff.o(i.validate)
+    i.wait_busy                              0x08010530   Section        0  sfud.o(i.wait_busy)
+    wait_busy                                0x08010531   Thumb Code    92  sfud.o(i.wait_busy)
+    i.write_log                              0x080105f4   Section        0  user_cmd.o(i.write_log)
+    i.write_sector_status                    0x080106d4   Section        0  ef_log.o(i.write_sector_status)
+    write_sector_status                      0x080106d5   Thumb Code    62  ef_log.o(i.write_sector_status)
+    i.write_status                           0x08010718   Section        0  ef_env.o(i.write_status)
+    write_status                             0x08010719   Thumb Code    84  ef_env.o(i.write_status)
+    .constdata                               0x080107d8   Section      122  main.o(.constdata)
+    __FUNCTION__                             0x080107d8   Data           5  main.o(.constdata)
+    __FUNCTION__                             0x080107f4   Data           9  main.o(.constdata)
+    __FUNCTION__                             0x080107fd   Data          16  main.o(.constdata)
+    __FUNCTION__                             0x0801080d   Data          10  main.o(.constdata)
+    __FUNCTION__                             0x08010817   Data          15  main.o(.constdata)
+    __FUNCTION__                             0x08010826   Data          15  main.o(.constdata)
+    __FUNCTION__                             0x08010835   Data           9  main.o(.constdata)
+    __FUNCTION__                             0x0801083e   Data          20  main.o(.constdata)
+    .constdata                               0x08010852   Section       12  w25qxx.o(.constdata)
+    __FUNCTION__                             0x08010852   Data          12  w25qxx.o(.constdata)
+    .constdata                               0x0801085e   Section        7  user_cmd.o(.constdata)
+    .constdata                               0x08010865   Section        7  user_cmd.o(.constdata)
+    .constdata                               0x0801086c   Section       10  user_cmd.o(.constdata)
+    .constdata                               0x08010876   Section       10  user_cmd.o(.constdata)
+    .constdata                               0x08010880   Section       16  user_cmd.o(.constdata)
+    .constdata                               0x08010890   Section       16  user_cmd.o(.constdata)
+    .constdata                               0x080108a0   Section       13  user_cmd.o(.constdata)
+    .constdata                               0x080108ad   Section       13  user_cmd.o(.constdata)
+    .constdata                               0x080108ba   Section       10  user_cmd.o(.constdata)
+    .constdata                               0x080108c4   Section       10  user_cmd.o(.constdata)
+    .constdata                               0x080108ce   Section       14  user_cmd.o(.constdata)
+    .constdata                               0x080108dc   Section       14  user_cmd.o(.constdata)
+    .constdata                               0x080108ea   Section       13  user_cmd.o(.constdata)
+    .constdata                               0x080108f7   Section       13  user_cmd.o(.constdata)
+    .constdata                               0x08010904   Section       15  user_cmd.o(.constdata)
+    .constdata                               0x08010913   Section       15  user_cmd.o(.constdata)
+    .constdata                               0x08010922   Section       14  user_cmd.o(.constdata)
+    .constdata                               0x08010930   Section       14  user_cmd.o(.constdata)
+    .constdata                               0x0801093e   Section       66  user_cmd.o(.constdata)
+    __FUNCTION__                             0x0801093e   Data          10  user_cmd.o(.constdata)
+    __FUNCTION__                             0x08010948   Data          14  user_cmd.o(.constdata)
+    __FUNCTION__                             0x08010956   Data          13  user_cmd.o(.constdata)
+    __FUNCTION__                             0x08010963   Data          15  user_cmd.o(.constdata)
+    __FUNCTION__                             0x08010972   Data          14  user_cmd.o(.constdata)
+    .constdata                               0x08010980   Section       64  system_stm32l4xx.o(.constdata)
+    .constdata                               0x080109c0   Section        8  system_stm32l4xx.o(.constdata)
+    .constdata                               0x080109c8   Section       20  usbh_diskio.o(.constdata)
+    .constdata                               0x080109dc   Section       20  sd_diskio.o(.constdata)
+    .constdata                               0x080109f0   Section      156  ff.o(.constdata)
+    ExCvt                                    0x080109f0   Data         128  ff.o(.constdata)
+    cst                                      0x08010a70   Data          14  ff.o(.constdata)
+    cst32                                    0x08010a7e   Data          14  ff.o(.constdata)
+    .constdata                               0x08010a8c   Section      198  elog.o(.constdata)
+    __FUNCTION__                             0x08010a8c   Data          11  elog.o(.constdata)
+    __FUNCTION__                             0x08010a97   Data          10  elog.o(.constdata)
+    __FUNCTION__                             0x08010aa1   Data          24  elog.o(.constdata)
+    __FUNCTION__                             0x08010ab9   Data          13  elog.o(.constdata)
+    __FUNCTION__                             0x08010ac6   Data          16  elog.o(.constdata)
+    __FUNCTION__                             0x08010ad6   Data          20  elog.o(.constdata)
+    __FUNCTION__                             0x08010aea   Data          24  elog.o(.constdata)
+    __FUNCTION__                             0x08010b02   Data          24  elog.o(.constdata)
+    __FUNCTION__                             0x08010b1a   Data          12  elog.o(.constdata)
+    __FUNCTION__                             0x08010b26   Data          16  elog.o(.constdata)
+    __FUNCTION__                             0x08010b36   Data          14  elog.o(.constdata)
+    __FUNCTION__                             0x08010b44   Data          14  elog.o(.constdata)
+    .constdata                               0x08010b52   Section       35  elog_utils.o(.constdata)
+    __FUNCTION__                             0x08010b52   Data          12  elog_utils.o(.constdata)
+    __FUNCTION__                             0x08010b5e   Data          11  elog_utils.o(.constdata)
+    __FUNCTION__                             0x08010b69   Data          12  elog_utils.o(.constdata)
+    .constdata                               0x08010b75   Section       94  elog_flash.o(.constdata)
+    __FUNCTION__                             0x08010b75   Data          18  elog_flash.o(.constdata)
+    __FUNCTION__                             0x08010b87   Data          25  elog_flash.o(.constdata)
+    __FUNCTION__                             0x08010ba0   Data          17  elog_flash.o(.constdata)
+    __FUNCTION__                             0x08010bb1   Data          17  elog_flash.o(.constdata)
+    __FUNCTION__                             0x08010bc2   Data          17  elog_flash.o(.constdata)
+    .constdata                               0x08010bd4   Section     1046  sfud.o(.constdata)
+    __FUNCTION__                             0x08010bd4   Data           6  sfud.o(.constdata)
+    mf_table                                 0x08010bdc   Data         136  sfud.o(.constdata)
+    flash_chip_table                         0x08010c64   Data         600  sfud.o(.constdata)
+    qspi_flash_ext_info_table                0x08010ebc   Data          52  sfud.o(.constdata)
+    __FUNCTION__                             0x08010ef0   Data          27  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f0b   Data          14  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f19   Data          14  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f27   Data          10  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f31   Data          16  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f41   Data          11  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f4c   Data          24  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f64   Data          10  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f6e   Data          14  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f7c   Data          18  sfud.o(.constdata)
+    __FUNCTION__                             0x08010f8e   Data          24  sfud.o(.constdata)
+    __FUNCTION__                             0x08010fa6   Data          17  sfud.o(.constdata)
+    __FUNCTION__                             0x08010fb7   Data          10  sfud.o(.constdata)
+    __FUNCTION__                             0x08010fc1   Data          23  sfud.o(.constdata)
+    __FUNCTION__                             0x08010fd8   Data          18  sfud.o(.constdata)
+    .constdata                               0x08010fea   Section       15  sfud_port.o(.constdata)
+    __FUNCTION__                             0x08010fea   Data          15  sfud_port.o(.constdata)
+    .constdata                               0x08010ffc   Section       86  ef_port.o(.constdata)
+    default_env_set                          0x08010ffc   Data          72  ef_port.o(.constdata)
+    __FUNCTION__                             0x08011044   Data          14  ef_port.o(.constdata)
+    .constdata                               0x08011052   Section      119  ef_env.o(.constdata)
+    __FUNCTION__                             0x08011052   Data          13  ef_env.o(.constdata)
+    __FUNCTION__                             0x0801105f   Data          12  ef_env.o(.constdata)
+    __FUNCTION__                             0x0801106b   Data           9  ef_env.o(.constdata)
+    __FUNCTION__                             0x08011074   Data          22  ef_env.o(.constdata)
+    __FUNCTION__                             0x0801108a   Data          18  ef_env.o(.constdata)
+    __FUNCTION__                             0x0801109c   Data          14  ef_env.o(.constdata)
+    __FUNCTION__                             0x080110aa   Data          19  ef_env.o(.constdata)
+    __FUNCTION__                             0x080110bd   Data          12  ef_env.o(.constdata)
+    .constdata                               0x080110c9   Section       25  ef_log.o(.constdata)
+    __FUNCTION__                             0x080110c9   Data          12  ef_log.o(.constdata)
+    __FUNCTION__                             0x080110d5   Data          13  ef_log.o(.constdata)
+    .constdata                               0x080110e4   Section     1024  ef_utils.o(.constdata)
+    crc32_table                              0x080110e4   Data        1024  ef_utils.o(.constdata)
+    .constdata                               0x080114e4   Section       22  shell.o(.constdata)
+    .constdata                               0x080114fa   Section        1  shell.o(.constdata)
+    .constdata                               0x080114fb   Section       13  shell.o(.constdata)
+    .constdata                               0x08011508   Section        7  shell.o(.constdata)
+    .constdata                               0x0801150f   Section        8  shell.o(.constdata)
+    .constdata                               0x08011517   Section        3  shell.o(.constdata)
+    .constdata                               0x0801151a   Section        5  shell.o(.constdata)
+    .constdata                               0x0801151f   Section        6  shell.o(.constdata)
+    .constdata                               0x08011525   Section        5  shell.o(.constdata)
+    .constdata                               0x0801152a   Section        4  shell.o(.constdata)
+    .constdata                               0x0801152e   Section       10  shell.o(.constdata)
+    .constdata                               0x08011538   Section       10  shell.o(.constdata)
+    .constdata                               0x08011542   Section        7  shell.o(.constdata)
+    .constdata                               0x08011549   Section        6  shell.o(.constdata)
+    .constdata                               0x0801154f   Section        6  shell.o(.constdata)
+    .constdata                               0x08011555   Section        5  shell.o(.constdata)
+    .constdata                               0x0801155a   Section       30  shell.o(.constdata)
+    .constdata                               0x08011578   Section        6  shell.o(.constdata)
+    .constdata                               0x0801157e   Section       14  shell.o(.constdata)
+    .constdata                               0x0801158c   Section        5  shell.o(.constdata)
+    .constdata                               0x08011591   Section       13  shell.o(.constdata)
+    .constdata                               0x0801159e   Section        5  shell.o(.constdata)
+    .constdata                               0x080115a3   Section       13  shell.o(.constdata)
+    .constdata                               0x080115b0   Section        5  shell.o(.constdata)
+    .constdata                               0x080115b5   Section       13  shell.o(.constdata)
+    .constdata                               0x080115c2   Section        6  shell.o(.constdata)
+    .constdata                               0x080115c8   Section       14  shell.o(.constdata)
+    .constdata                               0x080115d6   Section      129  ctype_o.o(.constdata)
+    .constdata                               0x08011658   Section        4  ctype_o.o(.constdata)
+    table                                    0x08011658   Data           4  ctype_o.o(.constdata)
+    .constdata__ZTV10c_keyboard              0x0801165c   Section       56  uicode.o(.constdata__ZTV10c_keyboard)
+    .constdata__ZTV11c_wave_ctrl             0x08011694   Section       52  uicode.o(.constdata__ZTV11c_wave_ctrl)
+    .constdata__ZTV17c_bitmap_operator       0x080116c8   Section       16  uicode.o(.constdata__ZTV17c_bitmap_operator)
+    .constdata__ZTV17c_keyboard_button       0x080116d8   Section       52  uicode.o(.constdata__ZTV17c_keyboard_button)
+    .constdata__ZTV17c_lattice_font_op       0x0801170c   Section       28  uicode.o(.constdata__ZTV17c_lattice_font_op)
+    .constdata__ZTV5c_wnd                    0x08011728   Section       52  uicode.o(.constdata__ZTV5c_wnd)
+    .constdata__ZTV6c_myUI                   0x0801175c   Section       52  uicode.o(.constdata__ZTV6c_myUI)
+    .constdata__ZTV8c_button                 0x08011790   Section       52  uicode.o(.constdata__ZTV8c_button)
+    .conststring                             0x080117c4   Section      216  main.o(.conststring)
+    .conststring                             0x0801189c   Section        4  usbh_msc.o(.conststring)
+    .conststring                             0x080118a0   Section       71  elog.o(.conststring)
+    .conststring                             0x080118e8   Section       66  elog_flash.o(.conststring)
+    .conststring                             0x0801192c   Section        8  uicode.o(.conststring)
+    .conststring                             0x08011934   Section      597  sfud.o(.conststring)
+    .conststring                             0x08011b8c   Section      103  ef_port.o(.conststring)
+    .conststring                             0x08011bf4   Section       73  easyflash.o(.conststring)
+    .conststring                             0x08011c40   Section      303  ef_env.o(.conststring)
+    .conststring                             0x08011d70   Section       84  ef_log.o(.conststring)
+    .conststring                             0x08011dc4   Section      673  shell.o(.conststring)
+    shellCommand                             0x08012088   Section      144  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x08012088   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x08012098   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x080120a8   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x080120b8   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x080120c8   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x080120d8   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x080120e8   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x080120f8   Number         0  user_cmd.o(shellCommand)
+    __tagsym$$used                           0x08012108   Number         0  user_cmd.o(shellCommand)
+    shellCommand                             0x08012118   Section      288  shell.o(shellCommand)
+    __tagsym$$used                           0x08012118   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012128   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012138   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012148   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012158   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012168   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012178   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012188   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012198   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x080121a8   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x080121b8   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x080121c8   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x080121d8   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x080121e8   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x080121f8   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012208   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012218   Number         0  shell.o(shellCommand)
+    __tagsym$$used                           0x08012228   Number         0  shell.o(shellCommand)
+    .init_array                              0x08012238   Section        4  uicode.o(.init_array)
+    .init_array                              0x0801223c   Section        0  cpp_init.o(.init_array)
     .data                                    0x20000000   Section        4  delay.o(.data)
     fac_us                                   0x20000000   Data           4  delay.o(.data)
     .data                                    0x20000004   Section        2  w25qxx.o(.data)
@@ -6771,104 +6771,104 @@ Image Symbol Table
     shellVars                                0x0800f9f1   Thumb Code    20  shell.o(i.shellVars)
     shellWriteString                         0x0800fb39   Thumb Code    36  shell.o(i.shellWriteString)
     test_elog                                0x0800fd61   Thumb Code   136  main.o(i.test_elog)
-    usb_read_file                            0x080100f9   Thumb Code   248  user_cmd.o(i.usb_read_file)
-    usb_write_file                           0x080102ed   Thumb Code   202  user_cmd.o(i.usb_write_file)
-    userShellInit                            0x080104ad   Thumb Code    34  shell_port.o(i.userShellInit)
-    userShellWrite                           0x080104e1   Thumb Code    22  shell_port.o(i.userShellWrite)
-    write_log                                0x080105f9   Thumb Code    50  user_cmd.o(i.write_log)
-    TEXT_Buffer                              0x080107e1   Data          23  main.o(.constdata)
-    shellCmdreboot                           0x08010862   Data           7  user_cmd.o(.constdata)
-    shellDescreboot                          0x08010869   Data           7  user_cmd.o(.constdata)
-    shellCmdwrite_log                        0x08010870   Data          10  user_cmd.o(.constdata)
-    shellDescwrite_log                       0x0801087a   Data          10  user_cmd.o(.constdata)
-    shellCmdread_recent_log                  0x08010884   Data          16  user_cmd.o(.constdata)
-    shellDescread_recent_log                 0x08010894   Data          16  user_cmd.o(.constdata)
-    shellCmdread_all_log                     0x080108a4   Data          13  user_cmd.o(.constdata)
-    shellDescread_all_log                    0x080108b1   Data          13  user_cmd.o(.constdata)
-    shellCmdclean_log                        0x080108be   Data          10  user_cmd.o(.constdata)
-    shellDescclean_log                       0x080108c8   Data          10  user_cmd.o(.constdata)
-    shellCmdsd_write_file                    0x080108d2   Data          14  user_cmd.o(.constdata)
-    shellDescsd_write_file                   0x080108e0   Data          14  user_cmd.o(.constdata)
-    shellCmdsd_read_file                     0x080108ee   Data          13  user_cmd.o(.constdata)
-    shellDescsd_read_file                    0x080108fb   Data          13  user_cmd.o(.constdata)
-    shellCmdusb_write_file                   0x08010908   Data          15  user_cmd.o(.constdata)
-    shellDescusb_write_file                  0x08010917   Data          15  user_cmd.o(.constdata)
-    shellCmdusb_read_file                    0x08010926   Data          14  user_cmd.o(.constdata)
-    shellDescusb_read_file                   0x08010934   Data          14  user_cmd.o(.constdata)
-    AHBPrescTable                            0x08010984   Data          16  system_stm32l4xx.o(.constdata)
-    MSIRangeTable                            0x08010994   Data          48  system_stm32l4xx.o(.constdata)
-    APBPrescTable                            0x080109c4   Data           8  system_stm32l4xx.o(.constdata)
-    USBH_Driver                              0x080109cc   Data          20  usbh_diskio.o(.constdata)
-    SDCARD_Driver                            0x080109e0   Data          20  sd_diskio.o(.constdata)
-    shellCmdDefaultUser                      0x080114e8   Data          22  shell.o(.constdata)
-    shellPasswordDefaultUser                 0x080114fe   Data           1  shell.o(.constdata)
-    shellDesDefaultUser                      0x080114ff   Data          13  shell.o(.constdata)
-    shellCmdsetVar                           0x0801150c   Data           7  shell.o(.constdata)
-    shellDescsetVar                          0x08011513   Data           8  shell.o(.constdata)
-    shellDesc0x1B5B4100                      0x0801151b   Data           3  shell.o(.constdata)
-    shellDesc0x1B5B4200                      0x0801151e   Data           5  shell.o(.constdata)
-    shellDesc0x1B5B4300                      0x08011523   Data           6  shell.o(.constdata)
-    shellDesc0x1B5B4400                      0x08011529   Data           5  shell.o(.constdata)
-    shellDesc0x09000000                      0x0801152e   Data           4  shell.o(.constdata)
-    shellDesc0x08000000                      0x08011532   Data          10  shell.o(.constdata)
-    shellDesc0x7F000000                      0x0801153c   Data          10  shell.o(.constdata)
-    shellDesc0x1B5B337E                      0x08011546   Data           7  shell.o(.constdata)
-    shellDesc0x0A000000                      0x0801154d   Data           6  shell.o(.constdata)
-    shellDesc0x0D000000                      0x08011553   Data           6  shell.o(.constdata)
-    shellCmdhelp                             0x08011559   Data           5  shell.o(.constdata)
-    shellDeschelp                            0x0801155e   Data          30  shell.o(.constdata)
-    shellCmdusers                            0x0801157c   Data           6  shell.o(.constdata)
-    shellDescusers                           0x08011582   Data          14  shell.o(.constdata)
-    shellCmdcmds                             0x08011590   Data           5  shell.o(.constdata)
-    shellDesccmds                            0x08011595   Data          13  shell.o(.constdata)
-    shellCmdvars                             0x080115a2   Data           5  shell.o(.constdata)
-    shellDescvars                            0x080115a7   Data          13  shell.o(.constdata)
-    shellCmdkeys                             0x080115b4   Data           5  shell.o(.constdata)
-    shellDesckeys                            0x080115b9   Data          13  shell.o(.constdata)
-    shellCmdclear                            0x080115c6   Data           6  shell.o(.constdata)
-    shellDescclear                           0x080115cc   Data          14  shell.o(.constdata)
-    __ctype_table                            0x080115da   Data         129  ctype_o.o(.constdata)
-    vtable for c_keyboard                    0x08011660   Data          56  uicode.o(.constdata__ZTV10c_keyboard)
-    vtable for c_wave_ctrl                   0x08011698   Data          52  uicode.o(.constdata__ZTV11c_wave_ctrl)
-    vtable for c_bitmap_operator             0x080116cc   Data          16  uicode.o(.constdata__ZTV17c_bitmap_operator)
-    vtable for c_keyboard_button             0x080116dc   Data          52  uicode.o(.constdata__ZTV17c_keyboard_button)
-    vtable for c_lattice_font_op             0x08011710   Data          28  uicode.o(.constdata__ZTV17c_lattice_font_op)
-    vtable for c_wnd                         0x0801172c   Data          52  uicode.o(.constdata__ZTV5c_wnd)
-    vtable for c_myUI                        0x08011760   Data          52  uicode.o(.constdata__ZTV6c_myUI)
-    vtable for c_button                      0x08011794   Data          52  uicode.o(.constdata__ZTV8c_button)
-    Region$$Table$$Base                      0x0801206c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0801208c   Number         0  anon$$obj.o(Region$$Table)
-    shellCommand$$Base                       0x0801208c   Number         0  user_cmd.o(shellCommand)
-    shellCommandreboot                       0x0801208c   Data          16  user_cmd.o(shellCommand)
-    shellCommandwrite_log                    0x0801209c   Data          16  user_cmd.o(shellCommand)
-    shellCommandread_recent_log              0x080120ac   Data          16  user_cmd.o(shellCommand)
-    shellCommandread_all_log                 0x080120bc   Data          16  user_cmd.o(shellCommand)
-    shellCommandclean_log                    0x080120cc   Data          16  user_cmd.o(shellCommand)
-    shellCommandsd_write_file                0x080120dc   Data          16  user_cmd.o(shellCommand)
-    shellCommandsd_read_file                 0x080120ec   Data          16  user_cmd.o(shellCommand)
-    shellCommandusb_write_file               0x080120fc   Data          16  user_cmd.o(shellCommand)
-    shellCommandusb_read_file                0x0801210c   Data          16  user_cmd.o(shellCommand)
-    shellUserDefault                         0x0801211c   Data          16  shell.o(shellCommand)
-    shellCommandsetVar                       0x0801212c   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4100                       0x0801213c   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4200                       0x0801214c   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4300                       0x0801215c   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B4400                       0x0801216c   Data          16  shell.o(shellCommand)
-    shellKey0x09000000                       0x0801217c   Data          16  shell.o(shellCommand)
-    shellKey0x08000000                       0x0801218c   Data          16  shell.o(shellCommand)
-    shellKey0x7F000000                       0x0801219c   Data          16  shell.o(shellCommand)
-    shellKey0x1B5B337E                       0x080121ac   Data          16  shell.o(shellCommand)
-    shellKey0x0A000000                       0x080121bc   Data          16  shell.o(shellCommand)
-    shellKey0x0D000000                       0x080121cc   Data          16  shell.o(shellCommand)
-    shellCommandhelp                         0x080121dc   Data          16  shell.o(shellCommand)
-    shellCommandusers                        0x080121ec   Data          16  shell.o(shellCommand)
-    shellCommandcmds                         0x080121fc   Data          16  shell.o(shellCommand)
-    shellCommandvars                         0x0801220c   Data          16  shell.o(shellCommand)
-    shellCommandkeys                         0x0801221c   Data          16  shell.o(shellCommand)
-    shellCommandclear                        0x0801222c   Data          16  shell.o(shellCommand)
-    SHT$$INIT_ARRAY$$Base                    0x0801223c   Number         0  uicode.o(.init_array)
-    shellCommand$$Limit                      0x0801223c   Number         0  shell.o(shellCommand)
-    SHT$$INIT_ARRAY$$Limit                   0x08012240   Number         0  cpp_init.o(.init_array)
+    usb_read_file                            0x080100f9   Thumb Code   244  user_cmd.o(i.usb_read_file)
+    usb_write_file                           0x080102e9   Thumb Code   202  user_cmd.o(i.usb_write_file)
+    userShellInit                            0x080104a9   Thumb Code    34  shell_port.o(i.userShellInit)
+    userShellWrite                           0x080104dd   Thumb Code    22  shell_port.o(i.userShellWrite)
+    write_log                                0x080105f5   Thumb Code    50  user_cmd.o(i.write_log)
+    TEXT_Buffer                              0x080107dd   Data          23  main.o(.constdata)
+    shellCmdreboot                           0x0801085e   Data           7  user_cmd.o(.constdata)
+    shellDescreboot                          0x08010865   Data           7  user_cmd.o(.constdata)
+    shellCmdwrite_log                        0x0801086c   Data          10  user_cmd.o(.constdata)
+    shellDescwrite_log                       0x08010876   Data          10  user_cmd.o(.constdata)
+    shellCmdread_recent_log                  0x08010880   Data          16  user_cmd.o(.constdata)
+    shellDescread_recent_log                 0x08010890   Data          16  user_cmd.o(.constdata)
+    shellCmdread_all_log                     0x080108a0   Data          13  user_cmd.o(.constdata)
+    shellDescread_all_log                    0x080108ad   Data          13  user_cmd.o(.constdata)
+    shellCmdclean_log                        0x080108ba   Data          10  user_cmd.o(.constdata)
+    shellDescclean_log                       0x080108c4   Data          10  user_cmd.o(.constdata)
+    shellCmdsd_write_file                    0x080108ce   Data          14  user_cmd.o(.constdata)
+    shellDescsd_write_file                   0x080108dc   Data          14  user_cmd.o(.constdata)
+    shellCmdsd_read_file                     0x080108ea   Data          13  user_cmd.o(.constdata)
+    shellDescsd_read_file                    0x080108f7   Data          13  user_cmd.o(.constdata)
+    shellCmdusb_write_file                   0x08010904   Data          15  user_cmd.o(.constdata)
+    shellDescusb_write_file                  0x08010913   Data          15  user_cmd.o(.constdata)
+    shellCmdusb_read_file                    0x08010922   Data          14  user_cmd.o(.constdata)
+    shellDescusb_read_file                   0x08010930   Data          14  user_cmd.o(.constdata)
+    AHBPrescTable                            0x08010980   Data          16  system_stm32l4xx.o(.constdata)
+    MSIRangeTable                            0x08010990   Data          48  system_stm32l4xx.o(.constdata)
+    APBPrescTable                            0x080109c0   Data           8  system_stm32l4xx.o(.constdata)
+    USBH_Driver                              0x080109c8   Data          20  usbh_diskio.o(.constdata)
+    SDCARD_Driver                            0x080109dc   Data          20  sd_diskio.o(.constdata)
+    shellCmdDefaultUser                      0x080114e4   Data          22  shell.o(.constdata)
+    shellPasswordDefaultUser                 0x080114fa   Data           1  shell.o(.constdata)
+    shellDesDefaultUser                      0x080114fb   Data          13  shell.o(.constdata)
+    shellCmdsetVar                           0x08011508   Data           7  shell.o(.constdata)
+    shellDescsetVar                          0x0801150f   Data           8  shell.o(.constdata)
+    shellDesc0x1B5B4100                      0x08011517   Data           3  shell.o(.constdata)
+    shellDesc0x1B5B4200                      0x0801151a   Data           5  shell.o(.constdata)
+    shellDesc0x1B5B4300                      0x0801151f   Data           6  shell.o(.constdata)
+    shellDesc0x1B5B4400                      0x08011525   Data           5  shell.o(.constdata)
+    shellDesc0x09000000                      0x0801152a   Data           4  shell.o(.constdata)
+    shellDesc0x08000000                      0x0801152e   Data          10  shell.o(.constdata)
+    shellDesc0x7F000000                      0x08011538   Data          10  shell.o(.constdata)
+    shellDesc0x1B5B337E                      0x08011542   Data           7  shell.o(.constdata)
+    shellDesc0x0A000000                      0x08011549   Data           6  shell.o(.constdata)
+    shellDesc0x0D000000                      0x0801154f   Data           6  shell.o(.constdata)
+    shellCmdhelp                             0x08011555   Data           5  shell.o(.constdata)
+    shellDeschelp                            0x0801155a   Data          30  shell.o(.constdata)
+    shellCmdusers                            0x08011578   Data           6  shell.o(.constdata)
+    shellDescusers                           0x0801157e   Data          14  shell.o(.constdata)
+    shellCmdcmds                             0x0801158c   Data           5  shell.o(.constdata)
+    shellDesccmds                            0x08011591   Data          13  shell.o(.constdata)
+    shellCmdvars                             0x0801159e   Data           5  shell.o(.constdata)
+    shellDescvars                            0x080115a3   Data          13  shell.o(.constdata)
+    shellCmdkeys                             0x080115b0   Data           5  shell.o(.constdata)
+    shellDesckeys                            0x080115b5   Data          13  shell.o(.constdata)
+    shellCmdclear                            0x080115c2   Data           6  shell.o(.constdata)
+    shellDescclear                           0x080115c8   Data          14  shell.o(.constdata)
+    __ctype_table                            0x080115d6   Data         129  ctype_o.o(.constdata)
+    vtable for c_keyboard                    0x0801165c   Data          56  uicode.o(.constdata__ZTV10c_keyboard)
+    vtable for c_wave_ctrl                   0x08011694   Data          52  uicode.o(.constdata__ZTV11c_wave_ctrl)
+    vtable for c_bitmap_operator             0x080116c8   Data          16  uicode.o(.constdata__ZTV17c_bitmap_operator)
+    vtable for c_keyboard_button             0x080116d8   Data          52  uicode.o(.constdata__ZTV17c_keyboard_button)
+    vtable for c_lattice_font_op             0x0801170c   Data          28  uicode.o(.constdata__ZTV17c_lattice_font_op)
+    vtable for c_wnd                         0x08011728   Data          52  uicode.o(.constdata__ZTV5c_wnd)
+    vtable for c_myUI                        0x0801175c   Data          52  uicode.o(.constdata__ZTV6c_myUI)
+    vtable for c_button                      0x08011790   Data          52  uicode.o(.constdata__ZTV8c_button)
+    Region$$Table$$Base                      0x08012068   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08012088   Number         0  anon$$obj.o(Region$$Table)
+    shellCommand$$Base                       0x08012088   Number         0  user_cmd.o(shellCommand)
+    shellCommandreboot                       0x08012088   Data          16  user_cmd.o(shellCommand)
+    shellCommandwrite_log                    0x08012098   Data          16  user_cmd.o(shellCommand)
+    shellCommandread_recent_log              0x080120a8   Data          16  user_cmd.o(shellCommand)
+    shellCommandread_all_log                 0x080120b8   Data          16  user_cmd.o(shellCommand)
+    shellCommandclean_log                    0x080120c8   Data          16  user_cmd.o(shellCommand)
+    shellCommandsd_write_file                0x080120d8   Data          16  user_cmd.o(shellCommand)
+    shellCommandsd_read_file                 0x080120e8   Data          16  user_cmd.o(shellCommand)
+    shellCommandusb_write_file               0x080120f8   Data          16  user_cmd.o(shellCommand)
+    shellCommandusb_read_file                0x08012108   Data          16  user_cmd.o(shellCommand)
+    shellUserDefault                         0x08012118   Data          16  shell.o(shellCommand)
+    shellCommandsetVar                       0x08012128   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4100                       0x08012138   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4200                       0x08012148   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4300                       0x08012158   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B4400                       0x08012168   Data          16  shell.o(shellCommand)
+    shellKey0x09000000                       0x08012178   Data          16  shell.o(shellCommand)
+    shellKey0x08000000                       0x08012188   Data          16  shell.o(shellCommand)
+    shellKey0x7F000000                       0x08012198   Data          16  shell.o(shellCommand)
+    shellKey0x1B5B337E                       0x080121a8   Data          16  shell.o(shellCommand)
+    shellKey0x0A000000                       0x080121b8   Data          16  shell.o(shellCommand)
+    shellKey0x0D000000                       0x080121c8   Data          16  shell.o(shellCommand)
+    shellCommandhelp                         0x080121d8   Data          16  shell.o(shellCommand)
+    shellCommandusers                        0x080121e8   Data          16  shell.o(shellCommand)
+    shellCommandcmds                         0x080121f8   Data          16  shell.o(shellCommand)
+    shellCommandvars                         0x08012208   Data          16  shell.o(shellCommand)
+    shellCommandkeys                         0x08012218   Data          16  shell.o(shellCommand)
+    shellCommandclear                        0x08012228   Data          16  shell.o(shellCommand)
+    SHT$$INIT_ARRAY$$Base                    0x08012238   Number         0  uicode.o(.init_array)
+    shellCommand$$Limit                      0x08012238   Number         0  shell.o(shellCommand)
+    SHT$$INIT_ARRAY$$Limit                   0x0801223c   Number         0  cpp_init.o(.init_array)
     W25QXX_TYPE                              0x20000004   Data           2  w25qxx.o(.data)
     SD_Type                                  0x20000006   Data           1  sd_card.o(.data)
     uwTickFreq                               0x20000008   Data           1  stm32l4xx_hal.o(.data)
@@ -6922,9 +6922,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000128dc, Max: 0x00067000, ABSOLUTE, COMPRESSED[0x000124c0])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000128d8, Max: 0x00067000, ABSOLUTE, COMPRESSED[0x000124bc])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00012240, Max: 0x00067000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0001223c, Max: 0x00067000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -7548,117 +7548,117 @@ Memory Map of the image
     0x0801003c   0x0801003c   0x0000005a   Code   RO         8060    i.update_sec_status  ef_env.o
     0x08010096   0x08010096   0x00000002   PAD
     0x08010098   0x08010098   0x00000060   Code   RO         8061    i.update_sector_cache  ef_env.o
-    0x080100f8   0x080100f8   0x000001f4   Code   RO          971    i.usb_read_file     user_cmd.o
-    0x080102ec   0x080102ec   0x000001c0   Code   RO          972    i.usb_write_file    user_cmd.o
-    0x080104ac   0x080104ac   0x00000034   Code   RO         8806    i.userShellInit     shell_port.o
-    0x080104e0   0x080104e0   0x0000001c   Code   RO         8808    i.userShellWrite    shell_port.o
-    0x080104fc   0x080104fc   0x00000038   Code   RO         5450    i.validate          ff.o
-    0x08010534   0x08010534   0x000000c4   Code   RO         7719    i.wait_busy         sfud.o
-    0x080105f8   0x080105f8   0x000000e0   Code   RO          973    i.write_log         user_cmd.o
-    0x080106d8   0x080106d8   0x00000044   Code   RO         8327    i.write_sector_status  ef_log.o
-    0x0801071c   0x0801071c   0x000000c0   Code   RO         8062    i.write_status      ef_env.o
-    0x080107dc   0x080107dc   0x0000007a   Data   RO           24    .constdata          main.o
-    0x08010856   0x08010856   0x0000000c   Data   RO          790    .constdata          w25qxx.o
-    0x08010862   0x08010862   0x00000007   Data   RO          974    .constdata          user_cmd.o
-    0x08010869   0x08010869   0x00000007   Data   RO          975    .constdata          user_cmd.o
-    0x08010870   0x08010870   0x0000000a   Data   RO          976    .constdata          user_cmd.o
-    0x0801087a   0x0801087a   0x0000000a   Data   RO          977    .constdata          user_cmd.o
-    0x08010884   0x08010884   0x00000010   Data   RO          978    .constdata          user_cmd.o
-    0x08010894   0x08010894   0x00000010   Data   RO          979    .constdata          user_cmd.o
-    0x080108a4   0x080108a4   0x0000000d   Data   RO          980    .constdata          user_cmd.o
-    0x080108b1   0x080108b1   0x0000000d   Data   RO          981    .constdata          user_cmd.o
-    0x080108be   0x080108be   0x0000000a   Data   RO          982    .constdata          user_cmd.o
-    0x080108c8   0x080108c8   0x0000000a   Data   RO          983    .constdata          user_cmd.o
-    0x080108d2   0x080108d2   0x0000000e   Data   RO          984    .constdata          user_cmd.o
-    0x080108e0   0x080108e0   0x0000000e   Data   RO          985    .constdata          user_cmd.o
-    0x080108ee   0x080108ee   0x0000000d   Data   RO          986    .constdata          user_cmd.o
-    0x080108fb   0x080108fb   0x0000000d   Data   RO          987    .constdata          user_cmd.o
-    0x08010908   0x08010908   0x0000000f   Data   RO          988    .constdata          user_cmd.o
-    0x08010917   0x08010917   0x0000000f   Data   RO          989    .constdata          user_cmd.o
-    0x08010926   0x08010926   0x0000000e   Data   RO          990    .constdata          user_cmd.o
-    0x08010934   0x08010934   0x0000000e   Data   RO          991    .constdata          user_cmd.o
-    0x08010942   0x08010942   0x00000042   Data   RO          992    .constdata          user_cmd.o
-    0x08010984   0x08010984   0x00000040   Data   RO         4905    .constdata          system_stm32l4xx.o
-    0x080109c4   0x080109c4   0x00000008   Data   RO         4906    .constdata          system_stm32l4xx.o
-    0x080109cc   0x080109cc   0x00000014   Data   RO         4946    .constdata          usbh_diskio.o
-    0x080109e0   0x080109e0   0x00000014   Data   RO         5001    .constdata          sd_diskio.o
-    0x080109f4   0x080109f4   0x0000009c   Data   RO         5452    .constdata          ff.o
-    0x08010a90   0x08010a90   0x000000c6   Data   RO         6418    .constdata          elog.o
-    0x08010b56   0x08010b56   0x00000023   Data   RO         6554    .constdata          elog_utils.o
-    0x08010b79   0x08010b79   0x0000005e   Data   RO         6661    .constdata          elog_flash.o
-    0x08010bd7   0x08010bd7   0x00000001   PAD
-    0x08010bd8   0x08010bd8   0x00000416   Data   RO         7721    .constdata          sfud.o
-    0x08010fee   0x08010fee   0x0000000f   Data   RO         7858    .constdata          sfud_port.o
-    0x08010ffd   0x08010ffd   0x00000003   PAD
-    0x08011000   0x08011000   0x00000056   Data   RO         7936    .constdata          ef_port.o
-    0x08011056   0x08011056   0x00000077   Data   RO         8064    .constdata          ef_env.o
-    0x080110cd   0x080110cd   0x00000019   Data   RO         8330    .constdata          ef_log.o
-    0x080110e6   0x080110e6   0x00000002   PAD
-    0x080110e8   0x080110e8   0x00000400   Data   RO         8394    .constdata          ef_utils.o
-    0x080114e8   0x080114e8   0x00000016   Data   RO         8462    .constdata          shell.o
-    0x080114fe   0x080114fe   0x00000001   Data   RO         8463    .constdata          shell.o
-    0x080114ff   0x080114ff   0x0000000d   Data   RO         8464    .constdata          shell.o
-    0x0801150c   0x0801150c   0x00000007   Data   RO         8465    .constdata          shell.o
-    0x08011513   0x08011513   0x00000008   Data   RO         8466    .constdata          shell.o
-    0x0801151b   0x0801151b   0x00000003   Data   RO         8467    .constdata          shell.o
-    0x0801151e   0x0801151e   0x00000005   Data   RO         8468    .constdata          shell.o
-    0x08011523   0x08011523   0x00000006   Data   RO         8469    .constdata          shell.o
-    0x08011529   0x08011529   0x00000005   Data   RO         8470    .constdata          shell.o
-    0x0801152e   0x0801152e   0x00000004   Data   RO         8471    .constdata          shell.o
-    0x08011532   0x08011532   0x0000000a   Data   RO         8472    .constdata          shell.o
-    0x0801153c   0x0801153c   0x0000000a   Data   RO         8473    .constdata          shell.o
-    0x08011546   0x08011546   0x00000007   Data   RO         8474    .constdata          shell.o
-    0x0801154d   0x0801154d   0x00000006   Data   RO         8475    .constdata          shell.o
-    0x08011553   0x08011553   0x00000006   Data   RO         8476    .constdata          shell.o
-    0x08011559   0x08011559   0x00000005   Data   RO         8477    .constdata          shell.o
-    0x0801155e   0x0801155e   0x0000001e   Data   RO         8478    .constdata          shell.o
-    0x0801157c   0x0801157c   0x00000006   Data   RO         8479    .constdata          shell.o
-    0x08011582   0x08011582   0x0000000e   Data   RO         8480    .constdata          shell.o
-    0x08011590   0x08011590   0x00000005   Data   RO         8481    .constdata          shell.o
-    0x08011595   0x08011595   0x0000000d   Data   RO         8482    .constdata          shell.o
-    0x080115a2   0x080115a2   0x00000005   Data   RO         8483    .constdata          shell.o
-    0x080115a7   0x080115a7   0x0000000d   Data   RO         8484    .constdata          shell.o
-    0x080115b4   0x080115b4   0x00000005   Data   RO         8485    .constdata          shell.o
-    0x080115b9   0x080115b9   0x0000000d   Data   RO         8486    .constdata          shell.o
-    0x080115c6   0x080115c6   0x00000006   Data   RO         8487    .constdata          shell.o
-    0x080115cc   0x080115cc   0x0000000e   Data   RO         8488    .constdata          shell.o
-    0x080115da   0x080115da   0x00000081   Data   RO        10296    .constdata          mc_w.l(ctype_o.o)
-    0x0801165b   0x0801165b   0x00000001   PAD
-    0x0801165c   0x0801165c   0x00000004   Data   RO        10297    .constdata          mc_w.l(ctype_o.o)
-    0x08011660   0x08011660   0x00000038   Data   RO         7237    .constdata__ZTV10c_keyboard  uicode.o
-    0x08011698   0x08011698   0x00000034   Data   RO         7241    .constdata__ZTV11c_wave_ctrl  uicode.o
-    0x080116cc   0x080116cc   0x00000010   Data   RO         7231    .constdata__ZTV17c_bitmap_operator  uicode.o
-    0x080116dc   0x080116dc   0x00000034   Data   RO         7239    .constdata__ZTV17c_keyboard_button  uicode.o
-    0x08011710   0x08011710   0x0000001c   Data   RO         7229    .constdata__ZTV17c_lattice_font_op  uicode.o
-    0x0801172c   0x0801172c   0x00000034   Data   RO         7233    .constdata__ZTV5c_wnd  uicode.o
-    0x08011760   0x08011760   0x00000034   Data   RO         7243    .constdata__ZTV6c_myUI  uicode.o
-    0x08011794   0x08011794   0x00000034   Data   RO         7235    .constdata__ZTV8c_button  uicode.o
-    0x080117c8   0x080117c8   0x000000d8   Data   RO           25    .conststring        main.o
-    0x080118a0   0x080118a0   0x00000004   Data   RO         6210    .conststring        usbh_msc.o
-    0x080118a4   0x080118a4   0x00000047   Data   RO         6419    .conststring        elog.o
-    0x080118eb   0x080118eb   0x00000001   PAD
-    0x080118ec   0x080118ec   0x00000042   Data   RO         6662    .conststring        elog_flash.o
-    0x0801192e   0x0801192e   0x00000002   PAD
-    0x08011930   0x08011930   0x00000008   Data   RO         6809    .conststring        uicode.o
-    0x08011938   0x08011938   0x00000255   Data   RO         7722    .conststring        sfud.o
-    0x08011b8d   0x08011b8d   0x00000003   PAD
-    0x08011b90   0x08011b90   0x00000067   Data   RO         7937    .conststring        ef_port.o
-    0x08011bf7   0x08011bf7   0x00000001   PAD
-    0x08011bf8   0x08011bf8   0x00000049   Data   RO         8000    .conststring        easyflash.o
-    0x08011c41   0x08011c41   0x00000003   PAD
-    0x08011c44   0x08011c44   0x0000012f   Data   RO         8065    .conststring        ef_env.o
-    0x08011d73   0x08011d73   0x00000001   PAD
-    0x08011d74   0x08011d74   0x00000054   Data   RO         8331    .conststring        ef_log.o
-    0x08011dc8   0x08011dc8   0x000002a1   Data   RO         8489    .conststring        shell.o
-    0x08012069   0x08012069   0x00000003   PAD
-    0x0801206c   0x0801206c   0x00000020   Data   RO        10356    Region$$Table       anon$$obj.o
-    0x0801208c   0x0801208c   0x00000090   Data   RO          993    shellCommand        user_cmd.o
-    0x0801211c   0x0801211c   0x00000120   Data   RO         8491    shellCommand        shell.o
-    0x0801223c   0x0801223c   0x00000004   Data   RO         6812    .init_array         uicode.o
-    0x08012240   0x0801223c   0x00000000   Data   RO        10150    .init_array         mc_w.l(cpp_init.o)
+    0x080100f8   0x080100f8   0x000001f0   Code   RO          971    i.usb_read_file     user_cmd.o
+    0x080102e8   0x080102e8   0x000001c0   Code   RO          972    i.usb_write_file    user_cmd.o
+    0x080104a8   0x080104a8   0x00000034   Code   RO         8806    i.userShellInit     shell_port.o
+    0x080104dc   0x080104dc   0x0000001c   Code   RO         8808    i.userShellWrite    shell_port.o
+    0x080104f8   0x080104f8   0x00000038   Code   RO         5450    i.validate          ff.o
+    0x08010530   0x08010530   0x000000c4   Code   RO         7719    i.wait_busy         sfud.o
+    0x080105f4   0x080105f4   0x000000e0   Code   RO          973    i.write_log         user_cmd.o
+    0x080106d4   0x080106d4   0x00000044   Code   RO         8327    i.write_sector_status  ef_log.o
+    0x08010718   0x08010718   0x000000c0   Code   RO         8062    i.write_status      ef_env.o
+    0x080107d8   0x080107d8   0x0000007a   Data   RO           24    .constdata          main.o
+    0x08010852   0x08010852   0x0000000c   Data   RO          790    .constdata          w25qxx.o
+    0x0801085e   0x0801085e   0x00000007   Data   RO          974    .constdata          user_cmd.o
+    0x08010865   0x08010865   0x00000007   Data   RO          975    .constdata          user_cmd.o
+    0x0801086c   0x0801086c   0x0000000a   Data   RO          976    .constdata          user_cmd.o
+    0x08010876   0x08010876   0x0000000a   Data   RO          977    .constdata          user_cmd.o
+    0x08010880   0x08010880   0x00000010   Data   RO          978    .constdata          user_cmd.o
+    0x08010890   0x08010890   0x00000010   Data   RO          979    .constdata          user_cmd.o
+    0x080108a0   0x080108a0   0x0000000d   Data   RO          980    .constdata          user_cmd.o
+    0x080108ad   0x080108ad   0x0000000d   Data   RO          981    .constdata          user_cmd.o
+    0x080108ba   0x080108ba   0x0000000a   Data   RO          982    .constdata          user_cmd.o
+    0x080108c4   0x080108c4   0x0000000a   Data   RO          983    .constdata          user_cmd.o
+    0x080108ce   0x080108ce   0x0000000e   Data   RO          984    .constdata          user_cmd.o
+    0x080108dc   0x080108dc   0x0000000e   Data   RO          985    .constdata          user_cmd.o
+    0x080108ea   0x080108ea   0x0000000d   Data   RO          986    .constdata          user_cmd.o
+    0x080108f7   0x080108f7   0x0000000d   Data   RO          987    .constdata          user_cmd.o
+    0x08010904   0x08010904   0x0000000f   Data   RO          988    .constdata          user_cmd.o
+    0x08010913   0x08010913   0x0000000f   Data   RO          989    .constdata          user_cmd.o
+    0x08010922   0x08010922   0x0000000e   Data   RO          990    .constdata          user_cmd.o
+    0x08010930   0x08010930   0x0000000e   Data   RO          991    .constdata          user_cmd.o
+    0x0801093e   0x0801093e   0x00000042   Data   RO          992    .constdata          user_cmd.o
+    0x08010980   0x08010980   0x00000040   Data   RO         4905    .constdata          system_stm32l4xx.o
+    0x080109c0   0x080109c0   0x00000008   Data   RO         4906    .constdata          system_stm32l4xx.o
+    0x080109c8   0x080109c8   0x00000014   Data   RO         4946    .constdata          usbh_diskio.o
+    0x080109dc   0x080109dc   0x00000014   Data   RO         5001    .constdata          sd_diskio.o
+    0x080109f0   0x080109f0   0x0000009c   Data   RO         5452    .constdata          ff.o
+    0x08010a8c   0x08010a8c   0x000000c6   Data   RO         6418    .constdata          elog.o
+    0x08010b52   0x08010b52   0x00000023   Data   RO         6554    .constdata          elog_utils.o
+    0x08010b75   0x08010b75   0x0000005e   Data   RO         6661    .constdata          elog_flash.o
+    0x08010bd3   0x08010bd3   0x00000001   PAD
+    0x08010bd4   0x08010bd4   0x00000416   Data   RO         7721    .constdata          sfud.o
+    0x08010fea   0x08010fea   0x0000000f   Data   RO         7858    .constdata          sfud_port.o
+    0x08010ff9   0x08010ff9   0x00000003   PAD
+    0x08010ffc   0x08010ffc   0x00000056   Data   RO         7936    .constdata          ef_port.o
+    0x08011052   0x08011052   0x00000077   Data   RO         8064    .constdata          ef_env.o
+    0x080110c9   0x080110c9   0x00000019   Data   RO         8330    .constdata          ef_log.o
+    0x080110e2   0x080110e2   0x00000002   PAD
+    0x080110e4   0x080110e4   0x00000400   Data   RO         8394    .constdata          ef_utils.o
+    0x080114e4   0x080114e4   0x00000016   Data   RO         8462    .constdata          shell.o
+    0x080114fa   0x080114fa   0x00000001   Data   RO         8463    .constdata          shell.o
+    0x080114fb   0x080114fb   0x0000000d   Data   RO         8464    .constdata          shell.o
+    0x08011508   0x08011508   0x00000007   Data   RO         8465    .constdata          shell.o
+    0x0801150f   0x0801150f   0x00000008   Data   RO         8466    .constdata          shell.o
+    0x08011517   0x08011517   0x00000003   Data   RO         8467    .constdata          shell.o
+    0x0801151a   0x0801151a   0x00000005   Data   RO         8468    .constdata          shell.o
+    0x0801151f   0x0801151f   0x00000006   Data   RO         8469    .constdata          shell.o
+    0x08011525   0x08011525   0x00000005   Data   RO         8470    .constdata          shell.o
+    0x0801152a   0x0801152a   0x00000004   Data   RO         8471    .constdata          shell.o
+    0x0801152e   0x0801152e   0x0000000a   Data   RO         8472    .constdata          shell.o
+    0x08011538   0x08011538   0x0000000a   Data   RO         8473    .constdata          shell.o
+    0x08011542   0x08011542   0x00000007   Data   RO         8474    .constdata          shell.o
+    0x08011549   0x08011549   0x00000006   Data   RO         8475    .constdata          shell.o
+    0x0801154f   0x0801154f   0x00000006   Data   RO         8476    .constdata          shell.o
+    0x08011555   0x08011555   0x00000005   Data   RO         8477    .constdata          shell.o
+    0x0801155a   0x0801155a   0x0000001e   Data   RO         8478    .constdata          shell.o
+    0x08011578   0x08011578   0x00000006   Data   RO         8479    .constdata          shell.o
+    0x0801157e   0x0801157e   0x0000000e   Data   RO         8480    .constdata          shell.o
+    0x0801158c   0x0801158c   0x00000005   Data   RO         8481    .constdata          shell.o
+    0x08011591   0x08011591   0x0000000d   Data   RO         8482    .constdata          shell.o
+    0x0801159e   0x0801159e   0x00000005   Data   RO         8483    .constdata          shell.o
+    0x080115a3   0x080115a3   0x0000000d   Data   RO         8484    .constdata          shell.o
+    0x080115b0   0x080115b0   0x00000005   Data   RO         8485    .constdata          shell.o
+    0x080115b5   0x080115b5   0x0000000d   Data   RO         8486    .constdata          shell.o
+    0x080115c2   0x080115c2   0x00000006   Data   RO         8487    .constdata          shell.o
+    0x080115c8   0x080115c8   0x0000000e   Data   RO         8488    .constdata          shell.o
+    0x080115d6   0x080115d6   0x00000081   Data   RO        10296    .constdata          mc_w.l(ctype_o.o)
+    0x08011657   0x08011657   0x00000001   PAD
+    0x08011658   0x08011658   0x00000004   Data   RO        10297    .constdata          mc_w.l(ctype_o.o)
+    0x0801165c   0x0801165c   0x00000038   Data   RO         7237    .constdata__ZTV10c_keyboard  uicode.o
+    0x08011694   0x08011694   0x00000034   Data   RO         7241    .constdata__ZTV11c_wave_ctrl  uicode.o
+    0x080116c8   0x080116c8   0x00000010   Data   RO         7231    .constdata__ZTV17c_bitmap_operator  uicode.o
+    0x080116d8   0x080116d8   0x00000034   Data   RO         7239    .constdata__ZTV17c_keyboard_button  uicode.o
+    0x0801170c   0x0801170c   0x0000001c   Data   RO         7229    .constdata__ZTV17c_lattice_font_op  uicode.o
+    0x08011728   0x08011728   0x00000034   Data   RO         7233    .constdata__ZTV5c_wnd  uicode.o
+    0x0801175c   0x0801175c   0x00000034   Data   RO         7243    .constdata__ZTV6c_myUI  uicode.o
+    0x08011790   0x08011790   0x00000034   Data   RO         7235    .constdata__ZTV8c_button  uicode.o
+    0x080117c4   0x080117c4   0x000000d8   Data   RO           25    .conststring        main.o
+    0x0801189c   0x0801189c   0x00000004   Data   RO         6210    .conststring        usbh_msc.o
+    0x080118a0   0x080118a0   0x00000047   Data   RO         6419    .conststring        elog.o
+    0x080118e7   0x080118e7   0x00000001   PAD
+    0x080118e8   0x080118e8   0x00000042   Data   RO         6662    .conststring        elog_flash.o
+    0x0801192a   0x0801192a   0x00000002   PAD
+    0x0801192c   0x0801192c   0x00000008   Data   RO         6809    .conststring        uicode.o
+    0x08011934   0x08011934   0x00000255   Data   RO         7722    .conststring        sfud.o
+    0x08011b89   0x08011b89   0x00000003   PAD
+    0x08011b8c   0x08011b8c   0x00000067   Data   RO         7937    .conststring        ef_port.o
+    0x08011bf3   0x08011bf3   0x00000001   PAD
+    0x08011bf4   0x08011bf4   0x00000049   Data   RO         8000    .conststring        easyflash.o
+    0x08011c3d   0x08011c3d   0x00000003   PAD
+    0x08011c40   0x08011c40   0x0000012f   Data   RO         8065    .conststring        ef_env.o
+    0x08011d6f   0x08011d6f   0x00000001   PAD
+    0x08011d70   0x08011d70   0x00000054   Data   RO         8331    .conststring        ef_log.o
+    0x08011dc4   0x08011dc4   0x000002a1   Data   RO         8489    .conststring        shell.o
+    0x08012065   0x08012065   0x00000003   PAD
+    0x08012068   0x08012068   0x00000020   Data   RO        10356    Region$$Table       anon$$obj.o
+    0x08012088   0x08012088   0x00000090   Data   RO          993    shellCommand        user_cmd.o
+    0x08012118   0x08012118   0x00000120   Data   RO         8491    shellCommand        shell.o
+    0x08012238   0x08012238   0x00000004   Data   RO         6812    .init_array         uicode.o
+    0x0801223c   0x08012238   0x00000000   Data   RO        10150    .init_array         mc_w.l(cpp_init.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08012240, Size: 0x00006b98, Max: 0x00018000, ABSOLUTE, COMPRESSED[0x00000280])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0801223c, Size: 0x00006b98, Max: 0x00018000, ABSOLUTE, COMPRESSED[0x00000280])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -7787,11 +7787,11 @@ Image component sizes
        908          0          0          0          0       6395   usbh_msc_scsi.o
        136          0          0          0          0       4026   usbh_pipes.o
         24          6          0          0          0        586   usbh_platform.o
-      2240       1216        434          0          0       9013   user_cmd.o
+      2236       1216        434          0          0       9017   user_cmd.o
        238         64         12          2          0       2806   w25qxx.o
 
     ----------------------------------------------------------------------
-     62208      10570       7014       1672      25852    1402565   Object Totals
+     62204      10570       7014       1672      25852    1402569   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         94          0         20          8          8          0   (incl. Padding)
 
@@ -7868,15 +7868,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     67156      10742       7148       1692      25852    1354093   Grand Totals
-     67156      10742       7148        640      25852    1354093   ELF Image Totals (compressed)
-     67156      10742       7148        640          0          0   ROM Totals
+     67152      10742       7148       1692      25852    1354097   Grand Totals
+     67152      10742       7148        640      25852    1354097   ELF Image Totals (compressed)
+     67152      10742       7148        640          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                74304 (  72.56kB)
+    Total RO  Size (Code + RO Data)                74300 (  72.56kB)
     Total RW  Size (RW Data + ZI Data)             27544 (  26.90kB)
-    Total ROM Size (Code + RO Data + RW Data)      74944 (  73.19kB)
+    Total ROM Size (Code + RO Data + RW Data)      74940 (  73.18kB)
 
 ==============================================================================
 
