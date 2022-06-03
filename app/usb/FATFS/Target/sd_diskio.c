@@ -52,10 +52,10 @@ const Diskio_drvTypeDef  SDCARD_Driver =
 DSTATUS SDCARD_initialize(BYTE lun)
 {
   /* CAUTION : USB Host library has to be initialized in the application */
-  uint8_t res;
-  res=SD_Init();	//SD卡初始化 
+  uint8_t res = RES_OK ;
+  res = SD_Init();	//SD卡初始化 
   //log_d("SD_Init is %d",res);
-  return res;
+  return ((DRESULT)res);
 }
 
 /**
@@ -85,14 +85,14 @@ DSTATUS SDCARD_status(BYTE lun)
 DRESULT SDCARD_read(BYTE lun, BYTE *buff, DWORD sector, UINT count)
 {
   uint8_t res = RES_OK;
-  res=SD_ReadDisk(buff,sector,count);	
+  res = SD_ReadDisk(buff,sector,count);	
   while(res)
   {
     SD_Init();	
     res=SD_ReadDisk(buff,sector,count);	
   }
   //log_d("SD_ReadDisk is %d",res);
-  return res;
+  return ((DRESULT)res);
 }
 
 /* USER CODE BEGIN beforeWriteSection */
@@ -111,14 +111,14 @@ DRESULT SDCARD_read(BYTE lun, BYTE *buff, DWORD sector, UINT count)
 DRESULT SDCARD_write(BYTE lun, const BYTE *buff, DWORD sector, UINT count)
 {
     uint8_t res = RES_OK;
-    res=SD_WriteDisk((u8*)buff,sector,count);
+    res = SD_WriteDisk((u8*)buff,sector,count);
     while(res)
     {
       SD_Init();	
       res=SD_WriteDisk((u8*)buff,sector,count);	
     }
     //log_d("SD_WriteDisk is %d",res);
-    return res;
+    return ((DRESULT)res);
 }
 
 
@@ -136,9 +136,7 @@ DRESULT SDCARD_write(BYTE lun, const BYTE *buff, DWORD sector, UINT count)
 
 DRESULT SDCARD_ioctl(BYTE lun, BYTE cmd, void *buff)
 {
-  DRESULT res = RES_ERROR;
-#if 0
-  MSC_LUNTypeDef info;
+  DRESULT res = RES_OK;
 
   switch (cmd)
   {
@@ -149,47 +147,24 @@ DRESULT SDCARD_ioctl(BYTE lun, BYTE cmd, void *buff)
 
   /* Get number of sectors on the disk (DWORD) */
   case GET_SECTOR_COUNT :
-    if(USBH_MSC_GetLUNInfo(&hUSB_Host, lun, &info) == USBH_OK)
-    {
-      *(DWORD*)buff = info.capacity.block_nbr;
-      res = RES_OK;
-    }
-    else
-    {
-      res = RES_ERROR;
-    }
+    *(DWORD*)buff = SD_GetSectorCount();
+		res = RES_OK;
     break;
 
   /* Get R/W sector size (WORD) */
   case GET_SECTOR_SIZE :
-    if(USBH_MSC_GetLUNInfo(&hUSB_Host, lun, &info) == USBH_OK)
-    {
-      *(DWORD*)buff = info.capacity.block_size;
-      res = RES_OK;
-    }
-    else
-    {
-      res = RES_ERROR;
-    }
+    *(DWORD*)buff = 512; 
+		res = RES_OK;
     break;
 
     /* Get erase block size in unit of sector (DWORD) */
   case GET_BLOCK_SIZE :
-
-    if(USBH_MSC_GetLUNInfo(&hUSB_Host, lun, &info) == USBH_OK)
-    {
-      *(DWORD*)buff = info.capacity.block_size / USB_DEFAULT_BLOCK_SIZE;
-      res = RES_OK;
-    }
-    else
-    {
-      res = RES_ERROR;
-    }
+    *(WORD*)buff = 8;
+		res = RES_OK;
     break;
 
   default:
     res = RES_PARERR;
   }
-#endif
   return res;
 }

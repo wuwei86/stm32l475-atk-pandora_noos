@@ -61,6 +61,8 @@
 "usb\elog_port.o"
 "usb\elog_flash.o"
 "usb\elog_flash_port.o"
+"usb\elog_file.o"
+"usb\elog_file_port.o"
 "usb\uicode.o"
 "usb\lucida_console_27.o"
 "usb\sfud.o"

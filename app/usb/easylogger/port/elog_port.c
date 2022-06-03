@@ -61,7 +61,9 @@ void elog_port_deinit(void) {
 void elog_port_output(const char *log, size_t size) {
     printf("%.*s", size, log);
     /* add your code here */
+#ifdef ELOG_FLASH_ENABLE
     elog_flash_write(log, size);
+#endif
 }
 
 /**

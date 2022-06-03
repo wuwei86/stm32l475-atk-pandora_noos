@@ -175,7 +175,7 @@ void SD_Mount(void)
   {
       log_d("SDPath f_mount is success");
       /* Create and Open a new text file object with write access */
-      res = f_open(&SDFile, "1:aa.TXT", FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+      res = f_open(&SDFile, "1:ww.TXT", FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
       log_d("SDPath f_open res is :%d",res);
       if(res != FR_OK)
       {
@@ -187,7 +187,7 @@ void SD_Mount(void)
       {
           log_d("SDPath f_open is success");
           /* Write data to the text file */
-          res = f_write(&SDFile, wtext, sizeof(wtext), (void *)&byteswriten);
+          res = f_write(&SDFile, wtext, sizeof(wtext)+1, (void *)&byteswriten);
           if((byteswriten == 0) || (res != FR_OK))
           {
               log_d("SDPath f_write is fail###res is :%d",res);
@@ -207,6 +207,28 @@ void SD_Mount(void)
               log_d("f_close is fail error code is: %d",res);
           }
       }
+
+      log_d("#####SDPath f_mount is success");
+      /* Create and Open a new text file object with write access */
+      res = f_open(&SDFile, "1:ww.TXT", FA_READ);
+      log_d("SDPath f_open res is :%d",res);
+      if(res != FR_OK)
+      {
+          log_d("SDPath f_open is fail###res is :%d",res);
+          /* 'STM32.TXT' file Open for write Error */
+          Error_Handler();
+      }
+      else
+      {
+          f_lseek(&SDFile, 0);//读取文件的时候必须要加上这一句，否则报错
+          res = f_read(&SDFile,rtext,100,&bytesread);
+          log_d("f_read is rtext is: %s",rtext);
+          log_d("f_read is fail error code is: %d",res);
+          /* Close the open text file */
+          res = f_close(&SDFile);
+          log_d("f_close is fail error code is: %d",res);
+      }
+
   }
 }
 
@@ -282,9 +304,6 @@ static void MSC_Application(void)
             log_d("f_close is fail error code is: %d",res);
         }
     }
-
-    
-    //SD_Mount();
 }
 
 static void user_usb_process(void)
@@ -297,7 +316,9 @@ static void user_usb_process(void)
       break;
 
     case APPLICATION_DISCONNECT:
-      //f_mount(NULL, (TCHAR const*)"", 0);
+      //f_mount(NULL, (TCHAR const*)"", 0);//卸载u盘
+      //f_mount(NULL, (TCHAR const*)USBHPath, 1);//卸载u盘
+      //f_mount(NULL, (TCHAR const*)SDPath, 1);//卸载SDCARD
 
       break;
     default:          
@@ -334,8 +355,16 @@ void elog_user_init(void)
   //输出所有内容
   elog_set_fmt(ELOG_LVL_VERBOSE, ELOG_FMT_ALL);
 
+#ifdef ELOG_FLASH_ENABLE
   /* initialize EasyLogger Flash plugin */
   elog_flash_init();
+#endif
+
+#ifdef ELOG_FILE_ENABLE
+  /* initialize EasyLogger Flash plugin */
+  //elog_file_init();
+#endif
+
   /* 启动elog */
   elog_start();
   test_elog();

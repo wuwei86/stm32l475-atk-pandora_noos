@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L475xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash;..\Core\Inc\SD_CARD;..\Core\Inc\SPI1;..\Core\Inc\SPI</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash;..\Core\Inc\SD_CARD;..\Core\Inc\SPI1;..\Core\Inc\SPI;..\easylogger\plugins\file</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2175,6 +2175,16 @@
               <FileName>elog_flash_port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\easylogger\plugins\flash\elog_flash_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>elog_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\easylogger\plugins\file\elog_file.c</FilePath>
+            </File>
+            <File>
+              <FileName>elog_file_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\easylogger\plugins\file\elog_file_port.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -35,7 +35,7 @@
 static u8 lcd_buf[LCD_Buf_Size];
 
 u16	POINT_COLOR = BLACK;	//画笔颜色	默认为黑色
-u16	BACK_COLOR 	= WHITE;	//背景颜色	默认为白色
+u16	BACK_COLOR 	= WHITE;	//背景颜色	默认为白色   
 
 
 /**
