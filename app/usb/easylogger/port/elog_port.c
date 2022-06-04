@@ -29,6 +29,8 @@
 #include <elog.h>
 #include "stm32l4xx_hal.h"
 #include <stdio.h>
+
+
 /**
  * EasyLogger port initialize
  *
@@ -64,6 +66,12 @@ void elog_port_output(const char *log, size_t size) {
 #ifdef ELOG_FLASH_ENABLE
     elog_flash_write(log, size);
 #endif
+
+#ifdef ELOG_FILE_ENABLE
+    /* initialize EasyLogger file plugin */
+    elog_file_write(log, size);
+#endif
+
 }
 
 /**

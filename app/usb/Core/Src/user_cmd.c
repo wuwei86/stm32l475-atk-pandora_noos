@@ -231,6 +231,13 @@ int usb_read_file(int argc, char *agrv[])
     log_d("agrv2 is %s",agrv[2]);//参数2,读取文件的长度
     //log_d("agrv2 len is %d",strlen(agrv[2]));//参数2长度
 
+    Str2Int((uint8_t*)agrv[2],&size);//字符串转数字
+    if(size > 128)
+    {
+        log_e("read size is too lager");
+        return 0;
+    }
+
     res = f_open(&USBHFile, (const TCHAR*)agrv[1], FA_READ);
     if(res != FR_OK)
     {
@@ -240,7 +247,6 @@ int usb_read_file(int argc, char *agrv[])
     }
     else
     {
-        Str2Int((uint8_t*)agrv[2],&size);//字符串转数字
         log_d("read size is: %d Pointer to number of bytes read is: %d",size,bytesread);
         f_lseek(&USBHFile, 0);//读取文件的时候必须要加上这一句，否则报错
         res = f_read(&USBHFile,readbuf,size,&bytesread);
@@ -258,3 +264,23 @@ int usb_read_file(int argc, char *agrv[])
     return 0;
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), usb_read_file, usb_read_file, usb_read_file);
+
+//读取文件
+int close_log_file(int argc, char *agrv[])
+{
+    extern FIL elogfp;
+    FRESULT res; 
+    log_d("##f_close is fail error code is: 1");
+    log_d("###f_close is fail error code is: 2");
+    log_d("###f_close is fail error code is: 3");
+    log_d("##f_close is fail error code is: 4");
+    // log_d("f_close is fail error code is: 5");
+    // log_d("f_close is fail error code is: 6");
+    // log_d("f_close is fail error code is: 7");
+    // log_d("f_close is fail error code is: 8");
+    // log_d("f_close is fail error code is: 9");
+    res = f_close(&elogfp);
+    log_d("f_close is fail error code is: %d",res);
+    return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), close_log_file, close_log_file, close_log_file);

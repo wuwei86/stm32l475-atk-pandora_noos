@@ -35,9 +35,14 @@
 
 #include "elog_file.h"
 
+#include "fatfs.h"
+#include "usb_host.h"
+#include "sd_diskio.h"
+
 /* initialize OK flag */
 static bool init_ok = false;
 static FILE *fp = NULL;
+FIL elogfp; 
 static ElogFileCfg local_cfg;
 
 ElogErrCode elog_file_init(void)
@@ -72,25 +77,42 @@ static bool elog_file_rotate(void)
     char oldpath[256], newpath[256];
     size_t base = strlen(local_cfg.name);
     bool result = true;
-    FILE *tmp_fp;
+    //FILE *tmp_fp;
+    FIL tmp_fp;
+    FRESULT res;
 
     memcpy(oldpath, local_cfg.name, base);
     memcpy(newpath, local_cfg.name, base);
 
-    fclose(fp);
+    //fclose(fp);
+    res = f_close(&elogfp);
+    if(res != FR_OK)
+    {
+        printf("####res is %d\r\n",res);
+        __nop();
+        __nop();
+    }
 
     for (n = local_cfg.max_rotate - 1; n >= 0; --n) {
         snprintf(oldpath + base, SUFFIX_LEN, n ? ".%d" : "", n - 1);
         snprintf(newpath + base, SUFFIX_LEN, ".%d", n);
         /* remove the old file */
-        if ((tmp_fp = fopen(newpath , "r")) != NULL) {
-            fclose(tmp_fp);
-            remove(newpath);
+        // if ((tmp_fp = fopen(newpath , "r")) != NULL) {
+        //     fclose(tmp_fp);
+        //     remove(newpath);
+        // }
+        if (f_open(&tmp_fp, newpath, FA_READ) != FR_OK) {
+            f_close(&tmp_fp);
+            //f_remove(newpath);
         }
         /* change the new log file to old file name */
-        if ((tmp_fp = fopen(oldpath , "r")) != NULL) {
-            fclose(tmp_fp);
-            err = rename(oldpath, newpath);
+        // if ((tmp_fp = fopen(oldpath , "r")) != NULL) {
+        //     fclose(tmp_fp);
+        //     err = rename(oldpath, newpath);
+        // }
+        if (f_open(&tmp_fp, oldpath, FA_READ) != FR_OK) {
+            f_close(&tmp_fp);
+            //f_remove(newpath);
         }
 
         if (err < 0) {
@@ -101,7 +123,13 @@ static bool elog_file_rotate(void)
 
 __exit:
     /* reopen the file */
-    fp = fopen(local_cfg.name, "a+");
+    //fp = fopen(local_cfg.name, "a+");
+    f_open(&elogfp,local_cfg.name,FA_CREATE_ALWAYS | FA_WRITE);
+    if(res != FR_OK)
+    {
+        __nop();
+    }
+
 
     return result;
 }
@@ -110,14 +138,35 @@ __exit:
 void elog_file_write(const char *log, size_t size)
 {
     size_t file_size = 0;
+    static FSIZE_t filePoint = 0;
+    FRESULT res;
 
     ELOG_ASSERT(init_ok);
     ELOG_ASSERT(log);
 
     elog_file_port_lock();
 
-    fseek(fp, 0L, SEEK_END);
-    file_size = ftell(fp);
+    //每次写的时候先关闭在打开，并从最后的位置开始写
+    res = f_close(&elogfp);
+    if(res != FR_OK)
+    {
+        printf("####f_close$$$res is %d\r\n",res);
+        __nop();
+        __nop();
+    }
+
+    res = f_open(&elogfp,local_cfg.name,FA_WRITE | FA_READ);
+    if(res != FR_OK)
+    {
+        printf("f_open res is:%d\r\n",res);
+        __nop();
+    }
+
+
+    //fseek(fp, 0L, SEEK_END);
+    f_lseek(&elogfp, filePoint);
+    file_size = f_tell(&elogfp);
+    //file_size = ftell(fp);
 
     if (unlikely(file_size > local_cfg.max_size)) {
 #if ELOG_FILE_MAX_ROTATE > 0
@@ -129,7 +178,15 @@ void elog_file_write(const char *log, size_t size)
 #endif
     }
 
-    fwrite(log, size, 1, fp);
+    uint32_t byteswriten = 1;
+    //fwrite(log, size, 1, fp);
+    res = f_write(&elogfp, log, size, &byteswriten);
+    if(res != FR_OK)
+    {
+        __nop();
+    }
+    filePoint = filePoint + size;
+    
 
 #ifdef ELOG_FILE_FLUSH_CACHE_ENABLE
     fflush(fp);
@@ -154,12 +211,14 @@ void elog_file_deinit(void)
 
 void elog_file_config(ElogFileCfg *cfg)
 {
+    FRESULT res;
     elog_file_port_lock();
 
-    if (fp) {
-        fclose(fp);
-        fp = NULL;
-    }
+    // if (fp) {
+    //     fclose(fp);
+    //     f_clsoe(&elogfp);
+    //     fp = NULL;
+    // }
 
     if (cfg != NULL) {
         local_cfg.name = cfg->name;
@@ -167,7 +226,14 @@ void elog_file_config(ElogFileCfg *cfg)
         local_cfg.max_rotate = cfg->max_rotate;
 
         if (local_cfg.name != NULL && strlen(local_cfg.name) > 0)
-            fp = fopen(local_cfg.name, "a+");
+            //fp = fopen(local_cfg.name, "a+");
+            res = f_open(&elogfp,local_cfg.name,FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
+            printf("local_cfg.name is:%s\r\n",local_cfg.name);
+            if(res != FR_OK)
+            {
+                printf("f_open res is:%d\r\n",res);
+                __nop();
+            }
     }
 
     elog_file_port_unlock();

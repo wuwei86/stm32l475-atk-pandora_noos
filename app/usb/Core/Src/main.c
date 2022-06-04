@@ -210,11 +210,11 @@ void SD_Mount(void)
 
       log_d("#####SDPath f_mount is success");
       /* Create and Open a new text file object with write access */
-      res = f_open(&SDFile, "1:ww.TXT", FA_READ);
+      res = f_open(&SDFile, "1:tt.log", FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
       log_d("SDPath f_open res is :%d",res);
       if(res != FR_OK)
       {
-          log_d("SDPath f_open is fail###res is :%d",res);
+          printf("SDPath f_open is fail###res is :%d",res);
           /* 'STM32.TXT' file Open for write Error */
           Error_Handler();
       }
@@ -362,7 +362,7 @@ void elog_user_init(void)
 
 #ifdef ELOG_FILE_ENABLE
   /* initialize EasyLogger Flash plugin */
-  //elog_file_init();
+  elog_file_init();
 #endif
 
   /* 启动elog */
@@ -544,6 +544,9 @@ int main(void)
   W25QXX_Init();
   LCD_Init();	
   SD_Init();
+
+  //挂载sd卡并测试文件的打开及其写入关闭
+  SD_Mount();
   
   //elog_user_init();
   //easyflash_user_init();
@@ -564,8 +567,9 @@ int main(void)
   extern int CJSON_CDECL cjson_main();
   cjson_main();
 
+
   //挂载sd卡并测试文件的打开及其写入关闭
-  SD_Mount();
+  //SD_Mount();
 
   //my_gfx_op.draw_pixel = gfx_draw_pixel;
   //my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
@@ -573,8 +577,7 @@ int main(void)
 
   //Display_ALIENTEK_LOGO(0, 0);
 
-
-
+  
   /* USER CODE BEGIN WHILE */
   while (1)
   {

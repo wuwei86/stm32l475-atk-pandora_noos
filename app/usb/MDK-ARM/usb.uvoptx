@@ -152,25 +152,25 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>3821</LineNumber>
+          <LineNumber>173</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134260818</Address>
+          <Address>134259646</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Middlewares/Third_Party/FatFs/src/ff.c</Filename>
+          <Filename>..\easylogger\plugins\file\elog_file.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\usb\../Middlewares/Third_Party/FatFs/src/ff.c\3821</Expression>
+          <Expression>\\usb\../easylogger/plugins/file/elog_file.c\173</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>3822</LineNumber>
+          <LineNumber>3829</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134260824</Address>
+          <Address>134264458</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -179,71 +179,39 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Middlewares/Third_Party/FatFs/src/ff.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\usb\../Middlewares/Third_Party/FatFs/src/ff.c\3822</Expression>
+          <Expression>\\usb\../Middlewares/Third_Party/FatFs/src/ff.c\3829</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>3786</LineNumber>
+          <LineNumber>174</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134262616</Address>
+          <Address>134259656</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Middlewares/Third_Party/FatFs/src/ff.c</Filename>
+          <Filename>..\easylogger\plugins\file\elog_file.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\usb\../Middlewares/Third_Party/FatFs/src/ff.c\3786</Expression>
+          <Expression>\\usb\../easylogger/plugins/file/elog_file.c\174</Expression>
         </Bp>
         <Bp>
           <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>3794</LineNumber>
+          <LineNumber>176</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134262674</Address>
+          <Address>134259658</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Middlewares/Third_Party/FatFs/src/ff.c</Filename>
+          <Filename>..\easylogger\plugins\file\elog_file.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\usb\../Middlewares/Third_Party/FatFs/src/ff.c\3794</Expression>
-        </Bp>
-        <Bp>
-          <Number>4</Number>
-          <Type>0</Type>
-          <LineNumber>3795</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134262680</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Middlewares/Third_Party/FatFs/src/ff.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\usb\../Middlewares/Third_Party/FatFs/src/ff.c\3795</Expression>
-        </Bp>
-        <Bp>
-          <Number>5</Number>
-          <Type>0</Type>
-          <LineNumber>971</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134280424</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Middlewares/Third_Party/FatFs/src/ff.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\usb\../Middlewares/Third_Party/FatFs/src/ff.c\971</Expression>
+          <Expression>\\usb\../easylogger/plugins/file/elog_file.c\176</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -291,6 +259,26 @@
           <count>8</count>
           <WinNumber>1</WinNumber>
           <ItemText>rtext</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>local_cfg</ItemText>
+        </Ww>
+        <Ww>
+          <count>10</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>file_size</ItemText>
+        </Ww>
+        <Ww>
+          <count>11</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>res</ItemText>
+        </Ww>
+        <Ww>
+          <count>12</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>res</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
