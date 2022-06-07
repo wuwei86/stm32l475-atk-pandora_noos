@@ -26,8 +26,11 @@
 #include "sd_diskio.h"
 #include "elog.h"
 #include "elog_flash.h"
+#include "elog_file.h"
 #include "bsp.h"
 #include "lcd.h"
+#include "timer.h"
+#include "led.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "w25qxx.h"
@@ -38,7 +41,13 @@
 #include "easyflash.h"
 #include "shell_port.h"
 #include "cJSON.h"
-#include "cJSON_Utils.h"   
+#include "cJSON_Utils.h"  
+
+#include "mb.h"
+#include "mbport.h"
+#include "port.h"
+
+#include "user_mb_app.h"
 
 
 
@@ -105,55 +114,17 @@ extern void startHelloWave(void* phy_fb, int width, int height, int color_bytes,
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void FreeModbus_Init(void)
+{
+  eMBErrorCode eStatus;
+  eStatus = eMBInit(MB_RTU, 0x01, 0, 115200, MB_PAR_NONE);
+  log_d("eMBInit is: %d",eStatus);
+  eStatus = eMBEnable(  );
+  log_d("eMBEnable is: %d",eStatus);
+}
 /* USER CODE END 0 */
 
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
-// int main(void)
-// {
-//   /* USER CODE BEGIN 1 */
 
-//   /* USER CODE END 1 */
-
-//   /* MCU Configuration--------------------------------------------------------*/
-
-//   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-//   HAL_Init();
-
-//   /* USER CODE BEGIN Init */
-
-//   /* USER CODE END Init */
-
-//   /* Configure the system clock */
-//   SystemClock_Config();
-
-//   /* USER CODE BEGIN SysInit */
-
-//   /* USER CODE END SysInit */
-
-//   /* Initialize all configured peripherals */
-//   MX_GPIO_Init();
-//   MX_FATFS_Init();
-//   MX_USB_HOST_Init();
-//   MX_USART1_UART_Init();
-//   /* USER CODE BEGIN 2 */
-
-//   /* USER CODE END 2 */
-
-//   /* Infinite loop */
-//   /* USER CODE BEGIN WHILE */
-//   while (1)
-//   {
-//     /* USER CODE END WHILE */
-//     MX_USB_HOST_Process();
-
-//     /* USER CODE BEGIN 3 */
-//   }
-//   /* USER CODE END 3 */
-// }
 
 void SD_Mount(void)
 {
@@ -537,9 +508,18 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  LED_Init();
+  TIM3_Init(5000 - 1, 8000 - 1);//分频系数为8000，80M = 80000000/8000 = 10000 自动装载为5000 则5000/10000 = 0.5s = 500ms
   MX_FATFS_Init();
   MX_USB_HOST_Init();
   MX_USART1_UART_Init();
+  //MX_USART3_UART_Init();
+
+  //HAL_UART_Receive_IT(&huart3, (uint8_t*)&clk, 1);
+  //HAL_UART_Transmit(&huart3,(const uint8_t*)LOG_VERSION_NUM, 5, 0xffff);
+  //HAL_UART_Transmit_IT(&huart3,(const uint8_t *)&ucByte, 1);
+  
+
   printf(LOG_PROJECT_VERSION_MSG);//打印工程信息
   W25QXX_Init();
   LCD_Init();	
@@ -547,7 +527,6 @@ int main(void)
 
   //挂载sd卡并测试文件的打开及其写入关闭
   SD_Mount();
-  
   //elog_user_init();
   //easyflash_user_init();
   elogger_eflash_user_init();
@@ -567,6 +546,8 @@ int main(void)
   extern int CJSON_CDECL cjson_main();
   cjson_main();
 
+  FreeModbus_Init();
+
 
   //挂载sd卡并测试文件的打开及其写入关闭
   //SD_Mount();
@@ -582,10 +563,19 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    MX_USB_HOST_Process();
+    //MX_USB_HOST_Process();
     
 
-    user_usb_process();
+    //user_usb_process();
+
+     ( void )eMBPoll();
+ 
+    usSRegHoldBuf[3]++;
+		if(usSRegHoldBuf[3] > 100)
+    {
+      usSRegHoldBuf[3] = 0;
+    }
+			
 
     /* USER CODE BEGIN 3 */
   }

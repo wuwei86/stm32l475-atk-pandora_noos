@@ -2,8 +2,13 @@
 #include "bsp.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "shell.h"
+#include "portserial.h"
+#include "led.h"
 
 UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart3;
+
 /**
   * @brief System Clock Configuration
   * @retval None
@@ -88,6 +93,41 @@ void MX_USART1_UART_Init(void)
 
 }
 
+/**
+  * @brief USART3 Initialization Function
+  * @param None
+  * @retval None
+  */
+void MX_USART3_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART3_Init 0 */
+
+  /* USER CODE END USART3_Init 0 */
+
+  /* USER CODE BEGIN USART3_Init 1 */
+
+  /* USER CODE END USART3_Init 1 */
+  huart3.Instance = USART3;
+  huart3.Init.BaudRate = 115200;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart3.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART3_Init 2 */
+
+  /* USER CODE END USART3_Init 2 */
+}
+
+
 //编写中断服务函数
 void USART1_IRQHandler(void)
 {
@@ -96,6 +136,87 @@ void USART1_IRQHandler(void)
 	//HAL_UART_Receive_IT(&huart1,rdata,sizeof(rdata));//使能接收中断
 }
 
+//编写中断服务函数
+void USART3_IRQHandler(void)
+{
+  if(__HAL_UART_GET_FLAG(&huart3, UART_FLAG_RXNE))			// 接收非空中断标记被置位
+  {
+      __HAL_UART_CLEAR_FLAG(&huart3, UART_FLAG_RXNE);			// 清除中断标记
+      prvvUARTRxISR();										// 通知modbus有数据到达
+  }
+
+  if(__HAL_UART_GET_FLAG(&huart3, UART_FLAG_TXE))				// 发送为空中断标记被置位
+  {
+      __HAL_UART_CLEAR_FLAG(&huart3, UART_FLAG_TXE);			// 清除中断标记
+      prvvUARTTxReadyISR();									// 通知modbus数据可以发松
+  }
+  //HAL_UART_IRQHandler(&huart3);
+
+}
+uint8_t recv_buf1 = 0;
+/* 中断回调函数 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    /* 判断是哪个串口触发的中断 */
+    if(huart ->Instance == USART1)
+    {
+        extern Shell shell;
+        extern uint8_t recv_buf;
+        //printf("recv:%#x\r\n",recv_buf);
+        //调用shell处理数据的接口
+        shellHandler(&shell, recv_buf);
+        //使能串口中断接收
+        HAL_UART_Receive_IT(&huart1, (uint8_t*)&recv_buf, 1);
+    }
+    else if(huart ->Instance == USART3)
+    {
+      //prvvUARTRxISR();
+    }
+}
+
+/* 中断回调函数 */
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+	extern UART_HandleTypeDef huart1;
+
+    /* 判断是哪个串口触发的中断 */
+    if(huart ->Instance == USART1)
+    {
+       
+    }
+    else if(huart ->Instance == USART3)
+    {
+      //prvvUARTTxReadyISR();	
+
+    }
+}
+
+extern TIM_HandleTypeDef TIM3_Handler;
+extern TIM_HandleTypeDef TIM4_Handler;
+
+void TIM3_IRQHandler(void)
+{
+    HAL_TIM_IRQHandler(&TIM3_Handler);
+}
+
+void TIM4_IRQHandler(void)
+{
+    HAL_TIM_IRQHandler(&TIM4_Handler);
+}
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM3)
+    {
+        LED_B_TogglePin;        //LED_B翻转
+    }
+    else if (htim->Instance == TIM4)
+    {
+        extern void prvvTIMERExpiredISR(void);
+        prvvTIMERExpiredISR();
+    }
+}
 /**
   * @brief GPIO Initialization Function
   * @param None

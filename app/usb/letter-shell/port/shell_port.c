@@ -80,21 +80,7 @@ void userShellInit(void)
     //xTaskCreate(shellTask, "shell", 2048, &shell, 10, NULL);
 }
 
-/* 中断回调函数 */
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-	extern UART_HandleTypeDef huart1;
 
-    /* 判断是哪个串口触发的中断 */
-    if(huart ->Instance == USART1)
-    {
-        //printf("recv:%#x\r\n",recv_buf);
-        //调用shell处理数据的接口
-        shellHandler(&shell, recv_buf);
-        //使能串口中断接收
-        HAL_UART_Receive_IT(&huart1, (uint8_t*)&recv_buf, 1);
-    }
-}
 
 
 

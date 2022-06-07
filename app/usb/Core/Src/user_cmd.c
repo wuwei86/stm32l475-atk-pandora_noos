@@ -266,21 +266,18 @@ int usb_read_file(int argc, char *agrv[])
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), usb_read_file, usb_read_file, usb_read_file);
 
 //读取文件
-int close_log_file(int argc, char *agrv[])
+int test_log_file(int argc, char *agrv[])
 {
-    extern FIL elogfp;
-    FRESULT res; 
     log_d("##f_close is fail error code is: 1");
     log_d("###f_close is fail error code is: 2");
     log_d("###f_close is fail error code is: 3");
     log_d("##f_close is fail error code is: 4");
-    // log_d("f_close is fail error code is: 5");
-    // log_d("f_close is fail error code is: 6");
-    // log_d("f_close is fail error code is: 7");
-    // log_d("f_close is fail error code is: 8");
-    // log_d("f_close is fail error code is: 9");
-    res = f_close(&elogfp);
-    log_d("f_close is fail error code is: %d",res);
+    log_d("f_close is fail error code is: 5");
+    log_d("f_close is fail error code is: 6");
+    log_d("f_close is fail error code is: 7");
+    log_d("f_close is fail error code is: 8");
+    log_d("f_close is fail error code is: 9");
+
     return 0;
 }
-SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), close_log_file, close_log_file, close_log_file);
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), test_log_file, test_log_file, test_log_file);

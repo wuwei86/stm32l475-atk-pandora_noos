@@ -22,7 +22,16 @@
         "sd_diskio.h": "c",
         "bsp.h": "c",
         "spi3.h": "c",
-        "grs.h": "c"
+        "grs.h": "c",
+        "assert.h": "c",
+        "port.h": "c",
+        "mbport.h": "c",
+        "mbfunc.h": "c",
+        "portserial.h": "c",
+        "timer.h": "c",
+        "time.h": "c",
+        "led.h": "c",
+        "lcd.h": "c"
     },
     "cmake.configureOnOpen": false
 }

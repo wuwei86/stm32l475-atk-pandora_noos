@@ -34,10 +34,12 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 
 extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart3;
 
- #define printDebugMsg(format, ...) printf("File:[%s], Line:%d ,Function:[%s]: " format "\r\n",__FILE__, __LINE__,__FUNCTION__,##__VA_ARGS__);
+#define printDebugMsg(format, ...) printf("File:[%s], Line:%d ,Function:[%s]: " format "\r\n",__FILE__, __LINE__,__FUNCTION__,##__VA_ARGS__);
 
-
+#define RS485_TX_EN   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET)
+#define RS485_RX_EN   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET)
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
@@ -48,6 +50,7 @@ extern UART_HandleTypeDef huart1;
 /* USER CODE END Private defines */
 void SystemClock_Config(void);
 void MX_USART1_UART_Init(void);
+void MX_USART3_UART_Init(void);
 void MX_GPIO_Init(void);
 void Error_Handler(void);
 #ifdef __cplusplus
