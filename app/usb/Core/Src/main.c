@@ -48,8 +48,8 @@
 #include "port.h"
 
 #include "user_mb_app.h"
-
-
+#include "MultiTimer.h"
+#include "multi_button.h"
 
 
 /* Private includes ----------------------------------------------------------*/
@@ -509,6 +509,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   LED_Init();
+  KEY_Init();
   TIM3_Init(5000 - 1, 8000 - 1);//分频系数为8000，80M = 80000000/8000 = 10000 自动装载为5000 则5000/10000 = 0.5s = 500ms
   MX_FATFS_Init();
   MX_USB_HOST_Init();
@@ -548,9 +549,11 @@ int main(void)
 
   FreeModbus_Init();
 
+  extern void MultiTimer_test(void);
+  MultiTimer_test();
 
-  //挂载sd卡并测试文件的打开及其写入关闭
-  //SD_Mount();
+  extern void MultiButton_callback();
+  MultiButton_callback();
 
   //my_gfx_op.draw_pixel = gfx_draw_pixel;
   //my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
@@ -563,10 +566,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    //MX_USB_HOST_Process();
+    MX_USB_HOST_Process();
     
 
-    //user_usb_process();
+    user_usb_process();
 
      ( void )eMBPoll();
  
@@ -575,6 +578,8 @@ int main(void)
     {
       usSRegHoldBuf[3] = 0;
     }
+
+    MultiTimerYield();
 			
 
     /* USER CODE BEGIN 3 */

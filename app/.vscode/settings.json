@@ -31,7 +31,9 @@
         "timer.h": "c",
         "time.h": "c",
         "led.h": "c",
-        "lcd.h": "c"
+        "lcd.h": "c",
+        "multitimer.h": "c",
+        "multi_button.h": "c"
     },
     "cmake.configureOnOpen": false
 }

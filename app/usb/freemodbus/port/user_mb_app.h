@@ -11,7 +11,7 @@
 #define S_DISCRETE_INPUT_START                    0
 #define S_DISCRETE_INPUT_NDISCRETES               8
 #define S_COIL_START                              0
-#define S_COIL_NCOILS                             8
+#define S_COIL_NCOILS                             24
 #define S_REG_INPUT_START                         0
 #define S_REG_INPUT_NREGS                         8
 #define S_REG_HOLDING_START                       0

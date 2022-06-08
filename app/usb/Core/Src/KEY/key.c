@@ -10,22 +10,22 @@
 			\_| |_/\_____/\___/ \____/ \_| \_/  \_/  \____/ \_| \_/
 
  *	******************************************************************************
- *	±¾³ÌĞòÖ»¹©Ñ§Ï°Ê¹ÓÃ£¬Î´¾­×÷ÕßĞí¿É£¬²»µÃÓÃÓÚÆäËüÈÎºÎÓÃÍ¾
- *	ALIENTEK Pandora STM32L475 IOT¿ª·¢°å
- *	KEYÇı¶¯´úÂë
- *	ÕıµãÔ­×Ó@ALIENTEK
- *	¼¼ÊõÂÛÌ³:www.openedv.com
- *	´´½¨ÈÕÆÚ:2018/10/27
- *	°æ±¾£ºV1.0
- *	°æÈ¨ËùÓĞ£¬µÁ°æ±Ø¾¿¡£
- *	Copyright(C) ¹ãÖİÊĞĞÇÒíµç×Ó¿Æ¼¼ÓĞÏŞ¹«Ë¾ 2014-2024
+ *	æœ¬ç¨‹åºåªä¾›å­¦ä¹ ä½¿ç”¨ï¼Œæœªç»ä½œè€…è®¸å¯ï¼Œä¸å¾—ç”¨äºå…¶å®ƒä»»ä½•ç”¨é€”
+ *	ALIENTEK Pandora STM32L475 IOTå¼€å‘æ¿
+ *	KEYé©±åŠ¨ä»£ç 
+ *	æ­£ç‚¹åŸå­@ALIENTEK
+ *	æŠ€æœ¯è®ºå›:www.openedv.com
+ *	åˆ›å»ºæ—¥æœŸ:2018/10/27
+ *	ç‰ˆæœ¬ï¼šV1.0
+ *	ç‰ˆæƒæ‰€æœ‰ï¼Œç›—ç‰ˆå¿…ç©¶ã€‚
+ *	Copyright(C) å¹¿å·å¸‚æ˜Ÿç¿¼ç”µå­ç§‘æŠ€æœ‰é™å…¬å¸ 2014-2024
  *	All rights reserved
  *	******************************************************************************
- *	³õÊ¼°æ±¾
+ *	åˆå§‹ç‰ˆæœ¬
  *	******************************************************************************/
 
 /**
- * @brief	°´¼ü³õÊ¼»¯º¯Êı
+ * @brief	æŒ‰é”®åˆå§‹åŒ–å‡½æ•°
  *
  * @param   void
  *
@@ -42,37 +42,37 @@ void KEY_Init(void)
 	
     GPIO_InitTypeDef GPIO_Initure;
 
-    __HAL_RCC_GPIOC_CLK_ENABLE();           //¿ªÆôGPIOCÊ±ÖÓ
-    __HAL_RCC_GPIOD_CLK_ENABLE();           //¿ªÆôGPIODÊ±ÖÓ
+    __HAL_RCC_GPIOC_CLK_ENABLE();           //å¼€å¯GPIOCæ—¶é’Ÿ
+    __HAL_RCC_GPIOD_CLK_ENABLE();           //å¼€å¯GPIODæ—¶é’Ÿ
 
     GPIO_Initure.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 ;	//PD8.9.10
-    GPIO_Initure.Mode = GPIO_MODE_INPUT;    //ÊäÈë
-    GPIO_Initure.Pull = GPIO_PULLDOWN;      //ÏÂÀ­
-    GPIO_Initure.Speed = GPIO_SPEED_HIGH;   //¸ßËÙ
+    GPIO_Initure.Mode = GPIO_MODE_INPUT;    //è¾“å…¥
+    GPIO_Initure.Pull = GPIO_PULLDOWN;      //ä¸‹æ‹‰
+    GPIO_Initure.Speed = GPIO_SPEED_HIGH;   //é«˜é€Ÿ
     HAL_GPIO_Init(GPIOD, &GPIO_Initure);
 
     GPIO_Initure.Pin = GPIO_PIN_13;         //PC13
-    GPIO_Initure.Mode = GPIO_MODE_INPUT;    //ÊäÈë
-    GPIO_Initure.Pull = GPIO_PULLUP;        //ÉÏÀ­
-    GPIO_Initure.Speed = GPIO_SPEED_HIGH;   //¸ßËÙ
+    GPIO_Initure.Mode = GPIO_MODE_INPUT;    //è¾“å…¥
+    GPIO_Initure.Pull = GPIO_PULLUP;        //ä¸Šæ‹‰
+    GPIO_Initure.Speed = GPIO_SPEED_HIGH;   //é«˜é€Ÿ
     HAL_GPIO_Init(GPIOC, &GPIO_Initure);
 }
 
 /**
- * @brief	°´¼ü´¦Àíº¯Êı
+ * @brief	æŒ‰é”®å¤„ç†å‡½æ•°
  *
- * @remark	×¢Òâ´Ëº¯ÊıÓĞÏìÓ¦ÓÅÏÈ¼¶,KEY0>KEY1>KEY2>WK_UP!!
+ * @remark	æ³¨æ„æ­¤å‡½æ•°æœ‰å“åº”ä¼˜å…ˆçº§,KEY0>KEY1>KEY2>WK_UP!!
  *
- * @param   mode	0:²»Ö§³ÖÁ¬Ğø°´,1:Ö§³ÖÁ¬Ğø°´
+ * @param   mode	0:ä¸æ”¯æŒè¿ç»­æŒ‰,1:æ”¯æŒè¿ç»­æŒ‰
  *
- * @return  u8		·µ»Ø°´¼üÖµ	
-*					0:Ã»ÓĞÈÎºÎ°´¼ü°´ÏÂ,1:KEY0°´ÏÂ,2:KEY1°´ÏÂ,3:KEY2°´ÏÂ,4:WK_UP°´ÏÂ
+ * @return  u8		è¿”å›æŒ‰é”®å€¼	
+*					0:æ²¡æœ‰ä»»ä½•æŒ‰é”®æŒ‰ä¸‹,1:KEY0æŒ‰ä¸‹,2:KEY1æŒ‰ä¸‹,3:KEY2æŒ‰ä¸‹,4:WK_UPæŒ‰ä¸‹
  */
 u8 KEY_Scan(u8 mode)
 {
-    static u8 key_up = 1;   //°´¼üËÉ¿ª±êÖ¾
+    static u8 key_up = 1;   //æŒ‰é”®æ¾å¼€æ ‡å¿—
 
-    if(mode == 1)key_up = 1; //Ö§³ÖÁ¬°´
+    if(mode == 1)key_up = 1; //æ”¯æŒè¿æŒ‰
 
     if(key_up && (KEY0 == 0 || KEY1 == 0 || KEY2 == 0 || WK_UP == 1))
     {
@@ -90,5 +90,5 @@ u8 KEY_Scan(u8 mode)
 
     else if(KEY0 == 1 && KEY1 == 1 && KEY2 == 1 && WK_UP == 0)key_up = 1;
 
-    return 0;   //ÎŞ°´¼ü°´ÏÂ
+    return 0;   //æ— æŒ‰é”®æŒ‰ä¸‹
 }

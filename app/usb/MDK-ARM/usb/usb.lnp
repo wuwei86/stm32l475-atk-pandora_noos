@@ -110,6 +110,10 @@
 "usb\portserial.o"
 "usb\porttimer.o"
 "usb\user_mb_app.o"
+"usb\multitimer.o"
+"usb\test_stm32.o"
+"usb\example_callback.o"
+"usb\multi_button.o"
 --library_type=microlib --strict --scatter "usb\usb.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

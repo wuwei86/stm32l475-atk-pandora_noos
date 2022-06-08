@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L475xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash;..\Core\Inc\SD_CARD;..\Core\Inc\SPI1;..\Core\Inc\SPI;..\easylogger\plugins\file;..\freemodbus\modbus\include;..\freemodbus\port;..\freemodbus\modbus\ascii;..\freemodbus\modbus\rtu;..\freemodbus\modbus\tcp;..\freemodbus\modbus\functions;..\Core\Inc\TIMER;..\Core\Inc\LED;..\Core\Inc\BEEP;..\Core\Inc\EXTI;..\Core\Inc\IWDG;..\Core\Inc\KEY;..\Core\Inc\WWDG</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash;..\Core\Inc\SD_CARD;..\Core\Inc\SPI1;..\Core\Inc\SPI;..\easylogger\plugins\file;..\freemodbus\modbus\include;..\freemodbus\port;..\freemodbus\modbus\ascii;..\freemodbus\modbus\rtu;..\freemodbus\modbus\tcp;..\freemodbus\modbus\functions;..\Core\Inc\TIMER;..\Core\Inc\LED;..\Core\Inc\BEEP;..\Core\Inc\EXTI;..\Core\Inc\IWDG;..\Core\Inc\KEY;..\Core\Inc\WWDG;..\MultiTimer;..\MultiButton</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2959,6 +2959,92 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MultiTimer</GroupName>
+          <Files>
+            <File>
+              <FileName>MultiTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MultiTimer\MultiTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_stm32.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MultiTimer\test_stm32.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MultiButton</GroupName>
+          <Files>
+            <File>
+              <FileName>example_callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MultiButton\example_callback.c</FilePath>
+            </File>
+            <File>
+              <FileName>example_poll.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MultiButton\example_poll.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>multi_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MultiButton\multi_button.c</FilePath>
             </File>
           </Files>
         </Group>
