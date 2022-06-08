@@ -199,9 +199,16 @@ void TIM3_IRQHandler(void)
     HAL_TIM_IRQHandler(&TIM3_Handler);
 }
 
+extern void prvvTIMERExpiredISR(void);
+
 void TIM4_IRQHandler(void)
 {
     HAL_TIM_IRQHandler(&TIM4_Handler);
+    // if(__HAL_TIM_GET_FLAG(&TIM4_Handler, TIM_FLAG_UPDATE))			// 更新中断标记被置位
+    // {
+    //     __HAL_TIM_CLEAR_FLAG(&TIM4_Handler, TIM_FLAG_UPDATE);		// 清除中断标记
+    //     prvvTIMERExpiredISR();								// 通知modbus3.5个字符等待时间到
+    // }
 }
 
 
@@ -213,8 +220,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     }
     else if (htim->Instance == TIM4)
     {
-        extern void prvvTIMERExpiredISR(void);
-        prvvTIMERExpiredISR();
+        // if(__HAL_TIM_GET_FLAG(&TIM4_Handler, TIM_FLAG_UPDATE))			// 更新中断标记被置位
+        // {
+        //     __HAL_TIM_CLEAR_FLAG(&TIM4_Handler, TIM_FLAG_UPDATE);		// 清除中断标记
+        //     prvvTIMERExpiredISR();								// 通知modbus3.5个字符等待时间到
+        // }
+        prvvTIMERExpiredISR();								// 通知modbus3.5个字符等待时间到
     }
 }
 /**

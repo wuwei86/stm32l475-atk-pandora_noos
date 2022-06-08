@@ -80,30 +80,28 @@ BOOL xMBPortSerialInit(UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits,
 
 void vMBPortSerialEnable(BOOL xRxEnable, BOOL xTxEnable)
 {
-    uint8_t tmp = 0;
     ENTER_CRITICAL_SECTION();
    
     if(xRxEnable == TRUE) 
     {
-        RS485_RX_EN;
         __HAL_UART_ENABLE_IT(&huart3, UART_IT_RXNE);
-        //HAL_UART_Receive_IT(&huart3, &tmp, 1);
+        RS485_RX_EN;
     } 
     else 
     {
-        RS485_TX_EN;
         __HAL_UART_DISABLE_IT(&huart3, UART_IT_RXNE);
+        RS485_TX_EN;
     }
 
     if(xTxEnable == TRUE) 
     {
-        RS485_TX_EN;
         __HAL_UART_ENABLE_IT(&huart3, UART_IT_TC);
+        RS485_TX_EN;
     } 
     else 
     {
-        RS485_RX_EN;
         __HAL_UART_DISABLE_IT(&huart3, UART_IT_TC);
+        RS485_RX_EN;
     }
 
     EXIT_CRITICAL_SECTION();
@@ -130,7 +128,7 @@ BOOL xMBPortSerialGetByte(CHAR * pucByte)
 	
     //*pucByte = (USART3->RDR & (uint16_t)0x00FF);
     HAL_UART_Receive(&huart3, &temp, 1,0xffff);
-     *pucByte = temp;
+    *pucByte = temp;
     return TRUE;
 }
 

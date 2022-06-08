@@ -36,6 +36,7 @@ TIM_HandleTypeDef TIM4_Handler;      //定时器句柄
 /* ----------------------- Start implementation -----------------------------*/
 BOOL xMBPortTimersInit(USHORT usTim1Timerout50us)//需要实现50us定时器
 {
+    TIM_ClockConfigTypeDef sClockSourceConfig = {0};
     TIM_MasterConfigTypeDef sMasterConfig = {0};
 
     MODBUS_TIM.Instance = TIM4;
@@ -47,13 +48,20 @@ BOOL xMBPortTimersInit(USHORT usTim1Timerout50us)//需要实现50us定时器
     {
         Error_Handler();
     }
+    sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+    if (HAL_TIM_ConfigClockSource(&MODBUS_TIM, &sClockSourceConfig) != HAL_OK)
+    {
+        return FALSE;
+    }
+
     sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
     sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
     if (HAL_TIMEx_MasterConfigSynchronization(&MODBUS_TIM, &sMasterConfig) != HAL_OK)
     {
         Error_Handler();
     }
-
+    __HAL_TIM_CLEAR_FLAG(&MODBUS_TIM, TIM_FLAG_UPDATE);// 先清除一下定时器的中断标记,防止使能中断后直接触发中断
+    __HAL_TIM_ENABLE_IT(&MODBUS_TIM, TIM_IT_UPDATE);// 使能定时器更新中断
     return TRUE;
 }
 

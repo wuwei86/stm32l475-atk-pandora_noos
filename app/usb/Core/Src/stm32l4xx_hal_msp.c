@@ -20,6 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "bsp.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -165,7 +166,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
     HAL_NVIC_SetPriority(USART3_IRQn,2,2);//设置中断优先级
     HAL_NVIC_EnableIRQ(USART3_IRQn);//使能中断通道
   /* USER CODE BEGIN USART3_MspInit 1 */
-
+    //__HAL_UART_ENABLE_IT(&huart3, UART_IT_RXNE);
+    //__HAL_UART_CLEAR_FLAG(&huart3, UART_FLAG_TXE);			// 清除中断标记
+    //__HAL_UART_CLEAR_FLAG(&huart3, UART_FLAG_RXNE);			// 清除中断标记
   /* USER CODE END USART3_MspInit 1 */
   }
 
