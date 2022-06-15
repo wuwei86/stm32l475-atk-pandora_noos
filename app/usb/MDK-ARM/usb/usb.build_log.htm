@@ -22,19 +22,30 @@ Dialog DLL:      TCM.DLL V1.36.5.0
  
 <h2>Project:</h2>
 F:\work\github\stm32l475-atk-pandora_noos\app\usb\MDK-ARM\usb.uvprojx
-Project File Date:  06/08/2022
+Project File Date:  06/14/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files\Keil_v5\ARM\ARMCC\Bin'
 *** Warning: You are compiling one or more files of source type C++ and have selected 'use MicroLIB'. MicroLIB does not support C++!
   
 Build target 'usb'
-compiling porttimer.c...
+compiling wifi_task.c...
+..\Core\Inc\WIFI_AT_ESP8266\wifi_task.h(44): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Core\Src\WIFI_AT_ESP8266\wifi_task.c(311): warning:  #223-D: function "memset" declared implicitly
+      memset(buf, 0, 64);
+..\Core\Src\WIFI_AT_ESP8266\wifi_task.c(164): warning:  #177-D: function "at_init_callbatk"  was declared but never referenced
+  static void at_init_callbatk(at_response_t *r)
+..\Core\Src\WIFI_AT_ESP8266\wifi_task.c(179): warning:  #177-D: variable "wifi_init_cmds"  was declared but never referenced
+  static const char *wifi_init_cmds[] = {
+..\Core\Src\WIFI_AT_ESP8266\wifi_task.c(285): warning:  #177-D: variable "at_cmd_ver"  was declared but never referenced
+  static const at_cmd_t at_cmd_ver = {
+..\Core\Src\WIFI_AT_ESP8266\wifi_task.c: 5 warnings, 0 errors
 linking...
-Program Size: Code=76336 RO-data=7812 RW-data=1972 ZI-data=27156  
+Program Size: Code=82824 RO-data=8380 RW-data=1992 ZI-data=30040  
 FromELF: creating hex file...
 After Build - User command #1: fromelf.exe --bin -o "usb.bin"  "usb\usb.axf"
-"usb\usb.axf" - 0 Error(s), 0 Warning(s).
+"usb\usb.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -57,7 +68,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

@@ -2,6 +2,11 @@
 #include "bsp.h"
 #include "led.h"
 #include "MultiTimer.h"
+#include <lvgl.h>
+#include "lv_port_disp.h"
+#include "lvgl_button.h"
+#include "lvgl_app.h"
+
 #define LOG_TAG    "app_multitimer_test"
 
 
@@ -20,6 +25,9 @@ void exampleTimer1Callback(MultiTimer* timer, void *userData)
 {
     //log_d("[%012ld] Timer:%p callback-> %s.\r\n", PlatformTicksGetFunc(), timer, (char*)userData);
     LED_R_TogglePin;
+    lv_led_toggle(led_red);
+    lv_led_toggle(led_green);
+    lv_led_toggle(led_blue);
     MultiTimerStart(timer, 500, exampleTimer1Callback, userData);
 }
 

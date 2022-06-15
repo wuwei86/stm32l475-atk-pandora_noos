@@ -15,18 +15,18 @@ enum Button_IDs {
 	btn_wake_up,
 };
 
-struct Button btn0;
-struct Button btn1;
+static struct Button btn0;
+static struct Button btn1;
 
-MultiTimer btn_timer;
+static MultiTimer btn_timer;
 
-void btnTimerCallback(MultiTimer* timer, void *userData)
+static void btnTimerCallback(MultiTimer* timer, void *userData)
 {
 	button_ticks();
     MultiTimerStart(timer, 5, btnTimerCallback, userData);
 }
 
-uint8_t read_button_GPIO(uint8_t button_id)
+static uint8_t read_button_GPIO(uint8_t button_id)
 {
 	uint8_t readkey = 0xff;
 	// you can share the GPIO read function with multiple Buttons
@@ -55,7 +55,7 @@ uint8_t read_button_GPIO(uint8_t button_id)
 	return readkey;
 }
 
-void BTN0_CALLBAKC_Handler(void* btn)
+static void BTN0_CALLBAKC_Handler(void* btn)
 {
 	uint8_t btn_event_val;
 	btn_event_val = get_button_event((struct Button *)btn);
@@ -89,7 +89,7 @@ void BTN0_CALLBAKC_Handler(void* btn)
 
 }
 
-void BTN1_CALLBAKC_Handler(void* btn)
+static void BTN1_CALLBAKC_Handler(void* btn)
 {
 	uint8_t btn_event_val;
 	btn_event_val = get_button_event((struct Button *)btn);

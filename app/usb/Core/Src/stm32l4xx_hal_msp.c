@@ -21,6 +21,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "bsp.h"
+#include "stm32l4xx_hal.h"
+#include "stm32l475xx.h"
+#include "stm32l4xx_hal_conf.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -119,10 +122,55 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
      //串口接收中断优先级配置和使能
 		HAL_NVIC_SetPriority(USART1_IRQn,3,3);//设置中断优先级
 		HAL_NVIC_EnableIRQ(USART1_IRQn);//使能中断通道
+    //__HAL_UART_CLEAR_FLAG(&huart2, UART_FLAG_TXE);			// 清除中断标记
+    //__HAL_UART_CLEAR_FLAG(&huart2, UART_FLAG_RXNE);			// 清除中断标记
+    //__HAL_UART_ENABLE_IT(&huart2, UART_IT_RXNE);
+    //__HAL_UART_ENABLE_IT(&huart2, UART_IT_TC);
+
 
   /* USER CODE BEGIN USART1_MspInit 1 */
 
   /* USER CODE END USART1_MspInit 1 */
+  }
+  else if(huart->Instance==USART2)
+  {
+  /* USER CODE BEGIN USART3_MspInit 0 */
+
+  /* USER CODE END USART3_MspInit 0 */
+
+  /** Initializes the peripherals clock
+  */
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
+    PeriphClkInit.Usart3ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    /* Peripheral clock enable */
+    __HAL_RCC_USART2_CLK_ENABLE();
+
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**USART3 GPIO Configuration
+    PB10     ------> USART3_TX
+    PB11     ------> USART3_RX
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    
+    //串口接收中断优先级配置和使能
+    HAL_NVIC_SetPriority(USART2_IRQn,2,2);//设置中断优先级
+    HAL_NVIC_EnableIRQ(USART2_IRQn);//使能中断通道
+  /* USER CODE BEGIN USART3_MspInit 1 */
+    //__HAL_UART_ENABLE_IT(&huart2, UART_IT_RXNE);
+    //__HAL_UART_CLEAR_FLAG(&huart2, UART_FLAG_TXE);			// 清除中断标记
+    //__HAL_UART_CLEAR_FLAG(&huart2, UART_FLAG_RXNE);			// 清除中断标记
+  /* USER CODE END USART3_MspInit 1 */
   }
   else if(huart->Instance==USART3)
   {
@@ -163,7 +211,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
 
 
     //串口接收中断优先级配置和使能
-    HAL_NVIC_SetPriority(USART3_IRQn,2,2);//设置中断优先级
+    HAL_NVIC_SetPriority(USART3_IRQn,4,4);//设置中断优先级
     HAL_NVIC_EnableIRQ(USART3_IRQn);//使能中断通道
   /* USER CODE BEGIN USART3_MspInit 1 */
     //__HAL_UART_ENABLE_IT(&huart3, UART_IT_RXNE);
@@ -199,6 +247,26 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
   /* USER CODE BEGIN USART1_MspDeInit 1 */
 
   /* USER CODE END USART1_MspDeInit 1 */
+  }
+  else if(huart->Instance==USART2)
+  {
+   
+    /* USER CODE BEGIN USART1_MspDeInit 0 */
+
+    /* USER CODE END USART1_MspDeInit 0 */
+      /* Peripheral clock disable */
+      __HAL_RCC_USART2_CLK_DISABLE();
+
+      /**USART1 GPIO Configuration
+      PA9     ------> USART1_TX
+      PA10     ------> USART1_RX
+      */
+      HAL_GPIO_DeInit(GPIOA, GPIO_PIN_2|GPIO_PIN_3);
+
+    /* USER CODE BEGIN USART1_MspDeInit 1 */
+
+    /* USER CODE END USART1_MspDeInit 1 */
+
   }
   else if(huart->Instance==USART3)
   {

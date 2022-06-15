@@ -123,7 +123,7 @@ BOOL xMBPortSerialPutByte(CHAR ucByte)
 
 BOOL xMBPortSerialGetByte(CHAR * pucByte)
 {
-     static uint8_t temp = 0;
+    static uint8_t temp = 0;
 	// HAL_UART_Receive_IT(&huart3, &temp, 1);
 	
     //*pucByte = (USART3->RDR & (uint16_t)0x00FF);

@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'f:/work/github/stm32l475-atk-pandora_noos/app'
+make.exe: Leaving directory 'f:/work/github/stm32l475-atk-pandora_noos/app'
+ 
+make.exe: *** No targets specified and no makefile found.  Stop.
+

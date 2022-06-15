@@ -7,6 +7,7 @@
 #include "led.h"
 
 UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
 /**
@@ -94,6 +95,44 @@ void MX_USART1_UART_Init(void)
 }
 
 /**
+  * @brief USART2 Initialization Function
+  * @param None
+  * @retval None
+  */
+void MX_USART2_UART_Init(void)
+{
+  uint8_t tmp = 0;
+  /* USER CODE BEGIN USART3_Init 0 */
+
+  /* USER CODE END USART3_Init 0 */
+
+  /* USER CODE BEGIN USART3_Init 1 */
+
+  /* USER CODE END USART3_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 115200;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  //注意：中断开启和关闭操作不能在HAL_UART_MspInit回调中调用，否则不生效
+  //因为：HAL_UART_Init调用流程是HAL_UART_MspInit--->UART_SetConfig(配置串口参数)
+  //如果在UART_SetConfig之前配置中断则无效，必须要等待UART_SetConfig后面配置中断使能
+  __HAL_UART_ENABLE_IT(&huart2, UART_IT_RXNE);
+  /* USER CODE BEGIN USART3_Init 2 */
+
+  /* USER CODE END USART3_Init 2 */
+}
+
+/**
   * @brief USART3 Initialization Function
   * @param None
   * @retval None
@@ -136,6 +175,7 @@ void USART1_IRQHandler(void)
 	//HAL_UART_Receive_IT(&huart1,rdata,sizeof(rdata));//使能接收中断
 }
 
+
 //编写中断服务函数
 void USART3_IRQHandler(void)
 {
@@ -150,10 +190,9 @@ void USART3_IRQHandler(void)
       __HAL_UART_CLEAR_FLAG(&huart3, UART_FLAG_TXE);			// 清除中断标记
       prvvUARTTxReadyISR();									// 通知modbus数据可以发松
   }
-  //HAL_UART_IRQHandler(&huart3);
-
 }
-uint8_t recv_buf1 = 0;
+
+
 /* 中断回调函数 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
@@ -168,9 +207,13 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         //使能串口中断接收
         HAL_UART_Receive_IT(&huart1, (uint8_t*)&recv_buf, 1);
     }
+    else if(huart ->Instance == USART2)
+    {
+     
+    }
     else if(huart ->Instance == USART3)
     {
-      //prvvUARTRxISR();
+     
     }
 }
 

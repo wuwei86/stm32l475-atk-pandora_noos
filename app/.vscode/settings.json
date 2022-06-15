@@ -33,7 +33,19 @@
         "led.h": "c",
         "lcd.h": "c",
         "multitimer.h": "c",
-        "multi_button.h": "c"
+        "multi_button.h": "c",
+        "lvgl.h": "c",
+        "lv_example_get_started.h": "c",
+        "lv_port_disp.h": "c",
+        "lv_example_anim.h": "c",
+        "lvgl_button.h": "c",
+        "lv_examples.h": "c",
+        "lvgl_app.h": "c",
+        "stm32l4xx_hal_conf.h": "c",
+        "wifi_uart.h": "c",
+        "string.h": "c",
+        "cjson_utils.h": "c",
+        "wifi_task.h": "c"
     },
     "cmake.configureOnOpen": false
 }

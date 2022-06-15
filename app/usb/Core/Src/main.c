@@ -29,6 +29,7 @@
 #include "elog_file.h"
 #include "bsp.h"
 #include "lcd.h"
+#include "key.h"
 #include "timer.h"
 #include "led.h"
 #include <stdio.h>
@@ -50,6 +51,21 @@
 #include "user_mb_app.h"
 #include "MultiTimer.h"
 #include "multi_button.h"
+
+
+#include <lvgl.h>
+#include "lv_port_disp.h"
+#include "lv_example_get_started.h"
+#include "lv_example_anim.h"
+#include "lv_example_widgets.h"
+#include "lv_example_libs.h"
+
+#include "lvgl_app.h"
+#include "lvgl_button.h"
+
+
+#include "wifi_uart.h"
+#include "wifi_task.h"
 
 
 /* Private includes ----------------------------------------------------------*/
@@ -75,6 +91,40 @@
 
 
 /* USER CODE BEGIN PV */
+#define LVGL_TICK 	5
+MultiTimer lvgl_timer;
+void lvglTimerCallback(MultiTimer* timer, void *userData)
+{
+    //log_d("[%012ld] Timer:%p callback-> %s.\r\n", PlatformTicksGetFunc(), timer, (char*)userData);
+    lv_tick_inc(LVGL_TICK);
+		lv_timer_handler();
+    MultiTimerStart(&lvgl_timer, 5, lvglTimerCallback, userData);
+}
+
+static void lvgl_init( void ) 
+{
+    lv_init();
+    lv_port_disp_init();        // 显示器初始化
+    // lv_port_indev_init();       // 输入设备初始化
+    // lv_port_fs_init();          // 文件系统设备初始化
+
+    //lv_example_get_started_1();
+    //lv_example_keyboard_1();
+    //lv_example_img_2();
+    //lv_example_qrcode_1();
+    //lv_show_img();
+    lv_show_led();
+    lvgl_Button_init();
+    MultiTimerStart(&lvgl_timer, 5, lvglTimerCallback, "lvgl timer");
+  //   while(1) 
+  //   {
+	// 	// 先调用 lv_tick_inc 再调用 lv_timer_handler
+	// 	lv_tick_inc(LVGL_TICK);
+	// 	lv_timer_handler();
+  //   MultiTimerYield();
+	// 	HAL_Delay(LVGL_TICK);
+	// }
+}
 
 /* USER CODE END PV */
 
@@ -514,11 +564,15 @@ int main(void)
   MX_FATFS_Init();
   MX_USB_HOST_Init();
   MX_USART1_UART_Init();
+  //MX_USART2_UART_Init();
+  //wifi_uart_init(115200);
+  
   //MX_USART3_UART_Init();
-
-  //HAL_UART_Receive_IT(&huart3, (uint8_t*)&clk, 1);
-  //HAL_UART_Transmit(&huart3,(const uint8_t*)LOG_VERSION_NUM, 5, 0xffff);
-  //HAL_UART_Transmit_IT(&huart3,(const uint8_t *)&ucByte, 1);
+  //uint8_t tmp = 0;
+  //HAL_UART_Receive_IT(&huart2, &tmp, 1);
+  //HAL_UART_Transmit(&huart2,(const uint8_t*)LOG_VERSION_NUM, 5, 0xffff);
+  //HAL_UART_Transmit(&huart2,(const uint8_t*)"AT\r\n", 5, 0xffff);
+  //HAL_UART_Transmit_IT(&huart2,(const uint8_t*)LOG_VERSION_NUM, 5);
   
 
   printf(LOG_PROJECT_VERSION_MSG);//打印工程信息
@@ -555,6 +609,10 @@ int main(void)
   extern void MultiButton_callback();
   MultiButton_callback();
 
+  wifi_init();
+
+  //lvgl_init();
+
   //my_gfx_op.draw_pixel = gfx_draw_pixel;
   //my_gfx_op.fill_rect = NULL;//gfx_fill_rect;
   //startHelloWave(NULL, 240, 240, 2, &my_gfx_op);
@@ -580,7 +638,6 @@ int main(void)
     }
 
     MultiTimerYield();
-			
 
     /* USER CODE BEGIN 3 */
   }

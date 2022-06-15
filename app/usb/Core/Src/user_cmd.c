@@ -36,6 +36,8 @@
 #include "shell_port.h"
 #include "cJSON.h"
 #include "cJSON_Utils.h"
+#include "wifi_uart.h"
+#include "wifi_task.h"
 
 
 /* 系统重启 */
@@ -281,3 +283,46 @@ int test_log_file(int argc, char *agrv[])
     return 0;
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), test_log_file, test_log_file, test_log_file);
+
+//测试at指令
+int wifi_uart_cmd(int argc, char *agrv[])
+{
+    strcat(agrv[1],"\r\n");//拼接\r\n
+    log_d("agrv1 is %s",agrv[1]);//参数1,文件名
+    log_d("agrv1_size is %d",strlen(agrv[1]));//参数1,文件名
+    HAL_UART_Transmit(&huart2,(const uint8_t*)agrv[1], strlen(agrv[1]), 0xffff);
+
+    return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), wifi_uart_cmd, wifi_uart_cmd, wifi_uart_cmd);
+
+//发送中断的方式
+int wifi_uart_cmd_it(int argc, char *agrv[])
+{
+    strcat(agrv[1],"\r\n");//拼接\r\n
+    log_d("agrv1 is %s",agrv[1]);//参数1,文件名
+    log_d("agrv1_size is %d",strlen(agrv[1]));//参数1,文件名
+    wifi_uart_write((const void*)agrv[1],strlen(agrv[1]));
+    return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), wifi_uart_cmd_it, wifi_uart_cmd_it, wifi_uart_cmd_it);
+
+//查询模块版本号
+int wifi_get_version(int argc, char *agrv[])
+{
+    wifi_query_version();
+    return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), wifi_get_version, wifi_get_version, wifi_get_version);
+
+//测试at指令
+int wifi_at_cmd(int argc, char *agrv[])
+{
+    //不用加\r\n
+    log_d("agrv1 is %s",agrv[1]);//参数1,文件名
+    log_d("agrv1_size is %d",strlen(agrv[1]));//参数1,文件名
+    wifi_run_cmd(agrv[1]);
+    wifi_query_version();
+    return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), wifi_at_cmd, wifi_at_cmd, wifi_at_cmd);
