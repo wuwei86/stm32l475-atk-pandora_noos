@@ -321,8 +321,17 @@ int wifi_at_cmd(int argc, char *agrv[])
     //不用加\r\n
     log_d("agrv1 is %s",agrv[1]);//参数1,文件名
     log_d("agrv1_size is %d",strlen(agrv[1]));//参数1,文件名
-    wifi_run_cmd(agrv[1]);
-    wifi_query_version();
+    wifi_run_cmd(agrv[1],NULL);
     return 0;
 }
 SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), wifi_at_cmd, wifi_at_cmd, wifi_at_cmd);
+
+//测试mqtt_connect指令
+int mqtt_connect(int argc, char *agrv[])
+{
+    //不用加\r\n
+    extern void mqtt_ping(void);
+    mqtt_ping();
+    return 0;
+}
+SHELL_EXPORT_CMD(SHELL_CMD_PERMISSION(0)|SHELL_CMD_TYPE(SHELL_TYPE_CMD_MAIN), mqtt_connect, mqtt_connect, mqtt_connect);

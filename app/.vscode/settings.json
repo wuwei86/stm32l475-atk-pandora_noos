@@ -45,7 +45,12 @@
         "wifi_uart.h": "c",
         "string.h": "c",
         "cjson_utils.h": "c",
-        "wifi_task.h": "c"
+        "wifi_task.h": "c",
+        "ringbuffer.h": "c",
+        "at_chat.h": "c",
+        "stdint.h": "c",
+        "vcruntime.h": "c",
+        "common.h": "c"
     },
     "cmake.configureOnOpen": false
 }

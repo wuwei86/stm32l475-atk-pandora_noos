@@ -271,6 +271,18 @@
 "usb\lvgl_led.o"
 "usb\at_chat.o"
 "usb\ringbuffer.o"
+"usb\mqttconnectclient.o"
+"usb\mqttconnectserver.o"
+"usb\mqttdeserializepublish.o"
+"usb\mqttformat.o"
+"usb\mqttpacket.o"
+"usb\mqttserializepublish.o"
+"usb\mqttsubscribeclient.o"
+"usb\mqttsubscribeserver.o"
+"usb\mqttunsubscribeclient.o"
+"usb\mqttunsubscribeserver.o"
+"usb\transport.o"
+"usb\ping.o"
 --library_type=microlib --strict --scatter "usb\usb.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

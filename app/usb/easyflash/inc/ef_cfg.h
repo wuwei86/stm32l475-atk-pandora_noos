@@ -83,7 +83,7 @@
 /* backup area start address */
 #define EF_START_ADDR             (0x00803000) /* from the SPI Flash position: 0KB*/
 /* ENV area size. It's at least one empty sector for GC. So it's definination must more then or equal 2 flash sector size. */
-#define ENV_AREA_SIZE             (2 * EF_ERASE_MIN_SIZE)      /* 8K */
+#define ENV_AREA_SIZE             (4 * EF_ERASE_MIN_SIZE)      /* 8K */
 /* saved log area size */
 #define LOG_AREA_SIZE             (10 * EF_ERASE_MIN_SIZE)     /* 40K */
 

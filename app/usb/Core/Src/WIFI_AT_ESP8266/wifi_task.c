@@ -16,6 +16,8 @@
 #include <stdbool.h>
 #include "wifi_task.h"
 #include "MultiTimer.h"
+#include "elog_flash.h"
+#include "easyflash.h"
 
 #define LOG_TAG    "app_wifi_task"
 
@@ -31,7 +33,8 @@ static void at_error(void);
 void wifi_ready_handler(char *recvbuf, int size);
 void wifi_connected_handler(char *recvbuf, int size);
 void wifi_disconnected_handler(char *recvbuf, int size);
-
+void wifi_recvdata_handler(char *recvbuf, int size);
+void tcp_disconnected_handler(char *recvbuf, int size);
 /* Private variables ---------------------------------------------------------*/
 /* 
  * @brief   wifi管理数据
@@ -58,8 +61,9 @@ static unsigned char wifi_urcbuf[128];
  */
 static const utc_item_t urc_table[] = {
     "ready",             wifi_ready_handler,
-    "WIFI CONNECTED:",   wifi_connected_handler,
+    "CLOSED",           tcp_disconnected_handler,
     "WIFI DISCONNECTED", wifi_disconnected_handler,
+    "+IPD",              wifi_recvdata_handler,
 };
 
 /* 
@@ -78,6 +82,22 @@ static const at_adapter_t  at_adapter = {
 };
 
 /* Private functions ---------------------------------------------------------*/
+
+/* 
+ * @brief   wifi接收数据处理
+ */
+void tcp_disconnected_handler(char *recvbuf, int size)
+{
+    log_d("WIFI disconnect server...\r\n");
+}
+
+/* 
+ * @brief   wifi接收数据处理
+ */
+void wifi_recvdata_handler(char *recvbuf, int size)
+{
+    log_d("WIFI recv size is: %d###data is: %s\r\n",size,wifi_urcbuf);
+}
 
 /* 
  * @brief   wifi开机就绪事件
@@ -204,16 +224,49 @@ static void wifiTimerCallback(MultiTimer* timer, void *userData)
     MultiTimerStart(timer, 10, wifiTimerCallback, userData);
 }
 
+/******************************************************************************/
+
+/* 
+ * @brief    透传模式查询回调
+ */
+static void query_cip_mode(at_response_t *r)
+{
+    if (r->ret == AT_RET_OK ) {
+        log_d("wifi cmd info : \r\n%s\r\n", r->recvbuf);
+    } else 
+        log_d("wifi cmd failure...\r\n");
+}
+
+/* 
+ * @brief    透传模式设置回调
+ */
+static void set_cip_mode(at_response_t *r)
+{
+    if (r->ret == AT_RET_OK ) {
+        log_d("wifi cmd info : \r\n%s\r\n", r->recvbuf);
+        wifi_data.cip_mode = WIFI_MODE_CIP;
+        ef_set_env_blob(WIFI_CIP_MODE,(const char*)&wifi_data.cip_mode,1);
+    } else 
+        log_d("wifi cmd failure...\r\n");
+}
+
+/******************************************************************************/
+
 /* 
  * @brief    wifi初始化
  */
 void wifi_init(void)
 {
+    size_t wifi_connect_state;
+    size_t saved_value_len = 1;
+    size_t wifi_cip_mode;
+
     wifi_uart_init(115200);
     at_obj_init(&at, &at_adapter);
 
     //初始化数据
     wifi_data.connect_state = WIFI_STATE_BREAK;
+    wifi_data.cip_mode = WIFI_MODE_AT;//默认at模式
     wifi_data.ssid = WLAN_SSID;
     wifi_data.password = WLAN_PASSWORD;
 
@@ -227,14 +280,74 @@ void wifi_init(void)
 
 
     //wifi_query_version(); 
+    
+#if 1
+    //wifi_uart_write("+++",3);
+    //获取wifi透传模式
+    wifi_cip_mode = ef_get_env_blob(WIFI_CIP_MODE,&wifi_data.cip_mode,1,&saved_value_len);
+    if(wifi_cip_mode == 0)
+    {
+        //ef_set_and_save_env(WIFI_CIP_MODE,(const char*)&wifi_data.connect_state);
+        ef_set_env_blob(WIFI_CIP_MODE,(const char*)&wifi_data.cip_mode,1);
+        log_d("write wifi cip mode\n\r");
+    }
+    else
+    {
+        log_d("wifi cip mode is: %d\n\r", wifi_data.cip_mode);
+    }
 
-    wifi_run_cmd("AT");
+    if(wifi_data.cip_mode == WIFI_MODE_CIP)
+    {
+        //退出透传模式
+        //wifi_uart_write("+++",3);
+        log_i("quit wifi cip mode\n\r");
+    }
 
-    //wifi_run_cmd("AT+CWJAP=\"CMCC-g7cN\",\"su7s9cbx\"");
-    wifi_connect(WLAN_SSID,WLAN_PASSWORD);
+    wifi_run_cmd("AT",NULL);
 
+    //查询当前的模式
+    wifi_run_cmd("AT+CIPMODE?",query_cip_mode);
+
+
+    //获取wifi链接状态
+    //ef_set_env_blob(WIFI_CONNECT_STATE,NULL,1);
+    wifi_connect_state = ef_get_env_blob(WIFI_CONNECT_STATE,&wifi_data.connect_state,1,&saved_value_len);
+    if(wifi_connect_state == 0)
+    {
+        //ef_set_and_save_env(WIFI_CONNECT_STATE,(const char*)&wifi_data.connect_state);
+        ef_set_env_blob(WIFI_CONNECT_STATE,(const char*)&wifi_data.connect_state,1);
+        log_d("write wifi connect state\n\r");
+    }
+    else
+    {
+        log_d("wifi connect state is: %d\n\r", wifi_data.connect_state);
+    }
+
+    if(wifi_data.connect_state == WIFI_STATE_BREAK)\
+    {
+        //wifi_run_cmd("AT+CWJAP=\"CMCC-g7cN\",\"su7s9cbx\"");
+        wifi_connect(WLAN_SSID,WLAN_PASSWORD);
+    }
+
+    
     //查询ip地址
-    wifi_run_cmd("AT+CIFSR");
+    wifi_run_cmd("AT+CIFSR",NULL);
+
+    wifi_run_cmd("AT+PING=\"www.baidu.com\"",NULL);
+    
+    //链接服务器
+    wifi_run_cmd("AT+CIPSTART=\"TCP\",\"192.168.1.2\",1883",NULL);
+    //设置为透传模式
+    wifi_run_cmd("AT+CIPMODE=1",set_cip_mode);
+
+    
+    wifi_run_cmd("AT+CIPSEND",NULL);//透传模式下发送数据的方式
+#endif
+    //wifi_uart_write("wuwei",5);
+
+    //wifi_run_cmd("AT+CIPSEND=5");//非透传模式下发送数据的方式
+    //wifi_run_cmd("wuwei");
+
     //初始化wifi
     //at_send_multiline(&at, at_init_callbatk, wifi_init_cmds);  
     
@@ -321,6 +434,7 @@ static void wifi_connect_callback(at_response_t *r)
     if (r->ret == AT_RET_OK ) {
         log_d("wifi version info : \r\n%s\r\n", r->recvbuf);
         wifi_data.connect_state = WIFI_STATE_CONNECT;
+        ef_set_env_blob(WIFI_CONNECT_STATE,(const char *)&wifi_data.connect_state,1);
     } else 
         log_d("wifi version query failure...\r\n");
 }
@@ -364,8 +478,16 @@ static void cmd_callback(at_response_t *r)
 /* 
  * @brief    执行命令
  */
-void wifi_run_cmd(const char *cmd)
+void wifi_run_cmd(const char *cmd,at_callbatk_t cb)
 {
     log_d("wifi_run_cmd is: %s",cmd);
-    at_send_singlline(&at,cmd_callback,cmd);
+    if(cb == NULL)
+    {
+        at_send_singlline(&at,cmd_callback,cmd);
+    }
+    else
+    {
+       at_send_singlline(&at,cb,cmd); 
+    }
+    
 }

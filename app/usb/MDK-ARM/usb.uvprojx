@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath></ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L475xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash;..\Core\Inc\SD_CARD;..\Core\Inc\SPI1;..\Core\Inc\SPI;..\easylogger\plugins\file;..\freemodbus\modbus\include;..\freemodbus\port;..\freemodbus\modbus\ascii;..\freemodbus\modbus\rtu;..\freemodbus\modbus\tcp;..\freemodbus\modbus\functions;..\Core\Inc\TIMER;..\Core\Inc\LED;..\Core\Inc\BEEP;..\Core\Inc\EXTI;..\Core\Inc\IWDG;..\Core\Inc\KEY;..\Core\Inc\WWDG;..\MultiTimer;..\MultiButton;..\LVGL;..\LVGL\examples\porting;..\LVGL\examples\get_started;..\LVGL\examples\anim;..\LVGL\examples\widgets;..\LVGL\examples\libs;..\LVGL\examples\libs\qrcode;..\LVGL\lvgl_app;..\ringbuffer;..\AT-Command;..\Core\Inc\WIFI_AT_ESP8266</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc;../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32L4xx/Include;../Drivers/CMSIS/Include;../FATFS/Target;../FATFS/App;../USB_HOST/App;../USB_HOST/Target;../Middlewares/Third_Party/FatFs/src;../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc;..\easylogger\inc;..\Core\Inc\LCD;..\Core\Inc\SPI3;..\Core\Inc\delay;..\Core\Inc\sys;..\UIcode;..\Core\Inc\W25QXX;..\Core\Inc\QSPI;..\SFUD\inc;..\easyflash\inc;..\letter-shell\port;..\letter-shell\src;..\cJSON;..\easylogger\plugins\flash;..\Core\Inc\SD_CARD;..\Core\Inc\SPI1;..\Core\Inc\SPI;..\easylogger\plugins\file;..\freemodbus\modbus\include;..\freemodbus\port;..\freemodbus\modbus\ascii;..\freemodbus\modbus\rtu;..\freemodbus\modbus\tcp;..\freemodbus\modbus\functions;..\Core\Inc\TIMER;..\Core\Inc\LED;..\Core\Inc\BEEP;..\Core\Inc\EXTI;..\Core\Inc\IWDG;..\Core\Inc\KEY;..\Core\Inc\WWDG;..\MultiTimer;..\MultiButton;..\LVGL;..\LVGL\examples\porting;..\LVGL\examples\get_started;..\LVGL\examples\anim;..\LVGL\examples\widgets;..\LVGL\examples\libs;..\LVGL\examples\libs\qrcode;..\LVGL\lvgl_app;..\ringbuffer;..\AT-Command;..\Core\Inc\WIFI_AT_ESP8266;..\MQTTPacket\src;..\MQTTPacket\port</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -3870,6 +3870,81 @@
               <FileName>ringbuffer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\ringbuffer\ringbuffer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MQTTPacket</GroupName>
+          <Files>
+            <File>
+              <FileName>MQTTConnectClient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTConnectClient.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTConnectServer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTConnectServer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTDeserializePublish.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTDeserializePublish.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTFormat.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTFormat.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTPacket.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTPacket.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTSerializePublish.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTSerializePublish.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTSubscribeClient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTSubscribeClient.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTSubscribeServer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTSubscribeServer.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTUnsubscribeClient.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTUnsubscribeClient.c</FilePath>
+            </File>
+            <File>
+              <FileName>MQTTUnsubscribeServer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\src\MQTTUnsubscribeServer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MQTTPort</GroupName>
+          <Files>
+            <File>
+              <FileName>transport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\port\transport.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MQTTApp</GroupName>
+          <Files>
+            <File>
+              <FileName>ping.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MQTTPacket\samples\ping.c</FilePath>
             </File>
           </Files>
         </Group>

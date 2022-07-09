@@ -498,10 +498,11 @@ static void test_env(void)
   ef_save_env();//保存内存中的环境变量表到Flash中
   //ef_read_env_value();
   //ef_print_env();
-  ef_env_set_default();//将内存中的环境变量表重置为默认值。
+  //ef_env_set_default();//将内存中的环境变量表重置为默认值。
   //size_t size = ef_get_env_write_bytes();//获取当前环境变量写入到Flash的字节大小
   //log_d("ef_get_env_write_bytes is: %d",size);
   ef_set_and_save_env("device_id","123");//设置环境变量成功后立刻保存。设置功能参考ef_set_env方法。（注意：此处的环境变量指代的已加载到内存中的环境变量）
+  //ef_set_and_save_env("device_id123",123);
   //ef_print_env();
 }
 
